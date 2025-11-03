@@ -197,6 +197,8 @@ SetField HudWidgets[4].PlacementData[0].Offset 100 -12
 SetField HudWidgets[4].PlacementData[0].Scale 1.25 1.25
 SetField HudWidgets[5].PlacementData[0].Offset 150 -12
 SetField HudWidgets[5].PlacementData[0].Scale 1.25 1.25
+SetField HudWidgets[3].BitmapWidgets[0].SortLayer Foreground
+SetField HudWidgets[4].BitmapWidgets[0].SortLayer Foreground
 SaveTagChanges
 Exit
 
