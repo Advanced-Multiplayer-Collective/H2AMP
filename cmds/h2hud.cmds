@@ -195,7 +195,7 @@ AddBlockElements HudWidgets[18].BitmapWidgets[1].RenderData
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputColorB PrimaryBackground
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputColorC HighlightForeground
-SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputScalarA FlashAnimation
+SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputScalarA Input
 
 SetField HudWidgets[20].BitmapWidgets[2].RuntimeWidgetIndex 146
 SetField HudWidgets[20].BitmapWidgets[2].Bitmap ui\chud\bitmaps\stamina_icon.bitmap
