@@ -172,14 +172,17 @@ SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].LocalScalarB 1
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputColorB PrimaryBackground
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputColorC HighlightForeground
+SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputScalarA Input
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputScalarB LocalA
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputScalarC LocalB
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputScalarD LocalC
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputScalarE LocalD
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputScalarF RangeInput
 
+
 SetField HudWidgets[20].BitmapWidgets[1].RuntimeWidgetIndex 145
 SetField HudWidgets[20].BitmapWidgets[1].Bitmap ui\chud\bitmaps\stamina_meter.bitmap
+
 
 SetField HudWidgets[20].BitmapWidgets[2].Name icon
 AddBlockElements HudWidgets[20].BitmapWidgets[2].PlacementData
@@ -187,15 +190,10 @@ SetField HudWidgets[20].BitmapWidgets[2].PlacementData[0].Anchor Parent
 SetField HudWidgets[20].BitmapWidgets[2].PlacementData[0].Offset -115 -80
 SetField HudWidgets[20].BitmapWidgets[2].PlacementData[0].Scale 0.9 0.9
 
-AddBlockElements HudWidgets[18].BitmapWidgets[2].AnimationData
-SetField HudWidgets[20].BitmapWidgets[1].AnimationData[0].Initializing.Animation ui\chud\animations\stamina1.chud_animation_definition
-SetField HudWidgets[20].BitmapWidgets[1].AnimationData[0].Active.Animation ui\chud\animations\dim_lines.chud_animation_definition
-
-AddBlockElements HudWidgets[18].BitmapWidgets[1].RenderData
+AddBlockElements HudWidgets[20].BitmapWidgets[1].RenderData
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputColorB PrimaryBackground
 SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputColorC HighlightForeground
-SetField HudWidgets[20].BitmapWidgets[1].RenderData[0].OutputScalarA Input
 
 SetField HudWidgets[20].BitmapWidgets[2].RuntimeWidgetIndex 146
 SetField HudWidgets[20].BitmapWidgets[2].Bitmap ui\chud\bitmaps\stamina_icon.bitmap
