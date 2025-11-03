@@ -68,6 +68,7 @@ PortTag Replace ui\chud\e_regen.chud_definition
 PortTag Replace ui\chud\e_tripmine.chud_definition
 PortTag Replace ui\chud\spartan_h2.chud_definition
 PortTag Replace ui\chud\elite_h2.chud_definition
+exit
 
 
 ## APPLY NEW HUD ##
