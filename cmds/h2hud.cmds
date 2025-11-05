@@ -69,8 +69,7 @@ PortTag Replace ui\chud\e_tripmine.chud_definition
 PortTag Replace ui\chud\spartan_h2.chud_definition
 PortTag Replace ui\chud\elite_h2.chud_definition
 exit
-
-
+ 
 ## APPLY NEW HUD ##
 EditTag objects\characters\elite\mp_elite\mp_elite.biped
 SetField HudInterfaces[0].UnitHudInterface ui\chud\elite_h2.chud_definition
@@ -81,7 +80,6 @@ EditTag objects\characters\masterchief\mp_masterchief\mp_masterchief.biped
 SetField HudInterfaces[0].UnitHudInterface ui\chud\spartan_h2.chud_definition
 SaveTagChanges
 Exit
-
 
 ## HUD FIXES ##
 EditTag ui\chud\globals.chud_globals_definition
@@ -94,7 +92,7 @@ EditTag objects\characters\elite\mp_elite\chud\globals.chud_globals_definition
 SetField HudGlobals[0].HudAttributes[0].WarpDestinationOffsetZ 0
 SetField HudGlobals[0].HudAttributes[0].MotionSensorOrigin 83 990
 SetField HudGlobals[0].PrimaryBackground 0 103 4 144
-SetField HudGlobals[0].SecondaryBackground 0 148 24 199
+SetField HudGlobals[0].SecondaryBackground 0 45 13 99
 SetField HudGlobals[0].HighlightForeground 0 195 109 242
 SetField HudGlobals[0].CrosshairNormal 0 184 92 211
 SetField HudGlobals[0].ScoreboardHud ui\chud\scoreboard.chud_definition
@@ -200,6 +198,313 @@ SetField HudWidgets[5].PlacementData[0].Scale 1.25 1.25
 SetField HudWidgets[2].BitmapWidgets[0].SortLayer Foreground
 SetField HudWidgets[3].BitmapWidgets[0].SortLayer Foreground
 SetField HudWidgets[4].BitmapWidgets[0].SortLayer Foreground
+SetField HudWidgets[5].BitmapWidgets[0].SortLayer Foreground
+SaveTagChanges
+Exit
+
+## FIX CUSTOM HUD COLORS, Elite ##
+EditTag ui\chud\elite_h2.chud_definition
+SetField HudWidgets[0].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[0].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[1].BitmapWidgets[0].RenderData[0].OutputColorA HighlightForeground
+
+SetField HudWidgets[2].BitmapWidgets[1].RenderData[0].OutputColorC PrimaryBackground
+SetField HudWidgets[2].BitmapWidgets[2].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[2].BitmapWidgets[3].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[2].BitmapWidgets[2].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[2].BitmapWidgets[3].RenderData[0].OutputColorB SecondaryBackground
+
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorC PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[2].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[3].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[2].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[3].RenderData[0].OutputColorB SecondaryBackground
+
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorC PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[2].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[3].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[2].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[3].RenderData[0].OutputColorB SecondaryBackground
+
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorC PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[2].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[3].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[2].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[3].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+## FIX CUSTOM HUD COLORS, Spartan ##
+EditTag ui\chud\spartan_h2.chud_definition
+
+SetField HudWidgets[2].BitmapWidgets[1].RenderData[0].OutputColorC PrimaryBackground
+SetField HudWidgets[2].BitmapWidgets[2].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[2].BitmapWidgets[3].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[2].BitmapWidgets[2].RenderData[0].OutputColorB PrimaryBackground
+SetField HudWidgets[2].BitmapWidgets[3].RenderData[0].OutputColorB PrimaryBackground
+
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorC PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[2].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[3].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[2].RenderData[0].OutputColorB PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[3].RenderData[0].OutputColorB PrimaryBackground
+
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorC PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[2].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[3].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[2].RenderData[0].OutputColorB PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[3].RenderData[0].OutputColorB PrimaryBackground
+
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorC PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[2].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[3].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[2].RenderData[0].OutputColorB PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[3].RenderData[0].OutputColorB PrimaryBackground
+SaveTagChanges
+Exit
+
+## FIX CUSTOM HUD COLORS, Weapons ##
+EditTag ui\chud\assault_rifle.chud_definition
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+EditTag ui\chud\automag.chud_definition
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\battle_rifle.chud_definition
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\beam_rifle.chud_definition
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\brute_shot.chud_definition
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\carbine.chud_definition
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\excavator.chud_definition
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\flamethrower.chud_definition
+SetField HudWidgets[2].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[2].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\fuel_rod_cannon.chud_definition
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\golf_club.chud_definition
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\hammer.chud_definition
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\machinegun_turret.chud_definition
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\magnum.chud_definition
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\missile.chud_definition
+SetField HudWidgets[2].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[2].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\needler.chud_definition
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\plasma_pistol.chud_definition
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\plasma_rifle.chud_definition
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\plasma_turret.chud_definition
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\rocket.chud_definition
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\sentinel_beam.chud_definition
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\shotgun.chud_definition
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\smg.chud_definition
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\smg_silenced.chud_definition
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\sniper_rifle.chud_definition
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\spartan_laser.chud_definition
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\spike_rifle.chud_definition
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SaveTagChanges
+Exit
+
+Edittag ui\chud\sword.chud_definition
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
