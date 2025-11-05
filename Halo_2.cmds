@@ -126,6 +126,16 @@ RunCommands workingdir\cmds\h2hud.cmds
 
 RunCommands workingdir\cmds\Halo_2_Shader_Fixes.cmds
 
+## Setting H2 Movement Speed ##
+EditTag globals\globals.globals
+SetField PlayerInformation[0].RunForward 2.25
+SetField PlayerInformation[0].RunBackward 2
+SetField PlayerInformation[0].RunSideways 2
+SetField PlayerInformation[0].StunTimeRange 0 1.25
+SetField PlayerInformation[0].FirstPersonIdleTimeRange 10 15
+SetField PlayerInformation[0].FirstPersonSkipFraction 0.25
+SaveTagChanges
+Exit
 ##EditTag multiplayer\forge_globals.forge_globals_definition
 ##MaximizeBudget All
 ##SaveTagChanges
