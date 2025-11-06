@@ -1,7 +1,7 @@
 
 echo battle rifle
 
-opencachefile "E:\Halo Resources\Halo2V\zanzibar.map"
+opencachefile "h2maps\zanzibar.map"
 porttag replace objects\weapons\rifle\battle_rifle\battle_rifle.model
 porttag replace objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle.mode
 exit
@@ -35,7 +35,7 @@ exit
 
 echo sniper
 
-opencachefile "E:\Halo Resources\Halo2V\zanzibar.map"
+opencachefile "h2maps\zanzibar.map"
 porttag replace objects\weapons\rifle\sniper_rifle\sniper_rifle.model
 porttag replace objects\weapons\rifle\sniper_rifle\fp_sniper_rifle\fp_sniper_rifle.mode
 porttag objects\weapons\rifle\sniper_rifle\bitmaps\sniper_rifle_scope_view.bitm
@@ -76,7 +76,7 @@ echo smg
 
 Nametag objects\weapons\rifle\smg\fp_smg\fp_smg.render_model objects\weapons\rifle\smg\fp_smg\fp_smg_h2
 
-opencachefile "E:\Halo Resources\Halo2V\zanzibar.map"
+opencachefile "h2maps\zanzibar.map"
 porttag replace objects\weapons\rifle\smg\fp_smg\fp_smg.mode
 exit
 
