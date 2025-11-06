@@ -121,4 +121,68 @@ SetArgument normal_specular_tint 1 1 1 1
 savetagchanges
 exit
 
+echo magnum
+
+Duplicatetag objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum.model_animation_graph objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum_og
+Savetagnames
+
+opencachefile "E:\Halo Resources\Halo2V\zanzibar.map"
+porttag replace objects\weapons\pistol\magnum\magnum.model
+porttag replace objects\weapons\pistol\magnum\fp_magnum\fp_magnum.mode
+porttag replace objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum.jmad
+exit
+
+EditTag objects\weapons\pistol\magnum\magnum.model
+SetField PhysicsModel objects\weapons\pistol\magnum\magnum.physics_model
+savetagchanges
+exit
+
+#Inheritance
+edittag objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum.jmad
+setinheritance MCC objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum_og.model_animation_graph
+savetagchanges
+exit
+
+#balance
+
+edittag objects\weapons\pistol\magnum\magnum.weapon
+SetField Magazines[0].RoundsLoadedMaximum 12
+SetField Barrels[0].Firing.FireRecoveryTime 0.12
+savetagchanges
+exit
+
+EditTag objects\weapons\pistol\magnum\damage_effects\magnum_bullet.damage_effect
+SetField DamageUpperBound 8 8
+savetagchanges
+exit
+
+
+echo shotgun
+
+opencachefile "E:\Halo Resources\Halo2V\zanzibar.map"
+porttag replace objects\weapons\rifle\shotgun\shotgun.model
+porttag replace objects\weapons\rifle\shotgun\fp_shotgun\fp_shotgun.mode
+exit
+
+EditTag objects\weapons\rifle\shotgun\shotgun.model
+SetField PhysicsModel objects\weapons\rifle\shotgun\shotgun.physics_model
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\shotgun\fp_shotgun\fp_shotgun.render_model
+SetField MarkerGroups[1].Markers[0].Rotation -0.7397646 0.05048302 -0.5770238 0.34240797
+SetField MarkerGroups[1].Markers[0].Translation -0.024636278 0.005 -0.015
+savetagchanges
+exit
+
+objects\weapons\rifle\shotgun\shaders\shotgun_decal.shader
+SetArgument specular_coefficient 0.5
+SetArgument env_tint_color 1 1 1 1
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\shotgun\shaders\shotgun_light.shader
+SetArgument self_illum_intensity 5
+savetagchanges
+exit
 
