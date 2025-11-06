@@ -5,3 +5,9 @@ SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
+
+EditTag scenarios\shaders\multi\halo\coagulation\coag_washere.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
