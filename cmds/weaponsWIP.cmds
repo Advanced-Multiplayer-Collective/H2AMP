@@ -1,0 +1,137 @@
+
+
+
+openmodpackage h2amp
+
+echo battle rifle
+
+opencachefile "E:\Halo Resources\Halo2V\zanzibar.map"
+porttag replace objects\weapons\rifle\battle_rifle\battle_rifle.model
+porttag replace objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle.mode
+exit
+
+opencachefile "h3maps\zanzibar.map"
+porttag objects\weapons\rifle\battle_rifle\shaders\ones.rmsh
+porttag objects\weapons\rifle\battle_rifle\shaders\tens.rmsh
+exit
+
+
+edittag objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle.render_model
+SetField Materials[5].RenderMethod objects\weapons\rifle\battle_rifle\shaders\tens.rmsh
+SetField Materials[6].RenderMethod objects\weapons\rifle\battle_rifle\shaders\ones.rmsh
+SetField MarkerGroups[1].Markers[0].Rotation -0.6918266 0.11636095 -0.5805532 0.4132723
+SetField MarkerGroups[1].Markers[0].Translation 0.10469455 -0.004 0.013183057
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\battle_rifle\battle_rifle.render_model
+SetField Materials[7].RenderMethod objects\weapons\rifle\battle_rifle\shaders\tens.shader
+SetField Materials[8].RenderMethod objects\weapons\rifle\battle_rifle\shaders\ones.shader
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\battle_rifle\battle_rifle.model
+SetField PhysicsModel objects\weapons\rifle\battle_rifle\battle_rifle.physics_model
+SaveTagChanges
+exit
+
+
+
+echo sniper
+
+opencachefile "E:\Halo Resources\Halo2V\zanzibar.map"
+porttag replace objects\weapons\rifle\sniper_rifle\sniper_rifle.model
+porttag replace objects\weapons\rifle\sniper_rifle\fp_sniper_rifle\fp_sniper_rifle.mode
+porttag objects\weapons\rifle\sniper_rifle\bitmaps\sniper_rifle_scope_view.bitm
+exit
+
+opencachefile "h3maps\zanzibar.map"
+porttag replace objects\weapons\rifle\sniper_rifle\shaders\sniper_rifle_scope_screen.shader
+porttag replace objects\weapons\rifle\sniper_rifle\shaders\sniper_rifle_scope_screen2.shader
+exit
+
+
+Duplicatetag levels\multi\shrine\sky\shaders\sundisk.shader objects\weapons\rifle\sniper_rifle\shaders\sniper_rifle_scope_screen_h2
+savetagnames
+
+Edittag objects\weapons\rifle\sniper_rifle\shaders\sniper_rifle_scope_screen_h2.shader
+SetField ShaderProperties[0].TextureConstants[0].ExternTextureMode Scope
+SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\weapons\rifle\sniper_rifle\bitmaps\sniper_rifle_scope_view.bitmap
+SetArgument base_map 0.1 0.1 0.45 0.45
+SetArgument self_illum_intensity 0.1
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\sniper_rifle\fp_sniper_rifle\fp_sniper_rifle.render_model
+SetField Materials[1].RenderMethod objects\weapons\rifle\sniper_rifle\shaders\sniper_rifle_scope_screen_h2.shader
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\sniper_rifle\sniper_rifle.model
+SetField PhysicsModel objects\weapons\rifle\sniper_rifle\sniper_rifle.physics_model
+SaveTagChanges
+exit
+
+Edittag objects\weapons\rifle\sniper_rifle\bitmaps\sniper_rifle_scope_view.bitmap
+importbitmap 0 workingdir\bitmaps\sniper_scope\sniper_rifle_scope_view3.dds
+exit
+
+echo smg
+
+Nametag objects\weapons\rifle\smg\fp_smg\fp_smg.render_model objects\weapons\rifle\smg\fp_smg\fp_smg_h2
+
+opencachefile "E:\Halo Resources\Halo2V\zanzibar.map"
+porttag replace objects\weapons\rifle\smg\fp_smg\fp_smg.mode
+exit
+
+EditTag objects\weapons\rifle\smg\smg.weapon
+SetField FirstPerson[0].FirstPersonModel objects\weapons\rifle\smg\fp_smg\fp_smg_h2.render_model
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\smg\fp_smg\fp_smg_h2.render_model
+replacerendergeometry workingdir\models\smg.dae trianglelist
+SetField Materials[0].RenderMethod objects\weapons\rifle\smg\shaders\smg_bare_metal.shader
+SetField Materials[1].RenderMethod objects\weapons\rifle\smg\shaders\smg_painted_metal.shader
+SetField Materials[2].RenderMethod objects\weapons\rifle\smg\shaders\smg_rubber_grip.shader
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\smg\smg.model
+SetField RenderModel objects\weapons\rifle\smg\fp_smg\fp_smg_h2.render_model
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\smg\shaders\smg_painted_metal.shader
+SetArgument specular_coefficient 0.25
+SetArgument glancing_specular_tint 1 1 1 1
+SetArgument normal_specular_tint 1 1 1 1
+SetArgument env_tint_color 1 1 1 1
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\smg\shaders\smg_bare_metal.shader
+SetArgument specular_coefficient 0.25
+SetArgument glancing_specular_tint 1 1 1 1
+SetArgument normal_specular_tint 1 1 1 1
+SetArgument env_tint_color 1 1 1 1
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\smg\shaders\smg_rubber_grip.shader
+SetArgument specular_coefficient 0.25
+SetArgument glancing_specular_tint 1 1 1 1
+SetArgument normal_specular_tint 1 1 1 1
+savetagchanges
+exit
+
+echo Sword
+
+
+
+opencachefile "E:\Halo Resources\Halo2V\zanzibar.map"
+porttag replace objects\weapons\melee\energy_blade\energy_blade.model
+porttag replace objects\weapons\melee\energy_blade\energy_blade.mode
+porttag replace objects\weapons\melee\energy_blade\fp_energy_blade\fp_energy_blade.mode
+exit
+

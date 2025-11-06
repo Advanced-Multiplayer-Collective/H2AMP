@@ -1,0 +1,38 @@
+
+opencachefile "workingdir\maps\bipeds.map"
+porttag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.biped
+porttag objects\characters\h2_elite\mp_elite.biped
+porttag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\fp\fp.mode
+porttag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\fp_body\fp_body.mode
+exit
+
+edittag objects\characters\masterchief\mp_masterchief\mp_masterchief.biped
+SetField Model bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.model
+
+SaveTagChanges
+exit
+
+EditTag objects\characters\elite\mp_elite\mp_elite.biped
+SetField Model objects\characters\h2_elite\h2_elite_mp.model
+SaveTagChanges
+exit
+
+duplicatetag objects\characters\masterchief\shaders\mp_visor.shader objects\characters\masterchief\shaders\mp_visor_h2
+
+edittag objects\characters\masterchief\shaders\mp_visor.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap bean\objects\characters\masterchief\h2_masterchief\bitmaps\masterchief.bitmap
+SetField ShaderProperties[0].TextureConstants[4].Bitmap bean\objects\characters\masterchief\h2_masterchief\bitmaps\masterchief_bump.bitmap
+savetagchanges
+exit
+
+EditTag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.render_model
+SetField Materials[2].RenderMethod objects\characters\masterchief\shaders\mp_visor.shader
+SaveTagChanges
+exit
+
+EditTag globals\globals.globals
+SetField PlayerRepresentation[2].FirstPersonHands bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\fp\fp.mode
+SetField PlayerRepresentation[2].FirstPersonBody bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\fp_body\fp_body.mode
+savetagchanges
+exit
+

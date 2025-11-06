@@ -126,6 +126,8 @@ RunCommands workingdir\cmds\h2hud.cmds
 
 RunCommands workingdir\cmds\Halo_2_Shader_Fixes.cmds
 
+RunCommands workingdir\cmds\bipeds.cmds
+
 ## Setting H2 Movement Speed ##
 EditTag globals\globals.globals
 ## Spartan ##
