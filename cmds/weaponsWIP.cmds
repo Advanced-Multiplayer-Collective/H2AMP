@@ -1,8 +1,4 @@
 
-
-
-openmodpackage h2amp
-
 echo battle rifle
 
 opencachefile "E:\Halo Resources\Halo2V\zanzibar.map"
@@ -125,13 +121,4 @@ SetArgument normal_specular_tint 1 1 1 1
 savetagchanges
 exit
 
-echo Sword
-
-
-
-opencachefile "E:\Halo Resources\Halo2V\zanzibar.map"
-porttag replace objects\weapons\melee\energy_blade\energy_blade.model
-porttag replace objects\weapons\melee\energy_blade\energy_blade.mode
-porttag replace objects\weapons\melee\energy_blade\fp_energy_blade\fp_energy_blade.mode
-exit
 
