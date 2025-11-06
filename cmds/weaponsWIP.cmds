@@ -126,7 +126,7 @@ echo magnum
 Duplicatetag objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum.model_animation_graph objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum_og
 Savetagnames
 
-opencachefile "E:\Halo Resources\Halo2V\zanzibar.map"
+opencachefile "h2maps\zanzibar.map"
 porttag replace objects\weapons\pistol\magnum\magnum.model
 porttag replace objects\weapons\pistol\magnum\fp_magnum\fp_magnum.mode
 porttag replace objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum.jmad
@@ -159,7 +159,7 @@ exit
 
 echo shotgun
 
-opencachefile "E:\Halo Resources\Halo2V\zanzibar.map"
+opencachefile "h2maps\zanzibar.map"
 porttag replace objects\weapons\rifle\shotgun\shotgun.model
 porttag replace objects\weapons\rifle\shotgun\fp_shotgun\fp_shotgun.mode
 exit
@@ -185,4 +185,3 @@ EditTag objects\weapons\rifle\shotgun\shaders\shotgun_light.shader
 SetArgument self_illum_intensity 5
 savetagchanges
 exit
-
