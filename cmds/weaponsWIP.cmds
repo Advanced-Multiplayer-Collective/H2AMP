@@ -175,7 +175,7 @@ SetField MarkerGroups[1].Markers[0].Translation -0.024636278 0.005 -0.015
 savetagchanges
 exit
 
-objects\weapons\rifle\shotgun\shaders\shotgun_decal.shader
+EditTag objects\weapons\rifle\shotgun\shaders\shotgun_decal.shader
 SetArgument specular_coefficient 0.5
 SetArgument env_tint_color 1 1 1 1
 savetagchanges
