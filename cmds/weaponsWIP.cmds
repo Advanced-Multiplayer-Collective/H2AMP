@@ -1,4 +1,13 @@
 
+echo assault rifle
+
+opencachefile "h3maps\zanzibar.map"
+
+porttag replace objects\weapons\rifle\assault_rifle\assault_rifle.model
+porttag replace objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_rifle.mode
+exit
+
+
 echo battle rifle
 
 opencachefile "h2maps\zanzibar.map"
@@ -143,11 +152,15 @@ setinheritance MCC objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp
 savetagchanges
 exit
 
+
+
 #balance
 
 edittag objects\weapons\pistol\magnum\magnum.weapon
 SetField Magazines[0].RoundsLoadedMaximum 12
 SetField Barrels[0].Firing.FireRecoveryTime 0.12
+SetField FirstPersonWeaponOffset 0.06 -0.002 0.005
+SetField CenteredFirstPersonWeaponOffset 0.06 -0.002 0
 savetagchanges
 exit
 
@@ -184,4 +197,89 @@ exit
 EditTag objects\weapons\rifle\shotgun\shaders\shotgun_light.shader
 SetArgument self_illum_intensity 5
 savetagchanges
+exit
+
+
+echo Rocket
+
+opencachefile "h2maps\zanzibar.map"
+porttag replace objects\weapons\support_high\rocket_launcher\rocket_launcher.model
+porttag replace objects\weapons\support_high\rocket_launcher\fp_rocket_launcher\fp_rocket_launcher.render_model
+exit
+
+EditTag objects\weapons\support_high\rocket_launcher\rocket_launcher.model
+SetField PhysicsModel objects\weapons\support_high\rocket_launcher\rocket_launcher.physics_model
+savetagchanges
+exit
+
+EditTag objects\weapons\support_high\rocket_launcher\shaders\rocket_launcher_tubes.shader
+SetArgument env_tint_color 1 1 1 1
+SetArgument specular_coefficient 0.5
+savetagchanges
+exit
+
+EditTag objects\weapons\support_high\rocket_launcher\fp_rocket_launcher\fp_rocket_launcher.render_model
+SetField MarkerGroups[1].Markers[0].Rotation 0.4327794 -0.18890698 -0.083995394 0.8774742
+SetField MarkerGroups[1].Markers[0].Translation 0.26 0.01 -0.02
+savetagchanges
+exit
+
+
+echo Carbine
+
+duplicatetag objects\characters\masterchief\fp\weapons\rifle\fp_covenant_carbine\fp_covenant_carbine.jmad objects\characters\masterchief\fp\weapons\rifle\fp_covenant_carbine\fp_covenant_carbine_og
+
+
+opencachefile "h2maps\zanzibar.map"
+porttag replace objects\weapons\rifle\covenant_carbine\covenant_carbine.model
+porttag replace objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine.mode
+porttag replace objects\characters\masterchief\fp\weapons\rifle\fp_covenant_carbine\fp_covenant_carbine.jmad
+exit
+
+#Inheritance
+edittag objects\characters\masterchief\fp\weapons\rifle\fp_covenant_carbine\fp_covenant_carbine.jmad
+setinheritance MCC objects\characters\masterchief\fp\weapons\rifle\fp_covenant_carbine\fp_covenant_carbine_og.model_animation_graph
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\covenant_carbine\covenant_carbine.weapon
+SetField FirstPersonWeaponOffset 0.05 0 0.005
+SetField CenteredFirstPersonWeaponOffset 0.05 -0.001 0
+savetagchanges
+exit
+
+echo sword
+
+duplicatetag objects\characters\masterchief\fp\weapons\melee\fp_energy_blade\fp_energy_blade.model_animation_graph objects\characters\masterchief\fp\weapons\melee\fp_energy_blade\fp_energy_blade_og
+
+
+opencachefile "h2maps\zanzibar.map"
+porttag replace objects\weapons\melee\energy_blade\energy_blade.model
+porttag replace objects\weapons\melee\energy_blade\fp_energy_blade\fp_energy_blade.mode
+porttag replace objects\characters\masterchief\fp\weapons\melee\fp_energy_blade\fp_energy_blade.jmad
+exit
+
+#Inheritance
+edittag objects\characters\masterchief\fp\weapons\melee\fp_energy_blade\fp_energy_blade.jmad
+setinheritance MCC objects\characters\masterchief\fp\weapons\melee\fp_energy_blade\fp_energy_blade_og.jmad
+savetagchanges
+exit
+
+Edittag objects\weapons\melee\energy_blade\energy_blade.weapon
+SetField FirstPersonWeaponOffset 0.07 0 0.025
+SetField CenteredFirstPersonWeaponOffset 0.09 0 0.005
+savetagchanges
+exit
+
+EditTag objects\weapons\melee\energy_blade\shaders\energy_blade_handle.shader
+SetArgument env_tint_color 1 1 1 1
+SetArgument normal_specular_power 10
+SetArgument specular_coefficient 0.1
+savetagchanges
+exit
+
+edittag objects\weapons\melee\energy_blade\fp_energy_blade\fp_energy_blade.render_model
+SetField Materials[0].RenderMethod objects\weapons\melee\energy_blade\shaders\energy_blade.shader
+SetField Materials[1].RenderMethod objects\weapons\melee\energy_blade\shaders\energy_blade.shader
+SaveTagChanges
 exit
