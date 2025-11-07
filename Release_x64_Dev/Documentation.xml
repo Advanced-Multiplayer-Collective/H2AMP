@@ -986,7 +986,7 @@
             StringID resolver for 12.1.700123.
             </summary>
         </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.Add(System.IO.Stream,System.Byte[],System.UInt32@)">
+        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.Add(System.IO.Stream,System.ReadOnlySpan{System.Byte},System.UInt32@)">
             <summary>
             Adds a resource to the cache.
             </summary>
@@ -995,7 +995,7 @@
             <param name="compressedSize">On return, the size of the compressed data.</param>
             <returns>The index of the resource that was added.</returns>
         </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.AddRaw(System.IO.Stream,System.Byte[])">
+        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.AddRaw(System.IO.Stream,System.ReadOnlySpan{System.Byte})">
             <summary>
             Adds a raw, pre-compressed resource to the cache.
             </summary>
@@ -1012,7 +1012,7 @@
             <param name="compressedSize">Total size of the compressed data, including chunk headers.</param>
             <returns>The raw, compressed resource data.</returns>
         </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.ImportRaw(System.IO.Stream,System.Int32,System.Byte[])">
+        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.ImportRaw(System.IO.Stream,System.Int32,System.ReadOnlySpan{System.Byte})">
             <summary>
             Overwrites a resource with raw, pre-compressed data.
             </summary>
@@ -1029,7 +1029,7 @@
             <param name="compressedSize">Total size of the compressed data, including chunk headers.</param>
             <param name="outStream">The stream to write the decompressed resource data to.</param>
         </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.Compress(System.IO.Stream,System.Int32,System.Byte[])">
+        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.Compress(System.IO.Stream,System.Int32,System.ReadOnlySpan{System.Byte})">
             <summary>
             Compresses and saves data for a resource.
             </summary>
@@ -1038,16 +1038,16 @@
             <param name="data">The data to compress.</param>
             <returns>The total size of the compressed resource in bytes.</returns>
         </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.AddResource(TagTool.Common.PageableResource,System.IO.Stream)">
+        <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.AddResource(TagTool.Common.PageableResource,System.ReadOnlySpan{System.Byte})">
             <summary>
             Adds a new pageable_resource to the current cache.
             </summary>
             <param name="resource">The pageable_resource to add.</param>
-            <param name="dataStream">The stream to read the resource data from.</param>
+            <param name="data">Resource data</param>
             <exception cref="T:System.ArgumentNullException">resource</exception>
             <exception cref="T:System.ArgumentException">The input stream is not open for reading;dataStream</exception>
         </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.AddRawResource(TagTool.Common.PageableResource,System.Byte[])">
+        <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.AddRawResource(TagTool.Common.PageableResource,System.ReadOnlySpan{System.Byte})">
             <summary>
             Adds raw, pre-compressed resource data to a cache.
             </summary>
@@ -1063,16 +1063,6 @@
             <exception cref="T:System.ArgumentException">Thrown if the output stream is not open for writing.</exception>
             <exception cref="T:System.InvalidOperationException">Thrown if the file containing the resource has not been loaded.</exception>
         </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.ExtractResource(System.IO.Stream,TagTool.Common.PageableResource,System.IO.Stream)">
-            <summary>
-            Extracts and decompresses the data for a resource from the current cache.
-            </summary>
-            <param name="inStream"></param>
-            <param name="pageable">The resource.</param>
-            <param name="outStream">The stream to write the extracted data to.</param>
-            <exception cref="T:System.ArgumentException">Thrown if the output stream is not open for writing.</exception>
-            <exception cref="T:System.InvalidOperationException">Thrown if the file containing the resource has not been loaded.</exception>
-        </member>
         <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.ExtractRawResource(TagTool.Common.PageableResource)">
             <summary>
             Extracts raw, compressed resource data.
@@ -1080,12 +1070,12 @@
             <param name="resource">The resource.</param>
             <returns>The raw, compressed resource data.</returns>
         </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.ReplaceResource(TagTool.Common.PageableResource,System.IO.Stream)">
+        <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.ReplaceResource(TagTool.Common.PageableResource,System.ReadOnlySpan{System.Byte})">
             <summary>
             Compresses and replaces the data for a resource.
             </summary>
             <param name="resource">The resource whose data should be replaced. On success, the reference will be adjusted to account for the new data.</param>
-            <param name="dataStream">The stream to read the new data from.</param>
+            <param name="data">The new resource data</param>
             <exception cref="T:System.ArgumentException">Thrown if the input stream is not open for reading.</exception>
         </member>
         <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.ReplaceRawResource(TagTool.Common.PageableResource,System.Byte[])">
@@ -5077,14 +5067,6 @@
             If non null, overrides the ported tag name.
             </summary>
         </member>
-        <member name="F:TagTool.Porting.PortingContext.ConvertTagOptions.AllowReentrancy">
-            <summary>
-            If true, doesn't cache the ported tag.
-            </summary>
-            <remarks>
-            WARNING: If a tag references itself either directly (or indirectly) it would cause a stack overflow.
-            </remarks>
-        </member>
         <member name="M:TagTool.Porting.PortingContext.ConvertTag(System.IO.Stream,System.IO.Stream,TagTool.Cache.CachedTag,System.String,System.Object,TagTool.Porting.PortingContext.ConvertTagOptions@)">
             <summary>
             Ports a tag from the source cache to the destination cache
@@ -5832,12 +5814,12 @@
             Async compatible -- WARNING: no serialization is to occur within the scope of this function. pixl and vtsh must be serialized after this function.
             </summary>
         </member>
-        <member name="M:TagTool.Shaders.ShaderMatching.ShaderMatcherNew.FindClosestTemplate(System.String,System.String,System.String@,System.Boolean@)">
+        <member name="M:TagTool.Shaders.ShaderMatching.ShaderMatcher.FindClosestTemplate(System.String,System.String,System.String@,System.Boolean@)">
             <summary>
             Find the closest template in the base cache to the input template.
             </summary>
         </member>
-        <member name="M:TagTool.Shaders.ShaderMatching.ShaderMatcherNew.RebuildRmt2Options(TagTool.Shaders.ShaderMatching.ShaderMatcherNew.Rmt2Descriptor,System.String)">
+        <member name="M:TagTool.Shaders.ShaderMatching.ShaderMatcher.RebuildRmt2Options(TagTool.Shaders.Rmt2Descriptor,System.String)">
             <summary>
             Rebuilds an rmt2's options in memory so indices match up with the base cache
             </summary>
@@ -26879,6 +26861,11 @@
             <param name="cachePlatform"></param>
             <returns></returns>
         </member>
+        <member name="M:TagTool.Tags.TagFieldInfo.FieldInCacheVersion(TagTool.Tags.TagFieldInfo,TagTool.Cache.CacheVersion,TagTool.Cache.CachePlatform)">
+            <summary>
+            Check whether a field is in the given cache version and platform
+            </summary>
+        </member>
         <member name="F:TagTool.Tags.TagFile.Version">
             <summary>
             The version of the tag definition in the tag file.
@@ -27027,12 +27014,6 @@
             <summary>
             Utility class for analyzing a tag structure type's inheritance hierarchy.
             </summary>
-        </member>
-        <member name="M:TagTool.Tags.TagStructureInfo.#ctor(System.Type)">
-            <summary>
-            Constructs a <see cref="T:TagTool.Tags.TagStructureInfo"/> object which contains info about a tag structure type.
-            </summary>
-            <param name="structureType">The tag structure type to analyze.</param>
         </member>
         <member name="M:TagTool.Tags.TagStructureInfo.#ctor(System.Type,TagTool.Cache.CacheVersion,TagTool.Cache.CachePlatform)">
             <summary>

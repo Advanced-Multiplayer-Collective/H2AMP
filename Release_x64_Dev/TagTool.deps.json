@@ -10,14 +10,15 @@
         "dependencies": {
           "AssimpNet": "5.0.0-beta1",
           "HaloShaderGenerator": "1.0.0",
+          "K4os.Compression.LZ4": "1.3.8",
+          "K4os.Compression.LZ4.Streams": "1.3.8",
           "Microsoft.CodeAnalysis.CSharp.Scripting": "4.12.0",
           "Newtonsoft.Json": "13.0.3",
           "PluralizeService.Core": "1.2.21147.2",
           "Poly2Tri.NetStandard": "1.0.2",
           "System.Net.Http": "4.3.4",
           "System.Private.Uri": "4.3.2",
-          "System.Text.RegularExpressions": "4.3.1",
-          "lz4net": "1.0.15.93"
+          "System.Text.RegularExpressions": "4.3.1"
         },
         "runtime": {
           "TagTool.dll": {}
@@ -56,26 +57,32 @@
           }
         }
       },
-      "lz4net/1.0.15.93": {
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "lz4net.unsafe.netcore": "1.0.15.93"
-        },
+      "K4os.Compression.LZ4/1.3.8": {
         "runtime": {
-          "lib/netstandard1.0/LZ4.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "assemblyVersion": "1.3.8.0",
+            "fileVersion": "1.3.8.0"
           }
         }
       },
-      "lz4net.unsafe.netcore/1.0.15.93": {
+      "K4os.Compression.LZ4.Streams/1.3.8": {
         "dependencies": {
-          "NETStandard.Library": "1.6.1"
+          "K4os.Compression.LZ4": "1.3.8",
+          "K4os.Hash.xxHash": "1.0.8",
+          "System.IO.Pipelines": "6.0.3"
         },
         "runtime": {
-          "lib/netstandard1.0/LZ4pn.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "lib/net6.0/K4os.Compression.LZ4.Streams.dll": {
+            "assemblyVersion": "1.3.8.0",
+            "fileVersion": "1.3.8.0"
+          }
+        }
+      },
+      "K4os.Hash.xxHash/1.0.8": {
+        "runtime": {
+          "lib/net6.0/K4os.Hash.xxHash.dll": {
+            "assemblyVersion": "1.0.8.0",
+            "fileVersion": "1.0.8.0"
           }
         }
       },
@@ -427,6 +434,14 @@
       "System.IO.FileSystem.Primitives/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.1"
+        }
+      },
+      "System.IO.Pipelines/6.0.3": {
+        "runtime": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.522.21309"
+          }
         }
       },
       "System.Linq/4.3.0": {
@@ -859,19 +874,26 @@
       "path": "assimpnet/5.0.0-beta1",
       "hashPath": "assimpnet.5.0.0-beta1.nupkg.sha512"
     },
-    "lz4net/1.0.15.93": {
+    "K4os.Compression.LZ4/1.3.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-s92+YYtH4tiw0/0a7cyb+EXAOICtxZgPA1cL19L8paJZe39QViBaNl24o9ETBJxjgbm11OIMjuMUzX86id6SEg==",
-      "path": "lz4net/1.0.15.93",
-      "hashPath": "lz4net.1.0.15.93.nupkg.sha512"
+      "sha512": "sha512-LhwlPa7c1zs1OV2XadMtAWdImjLIsqFJPoRcIWAadSRn0Ri1DepK65UbWLPmt4riLqx2d40xjXRk0ogpqNtK7g==",
+      "path": "k4os.compression.lz4/1.3.8",
+      "hashPath": "k4os.compression.lz4.1.3.8.nupkg.sha512"
     },
-    "lz4net.unsafe.netcore/1.0.15.93": {
+    "K4os.Compression.LZ4.Streams/1.3.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tuJA5s13/5AF+fUcvERBBXtzK/gARwpJiHrqsCh2UH57e8qNp+WETNrKw63byK0Zle4OVTwuWgN0cY/uSc388Q==",
-      "path": "lz4net.unsafe.netcore/1.0.15.93",
-      "hashPath": "lz4net.unsafe.netcore.1.0.15.93.nupkg.sha512"
+      "sha512": "sha512-P15qr8dZAeo9GvYbUIPEYFQ0MEJ0i5iqr37wsYeRC3la2uCldOoeCa6to0CZ1taiwxIV+Mk8NGuZi+4iWivK9w==",
+      "path": "k4os.compression.lz4.streams/1.3.8",
+      "hashPath": "k4os.compression.lz4.streams.1.3.8.nupkg.sha512"
+    },
+    "K4os.Hash.xxHash/1.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Wp2F7BamQ2Q/7Hk834nV9vRQapgcr8kgv9Jvfm8J3D0IhDqZMMl+a2yxUq5ltJitvXvQfB8W6K4F4fCbw/P6YQ==",
+      "path": "k4os.hash.xxhash/1.0.8",
+      "hashPath": "k4os.hash.xxhash.1.0.8.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Analyzers/3.3.4": {
       "type": "package",
@@ -1201,6 +1223,13 @@
       "sha512": "sha512-6QOb2XFLch7bEc4lIcJH49nJN2HV+OC3fHDgsLVsBVBk3Y4hFAnOBGzJ2lUu7CyDDFo9IBWkSsnbkT6IBwwiMw==",
       "path": "system.io.filesystem.primitives/4.3.0",
       "hashPath": "system.io.filesystem.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.IO.Pipelines/6.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ryTgF+iFkpGZY1vRQhfCzX0xTdlV3pyaTTqRu2ETbEv+HlV7O6y7hyQURnghNIXvctl5DuZ//Dpks6HdL/Txgw==",
+      "path": "system.io.pipelines/6.0.3",
+      "hashPath": "system.io.pipelines.6.0.3.nupkg.sha512"
     },
     "System.Linq/4.3.0": {
       "type": "package",
