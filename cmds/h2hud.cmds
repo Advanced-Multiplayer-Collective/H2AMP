@@ -547,8 +547,8 @@ Exit
 Edittag ui\chud\spartan_laser.chud_definition
 SetField HudWidgets[2].BitmapWidgets[2].RenderData[0].OutputColorA HighlightForeground
 SetField HudWidgets[2].BitmapWidgets[2].RenderData[0].OutputColorB PrimaryBackground
-SetField HudWidgets[2].BitmapWidgets[4].RenderData[0].OutputColorA HighlightForeground
-SetField HudWidgets[2].BitmapWidgets[4].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[2].BitmapWidgets[5].RenderData[0].OutputColorA HighlightForeground
+SetField HudWidgets[2].BitmapWidgets[5].RenderData[0].OutputColorB SecondaryBackground
 
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
