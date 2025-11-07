@@ -1,5 +1,5 @@
 
-## Coagulation Shader Fixes
+## echo Coagulation Shader Fixes
 EditTag scenarios\shaders\multi\halo\coagulation\coag_rocks.shader
 SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
@@ -19,7 +19,7 @@ SaveTagChanges
 Exit
 
 
-## Sanctuary Shader Fixes
+## echo Sanctuary Shader Fixes
 EditTag scenarios\shaders\multi\deltatap\deltatap_rocks.shader
 SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
@@ -44,8 +44,64 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
-## Relic Shader Fixes
+## echo Relic Shader Fixes
 EditTag incompetent\default_object.render_model
 SetField Materials[0].RenderMethod objects\multi\shaders\invisible.shader
 SaveTagChanges
 Exit
+
+## echo Foundation Shader Fixes
+EditTag scenarios\shaders\multi\marathon\foundation\foun_grate.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+EditTag scenarios\shaders\multi\marathon\foundation\foun_grate_painted.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+## echo Gemeni Shader Fixes
+EditTag scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient_leaves.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_1_0_0_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+## echo Station Shader Fixes
+EditTag scenarios\shaders\multi\triplicate\station_wall.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+EditTag scenarios\shaders\multi\triplicate\station_floor.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+## echo Tombstone Shader Fixes
+EditTag scenarios\shaders\multi\halo\highplains\highplains_metal_walkways_grate.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+## echo Waterworks Shader Fixes
+EditTag scenarios\shaders\forerunner\industrial\floors\plate_rusted.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+EditTag scenarios\shaders\multi\waterworks\multi_banner.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+## echo Zanzibar Shader Fixes
+EditTag scenarios\shaders\forerunner\industrial\floors\plate_rusted.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
