@@ -30,6 +30,11 @@ OpenCacheFile "h2maps\beavercreek.map"
 PortTag *.scnr
 Exit
 
+EditTag scenarios\bitmaps\multi\halo\beavercreek\bc_carve.bitmap
+Importbitmap 0 "workingdir\bitmaps\bc_carve_inverted.dds"
+SaveTagChanges
+Exit
+
 OpenCacheFile "h2maps\burial_mounds.map"
 PortTag *.scnr
 Exit
