@@ -37,3 +37,9 @@ SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_1_0_0_0_0_0_
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
+
+## Relic Shader Fixes
+EditTag incompetent\default_object.render_model
+SetField Materials[0].RenderMethod objects\multi\shaders\invisible.shader
+SaveTagChanges
+Exit
