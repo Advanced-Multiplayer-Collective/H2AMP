@@ -6,6 +6,12 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+EditTag scenarios\shaders\multi\halo\coagulation\coag_ground.shader
+SetArgument glancing_specular_power 1
+SetArgument normal_specular_power 1
+SaveTagChanges
+Exit
+
 EditTag scenarios\shaders\multi\halo\coagulation\coag_washere.shader
 SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
