@@ -1,11 +1,11 @@
 "E:\ElDewrito 0.7 Official\maps\tags.dat"
 
 # echo ==Set Variables...==
-SetVariable modsfolder ""
-SetVariable h2maps ""
-SetVariable h3maps ""
-SetVariable odstmaps ""
-SetVariable workingdir ""
+SetVariable modsfolder "E:\ElDewrito 0.7 Official\mods"
+SetVariable h2maps "Z:\Halo Stuff\retail maps for porting and ed caches\Halo 2 maps"
+SetVariable h3maps "Z:\Halo Stuff\retail maps for porting and ed caches\Halo 3 maps"
+SetVariable h3mythicmaps "Z:\Halo Stuff\retail maps for porting and ed caches\Halo 3 Mythic maps"
+SetVariable odstmaps "Z:\Halo Stuff\retail maps for porting and ed caches\Halo 3 ODST maps"
 SetVariable workingdir "C:\Users\zekken\Documents\AMP PROJECTS\H2AMP"
 
 # echo ==Creating Mod Package...==
