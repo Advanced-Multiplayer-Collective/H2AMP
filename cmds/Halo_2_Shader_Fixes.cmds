@@ -92,6 +92,11 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+EditTag scenarios\objects\solo\earthcity\road_cone\shaders\road_cone.shader
+SetArgument self_illum_intensity 1
+SaveTagChanges
+Exit
+
 ## echo Waterworks Shader Fixes
 EditTag scenarios\shaders\forerunner\industrial\floors\plate_rusted.shader
 SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
