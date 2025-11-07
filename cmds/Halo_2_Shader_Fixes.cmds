@@ -120,3 +120,10 @@ EditTag scenarios\objects\multi\midship\midship_phantom_volume\midship_phantom_v
 SetField Materials[0].RenderMethod objects\multi\invisible_box\shaders\invisible_box.shader
 SaveTagChanges
 Exit
+
+## echo BeaverCreek Shader Fixes
+EditTag scenarios\shaders\nature\trees\tree_leafy_leaves.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
