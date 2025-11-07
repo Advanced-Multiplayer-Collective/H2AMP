@@ -105,7 +105,7 @@ SaveTagChanges
 Exit
 
 ## echo Zanzibar Shader Fixes
-EditTag scenarios\shaders\forerunner\industrial\floors\plate_rusted.shader
+EditTag scenarios\shaders\multi\zanzibar\spindle_grate.shader
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
