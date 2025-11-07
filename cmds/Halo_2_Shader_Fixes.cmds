@@ -1,5 +1,5 @@
 
-## Coagulation Rocks Shader Fix
+## Coagulation Shader Fixes
 EditTag scenarios\shaders\multi\halo\coagulation\coag_rocks.shader
 SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
@@ -8,6 +8,32 @@ Exit
 
 EditTag scenarios\shaders\multi\halo\coagulation\coag_washere.shader
 SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+
+## Sanctuary Shader Fixes
+EditTag scenarios\shaders\multi\deltatap\deltatap_rocks.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+EditTag scenarios\shaders\multi\halo\warlock\warlock_objects.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+EditTag scenarios\shaders\multi\halo\warlock\warlock_objects_light.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_0_0_0_0_1_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Additive
+SaveTagChanges
+Exit
+
+EditTag scenarios\shaders\multi\deltatap\sanc_trees.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_1_0_0_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
