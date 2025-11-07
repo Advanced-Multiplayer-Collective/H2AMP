@@ -1,6 +1,10 @@
-D:\eldewrito\eldewrito 0.7\ElDewrito\maps
+"E:\ElDewrito 0.7 Official\maps\tags.dat"
+
+# echo ==Set Variables...==
 SetVariable modsfolder ""
 SetVariable h2maps ""
+SetVariable h3maps ""
+SetVariable odstmaps ""
 SetVariable workingdir ""
 
 # echo ==Creating Mod Package...==
@@ -12,6 +16,8 @@ AMP Collective
 Multiplayer MainMenu
 
 RunCommands "workingdir\cmds\shaderupdates.cmds"
+
+RunCommands "workingdir\cmds\h2menu.cmds"
 
 OpenCacheFile "h2maps\ascension.map"
 PortTag *.scnr

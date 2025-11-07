@@ -1,0 +1,1626 @@
+
+opencachefile "odstmaps\c100.map"
+porttag levels\atlas\c100\c100_faux_lightmap.sLdT
+porttag objects\vehicles\cov_capital_ship\cov_capital_ship.scen
+porttag objects\levels\atlas\tether\tether_strand_c100\tether_strand_c100.scen
+portmultiplayerscenario none
+menu_test
+
+menu_test
+menu_test
+2
+1
+
+exit
+
+nametag levels\custom\menu_test\menu_test_bsp_0.sbsp levels\ui\mainmenu\bsp_menu
+nametag levels\ui\mainmenu\mainmenu.scnr levels\ui\mainmenu\mainmenu_ho
+opencachefile "h3mythicmaps\mainmenu.map"
+porttag replace levels\ui\mainmenu\sky\menu.skya
+porttag replace levels\ui\mainmenu\sky\ui.sefc
+DoNotReplaceGroups bitm
+porttag !UpdateMapFiles *.scnr
+exit
+opencachefile "h3maps\030_outskirts.map"
+porttag objects\vehicles\cov_cruiser\fx\digging_beam\digging_beam.effe
+exit
+
+updatemapfiles "h3mythicmaps\info"
+
+edittag objects\vehicles\cov_capital_ship\cov_capital_ship.scen
+addblockelements attachments
+setfield attachments[0].type objects\vehicles\cov_cruiser\fx\digging_beam\digging_beam.effe
+setfield attachments[0].AtlasFlags GameplayVisionMode
+savetagchanges
+exit
+
+opencachefile "h3mythicmaps\descent.map"
+porttag objects\levels\dlc\descent\egg_shield\egg_shield.bloc
+exit
+
+edittag objects\levels\dlc\descent\egg_shield\egg_shield.mode
+echo setfield materials[0].rendermethod null
+echo setfield materials[2].rendermethod null
+echo setfield materials[3].rendermethod null
+echo setfield materials[4].rendermethod null
+echo setfield materials[5].rendermethod null
+savetagchanges
+exit
+createtag scen
+nametag * objects\levels\dlc\descent\egg_shield\egg_shield
+edittag objects\levels\dlc\descent\egg_shield\egg_shield.scen
+setfield objecttype.halo3odst Scenery
+setfield boundingradius 1.986302
+setfield boundingoffset 0.0002773106 0.001095027 -0.0001298189
+setfield model objects\levels\dlc\descent\egg_shield\egg_shield.hlmt
+addblockelements multiplayerobject
+addblockelements pathfindingspheres
+setfield multiplayerobject[0].DefaultSpawnTime 30
+setfield multiplayerobject[0].DefaultAbandonTime 30
+setfield pathfindingspheres[0].center 0.0002773106 0.001095027 -0.0001298189
+setfield pathfindingspheres[0].radius 1.986302
+savetagchanges
+exit
+
+edittag levels\custom\menu_test\menu_test.scnr
+setfield scenery[0].paletteindex 0
+setfield scenery[0].nameindex -1
+setfield scenery[0].position 339 -775 -664
+setfield scenery[0].rotation -40 0 0
+setfield scenerypalette[0].object objects\vehicles\cov_capital_ship\cov_capital_ship.scen
+setfield scenerypalette[2].object null
+setfield scenerypalette[3].object null
+savetagchanges
+exit
+
+
+edittag levels\ui\mainmenu\mainmenu.scnr
+removeblockelements structurebsps * *
+removeblockelements skyreferences * *
+removeblockelements zonesetpvs * *
+removeblockelements zonesetaudibility * *
+removeblockelements zonesets * *
+removeblockelements designerzonesets * *
+addblockelements scenerypalette 7
+savetagchanges
+exit
+edittag levels\custom\menu_test\menu_test.scnr
+copyblockelements structurebsps * *
+exit
+edittag levels\ui\mainmenu\mainmenu.scnr
+pasteblockelements structurebsps
+savetagchanges
+exit
+edittag levels\custom\menu_test\menu_test.scnr
+copyblockelements skyreferences * *
+exit
+edittag levels\ui\mainmenu\mainmenu.scnr
+pasteblockelements skyreferences
+savetagchanges
+exit
+edittag levels\custom\menu_test\menu_test.scnr
+copyblockelements zonesetpvs * *
+exit
+edittag levels\ui\mainmenu\mainmenu.scnr
+pasteblockelements zonesetpvs
+savetagchanges
+exit
+edittag levels\custom\menu_test\menu_test.scnr
+copyblockelements zonesetaudibility * *
+exit
+edittag levels\ui\mainmenu\mainmenu.scnr
+pasteblockelements zonesetaudibility
+savetagchanges
+exit
+edittag levels\custom\menu_test\menu_test.scnr
+copyblockelements zonesets * *
+exit
+edittag levels\ui\mainmenu\mainmenu.scnr
+pasteblockelements zonesets
+savetagchanges
+exit
+edittag levels\custom\menu_test\menu_test.scnr
+removeblockelements scenery 1 1
+copyblockelements scenery 0 6
+exit
+edittag levels\ui\mainmenu\mainmenu.scnr
+pasteblockelements scenery
+savetagchanges
+exit
+
+stringid add elite_appearance
+stringid add spartan_appearance
+edittag levels\ui\mainmenu\mainmenu.scnr
+removeblockelements cutscenecamerapoints * *
+addblockelements cutscenecamerapoints 88
+addblockelements scenery
+setfield skyreferences[1].nameindex -1
+addblockelements objectnames 1
+setfield objectnames[2].name elite_appearance
+setfield objectnames[3].name spartan_appearance
+setfield objectnames[*].name appearance_pr
+setfield scenery[5].paletteindex 4
+setfield scenery[5].nameindex -1
+setfield scenery[5].position 1384 -1185 -648
+setfield scenery[5].rotation -130 0 0
+setfield scenery[5].ParentId.NameIndex -1
+setfield scenery[6].paletteindex 5
+setfield scenery[6].nameindex -1
+setfield scenery[6].position 1321 -1419 -768
+setfield scenery[6].rotation -147.616 0 0
+setfield scenery[6].ParentId.NameIndex -1
+setfield scenery[7].paletteindex 8
+setfield scenery[7].nameindex -1
+setfield scenery[7].ParentId.NameIndex -1
+setfield scenery[7].position 1337 -1005 -786
+setfield scenery[7].rotation -160 1 -2
+setfield scenery[8].paletteindex 6
+setfield scenery[8].nameindex -1
+setfield scenery[8].ParentId.NameIndex -1
+setfield scenery[9].paletteindex 7
+setfield scenery[9].nameindex -1
+setfield scenery[9].ParentId.NameIndex -1
+setfield scenery[10].paletteindex 9
+setfield scenery[10].nameindex -1
+setfield scenery[10].ParentId.NameIndex -1
+setfield scenery[11].paletteindex 10
+setfield scenery[11].nameindex -1
+setfield scenery[11].ParentId.NameIndex -1
+setfield scenery[11].position 762 -1481 -706
+setfield scenery[11].rotation 0 0 0
+setfield scenery[11].scale 1
+setfield scenery[11].ObjectId.UniqueId 28352 23
+setfield scenery[11].ObjectId.OriginBspIndex -1
+setfield scenery[11].ObjectId.Type.Halo3ODST Scenery
+setfield scenery[11].ObjectId.Source Editor
+setfield scenery[11].bsppolicy AlwaysPlaced
+setfield scenery[11].EditingBoundToBsp -1
+setfield scenery[11].EditorFolder -1
+setfield scenery[11].CanAttachToBspFlags 0
+setfield scenery[11].AiSpawningSquad -1
+setfield scenery[11].multiplayer.MapVariantParent.NameIndex -1
+setfield scenerypalette[4].object objects\vehicles\cov_capital_ship\cov_capital_ship.scen
+setfield scenerypalette[5].object objects\levels\atlas\tether\tether_version_undamaged_c100_sky_drop\tether_version_undamaged_c100_sky_drop.scen
+setfield scenerypalette[6].object objects\levels\atlas\c100\lowpoly_city\lowpoly_city.scen
+setfield scenerypalette[7].object objects\levels\atlas\c100\lowpoly_city_top\lowpoly_city_top.scen
+setfield scenerypalette[8].object objects\levels\atlas\tether\tether_strand_c100\tether_strand_c100.scen
+setfield scenerypalette[9].object objects\levels\atlas\c100\lowpoly_arcology\lowpoly_arcology.scen
+setfield scenerypalette[10].object objects\levels\dlc\descent\egg_shield\egg_shield.scen
+setfield bipeds[0].position 1390.95 -1000.694 -700.961
+setfield bipeds[0].rotation 0 0 0
+setfield bipeds[0].ObjectId.UniqueId 0 4
+setfield bipeds[0].CanAttachToBspFlags 1
+setfield bipeds[1].position 1390.95 -1000.694 -700.961
+setfield bipeds[1].ObjectId.UniqueId 0 5
+foreach bipeds setfield CanAttachToBspFlags 1
+setfield weapons[0].scale 1
+foreach weapons setfield CanAttachToBspFlags 1
+setfield weaponpalette[0].object objects\weapons\rifle\battle_rifle\battle_rifle.weap
+echo flythrough
+setfield cutscenecamerapoints[0].name flythrough_0
+setfield cutscenecamerapoints[0].position 718 -651 -700
+setfield cutscenecamerapoints[0].orientation 57.020 24.035 32.114
+setfield cutscenecamerapoints[1].name flythrough_1
+setfield cutscenecamerapoints[1].position 1231 -643 -767
+setfield cutscenecamerapoints[1].orientation -48.827 -2.355 2.690
+setfield cutscenecamerapoints[2].name flythrough_2
+setfield cutscenecamerapoints[2].position 1384 -811 -752
+setfield cutscenecamerapoints[2].orientation -86.092 -0.231 3.384
+setfield cutscenecamerapoints[3].name flythrough_3
+setfield cutscenecamerapoints[3].position 1400 -968 -746
+setfield cutscenecamerapoints[3].orientation -90.735 -0.198 -15.078
+setfield cutscenecamerapoints[4].name flythrough_4
+setfield cutscenecamerapoints[4].position 1328 -1221 -595
+setfield cutscenecamerapoints[4].orientation -87.234 -0.060 1.236
+setfield cutscenecamerapoints[5].name flythrough_5
+setfield cutscenecamerapoints[5].position 1497 -1476 -665
+setfield cutscenecamerapoints[5].orientation -174.105 20.663 2.087
+setfield cutscenecamerapoints[6].name flythrough_6
+setfield cutscenecamerapoints[6].position 1355 -1663 -665
+setfield cutscenecamerapoints[6].orientation 104.379 4.491 -16.983
+setfield cutscenecamerapoints[7].name flythrough_7
+setfield cutscenecamerapoints[7].position 1051 -1620 -668
+setfield cutscenecamerapoints[7].orientation 46.222 -4.130 -4.299
+setfield cutscenecamerapoints[8].name flythrough_8
+setfield cutscenecamerapoints[8].position 491 -1053 -763
+setfield cutscenecamerapoints[8].orientation -158.916 23.013 8.571
+setfield cutscenecamerapoints[9].name flythrough_9
+setfield cutscenecamerapoints[9].position 395 -862 -735
+setfield cutscenecamerapoints[9].orientation 17.403 -5.206 -1.629
+setfield cutscenecamerapoints[10].name flythrough_10
+setfield cutscenecamerapoints[10].position 588 -815 -701
+setfield cutscenecamerapoints[10].orientation 53.250 4.805 6.400
+echo campaign
+setfield cutscenecamerapoints[11].name campaign_in
+setfield cutscenecamerapoints[11].position 450.241 -1060.657 -768.118
+setfield cutscenecamerapoints[11].orientation 50.516 -1.983 -2.406
+setfield cutscenecamerapoints[12].name campaign
+setfield cutscenecamerapoints[12].position 450.241 -1060.657 -768.118
+setfield cutscenecamerapoints[12].orientation 50.516 -1.983 -2.406
+setfield cutscenecamerapoints[13].name campaign_path_02
+setfield cutscenecamerapoints[13].position 450.241 -1060.657 -768.118
+setfield cutscenecamerapoints[13].orientation 50.516 -1.983 -2.406
+setfield cutscenecamerapoints[14].name campaign_path_03
+setfield cutscenecamerapoints[14].position 450.241 -1060.657 -768.118
+setfield cutscenecamerapoints[14].orientation 50.516 -1.983 -2.406
+setfield cutscenecamerapoints[15].name campaign_path_04
+setfield cutscenecamerapoints[15].position 450.241 -1060.657 -768.118
+setfield cutscenecamerapoints[15].orientation 50.516 -1.983 -2.406
+echo matchmaking
+setfield cutscenecamerapoints[16].name matchmaking_in
+setfield cutscenecamerapoints[16].position 0 0 0
+setfield cutscenecamerapoints[16].orientation 0 0 0
+setfield cutscenecamerapoints[17].name matchmaking
+setfield cutscenecamerapoints[17].position 0 0 0
+setfield cutscenecamerapoints[17].orientation 0 0 0
+setfield cutscenecamerapoints[18].name mm_path_02
+setfield cutscenecamerapoints[18].position 0 0 0
+setfield cutscenecamerapoints[18].orientation 0 0 0
+setfield cutscenecamerapoints[19].name mm_path_03
+setfield cutscenecamerapoints[19].position 0 0 0
+setfield cutscenecamerapoints[19].orientation 0 0 0
+setfield cutscenecamerapoints[20].name mm_path_04
+setfield cutscenecamerapoints[20].position 0 0 0
+setfield cutscenecamerapoints[20].orientation 0 0 0
+echo custom_games
+setfield cutscenecamerapoints[21].name custom_in
+setfield cutscenecamerapoints[21].position 457.406 -1044.095 -785.677
+setfield cutscenecamerapoints[21].orientation -88.104 0.459 -13.605
+setfield cutscenecamerapoints[22].name custom_games
+setfield cutscenecamerapoints[22].position 457.406 -1044.095 -785.677
+setfield cutscenecamerapoints[22].orientation -88.104 0.459 -13.605
+setfield cutscenecamerapoints[23].name custom_path_02
+setfield cutscenecamerapoints[23].position 457.406 -1044.095 -785.677
+setfield cutscenecamerapoints[23].orientation -88.104 0.459 -13.605
+setfield cutscenecamerapoints[24].name custom_path_03
+setfield cutscenecamerapoints[24].position 457.406 -1044.095 -785.677
+setfield cutscenecamerapoints[24].orientation -88.104 0.459 -13.605
+setfield cutscenecamerapoints[25].name custom_path_04
+setfield cutscenecamerapoints[25].position 457.406 -1044.095 -785.677
+setfield cutscenecamerapoints[25].orientation -88.104 0.459 -13.605
+echo forge
+setfield cutscenecamerapoints[26].name editor_in
+setfield cutscenecamerapoints[26].position 0 0 0
+setfield cutscenecamerapoints[26].orientation 0 0 0
+setfield cutscenecamerapoints[27].name editor
+setfield cutscenecamerapoints[27].position 0 0 0
+setfield cutscenecamerapoints[27].orientation 0 0 0
+setfield cutscenecamerapoints[28].name editor_path_02
+setfield cutscenecamerapoints[28].position 0 0 0
+setfield cutscenecamerapoints[28].orientation 0 0 0
+setfield cutscenecamerapoints[29].name editor_path_03
+setfield cutscenecamerapoints[29].position 0 0 0
+setfield cutscenecamerapoints[29].orientation 0 0 0
+setfield cutscenecamerapoints[30].name editor_path_04
+setfield cutscenecamerapoints[30].position 0 0 0
+setfield cutscenecamerapoints[30].orientation 0 0 0
+echo theater
+setfield cutscenecamerapoints[31].name theater_in
+setfield cutscenecamerapoints[31].position 0 0 0
+setfield cutscenecamerapoints[31].orientation 0 0 0
+setfield cutscenecamerapoints[32].name theater
+setfield cutscenecamerapoints[32].position 0 0 0
+setfield cutscenecamerapoints[32].orientation 0 0 0
+setfield cutscenecamerapoints[33].name theater_path_02
+setfield cutscenecamerapoints[33].position 0 0 0
+setfield cutscenecamerapoints[33].orientation 0 0 0
+setfield cutscenecamerapoints[34].name theater_path_03
+setfield cutscenecamerapoints[34].position 0 0 0
+setfield cutscenecamerapoints[34].orientation 0 0 0
+setfield cutscenecamerapoints[35].name theater_path_04
+setfield cutscenecamerapoints[35].position 0 0 0
+setfield cutscenecamerapoints[35].orientation 0 0 0
+echo customization
+setfield cutscenecamerapoints[36].name settings_cam
+setfield cutscenecamerapoints[36].position 1330.955 -767.694 -769.961
+setfield cutscenecamerapoints[36].orientation -39.835 1.373 -1.145
+echo customization_cameras
+setfield cutscenecamerapoints[37].name spartan_chest_wide
+setfield cutscenecamerapoints[38].name spartan_helmet_wide
+setfield cutscenecamerapoints[39].name spartan_leftshoulder_wide
+setfield cutscenecamerapoints[40].name spartan_rightshoulder_wide
+setfield cutscenecamerapoints[41].name spartan_leftarm_wide
+setfield cutscenecamerapoints[42].name spartan_rightarm_wide
+setfield cutscenecamerapoints[43].name spartan_legs_wide
+setfield cutscenecamerapoints[44].name spartan_effects_wide
+setfield cutscenecamerapoints[45].name spartan_backpack_wide
+setfield cutscenecamerapoints[46].name spartan_chest_standard
+setfield cutscenecamerapoints[47].name spartan_helmet_standard
+setfield cutscenecamerapoints[48].name spartan_leftshoulder_standard
+setfield cutscenecamerapoints[49].name spartan_rightshoulder_standard
+setfield cutscenecamerapoints[50].name spartan_leftarm_standard
+setfield cutscenecamerapoints[51].name spartan_rightarm_standard
+setfield cutscenecamerapoints[52].name spartan_legs_standard
+setfield cutscenecamerapoints[53].name spartan_effects_standard
+setfield cutscenecamerapoints[54].name spartan_backpack_standard
+setfield cutscenecamerapoints[55].name elite_chest_wide
+setfield cutscenecamerapoints[56].name elite_head_wide
+setfield cutscenecamerapoints[57].name elite_leftforearm_wide
+setfield cutscenecamerapoints[58].name elite_rightforearm_wide
+setfield cutscenecamerapoints[59].name elite_leftshoulder_wide
+setfield cutscenecamerapoints[60].name elite_rightshoulder_wide
+setfield cutscenecamerapoints[61].name elite_legs_wide
+setfield cutscenecamerapoints[62].name elite_waist_wide
+setfield cutscenecamerapoints[63].name elite_back_wide
+setfield cutscenecamerapoints[64].name elite_armsflair_wide
+setfield cutscenecamerapoints[65].name elite_shouldersflair_wide
+setfield cutscenecamerapoints[66].name elite_thighsflair_wide
+setfield cutscenecamerapoints[67].name elite_chest_standard
+setfield cutscenecamerapoints[68].name elite_head_standard
+setfield cutscenecamerapoints[69].name elite_leftforearm_standard
+setfield cutscenecamerapoints[70].name elite_rightforearm_standard
+setfield cutscenecamerapoints[71].name elite_leftshoulder_standard
+setfield cutscenecamerapoints[72].name elite_rightshoulder_standard
+setfield cutscenecamerapoints[73].name elite_legs_standard
+setfield cutscenecamerapoints[74].name elite_waist_standard
+setfield cutscenecamerapoints[75].name elite_back_standard
+setfield cutscenecamerapoints[76].name elite_armsflair_standard
+setfield cutscenecamerapoints[77].name elite_shouldersflair_standard
+setfield cutscenecamerapoints[78].name elite_thighsflair_standard
+echo survival cam
+setfield cutscenecamerapoints[79].name survival_in
+setfield cutscenecamerapoints[79].position 0 0 0
+setfield cutscenecamerapoints[79].orientation 0 0 0
+setfield cutscenecamerapoints[80].name survival_cam
+setfield cutscenecamerapoints[80].position 0 0 0
+setfield cutscenecamerapoints[80].orientation 0 0 0
+setfield cutscenecamerapoints[81].name survival_path_02
+setfield cutscenecamerapoints[81].position 0 0 0
+setfield cutscenecamerapoints[81].orientation 0 0 0
+setfield cutscenecamerapoints[82].name survival_path_03
+setfield cutscenecamerapoints[82].position 0 0 0
+setfield cutscenecamerapoints[82].orientation 0 0 0
+setfield cutscenecamerapoints[83].name survival_path_04
+setfield cutscenecamerapoints[83].position 0 0 0
+setfield cutscenecamerapoints[83].orientation 0 0 0
+echo server_browser_cam
+setfield cutscenecamerapoints[84].name server_browser_cam
+setfield cutscenecamerapoints[84].position 0 0 0
+setfield cutscenecamerapoints[84].orientation 0 0 0
+setfield cutscenecamerapoints[85].name server_browser_path_02
+setfield cutscenecamerapoints[85].position 0 0 0
+setfield cutscenecamerapoints[85].orientation 0 0 0
+setfield cutscenecamerapoints[86].name server_browser_path_03
+setfield cutscenecamerapoints[86].position 0 0 0
+setfield cutscenecamerapoints[86].orientation 0 0 0
+setfield cutscenecamerapoints[87].name server_browser_path_04
+setfield cutscenecamerapoints[87].position 0 0 0
+setfield cutscenecamerapoints[87].orientation 0 0 0
+savetagchanges
+
+compilescripts workingdir\assets\mainmenu_mythic.hsc
+
+setfield skyparameters levels\multi\zanzibar\sky\zanzibar.skya
+setfield lightmap levels\atlas\c100\c100_faux_lightmap.sLdT
+addblockelements lightvolumes
+setfield lightvolumes[*].paletteindex 0
+setfield lightvolumes[*].nameindex -1
+setfield lightvolumes[*].position 1330.8 -767.825 -769.445
+setfield lightvolumes[*].rotation 65.14979 0 -90
+setfield lightvolumes[*].x 1349.8
+setfield lightvolumes[*].y -759.825
+setfield lightvolumes[*].z -773.445
+setfield lightvolumes[*].type2 Sphere
+savetagchanges
+exit
+
+echo edittag levels\ui\mainmenu\sky\menu.skya
+echo setfield atmosphereproperties[0].unknown6 32
+echo savetagchanges
+echo exit
+
+echo old
+echo Edittag ui\halox\main_menu\main_menu.scn3
+echo setfield ScriptIndex 43
+echo savetagchanges
+echo exit
+echo Edittag ui\halox\pregame_lobby\pregame_lobby_mapeditor.scn3
+echo setfield ScriptIndex 48
+echo savetagchanges
+echo exit
+echo Edittag ui\halox\pregame_lobby\pregame_lobby_matchmaking.scn3
+echo setfield ScriptIndex -1
+echo savetagchanges
+echo exit
+echo Edittag ui\halox\pregame_lobby\pregame_lobby_multiplayer.scn3
+echo setfield ScriptIndex 46
+echo savetagchanges
+echo exit
+echo Edittag ui\halox\pregame_lobby\pregame_lobby_campaign.scn3
+echo setfield ScriptIndex 44
+echo savetagchanges
+echo exit
+echo Edittag ui\halox\pregame_lobby\pregame_lobby_survival.scn3
+echo setfield ScriptIndex 49
+echo savetagchanges
+echo exit
+
+echo new
+Edittag ui\halox\main_menu\main_menu.scn3
+setfield ScriptIndex 7
+savetagchanges
+exit
+Edittag ui\halox\pregame_lobby\pregame_lobby_mapeditor.scn3
+setfield ScriptIndex 12
+savetagchanges
+exit
+Edittag ui\halox\pregame_lobby\pregame_lobby_matchmaking.scn3
+setfield ScriptIndex 9
+savetagchanges
+exit
+Edittag ui\halox\pregame_lobby\pregame_lobby_multiplayer.scn3
+setfield ScriptIndex 10
+savetagchanges
+exit
+Edittag ui\halox\pregame_lobby\pregame_lobby_campaign.scn3
+setfield ScriptIndex 8
+savetagchanges
+exit
+Edittag ui\halox\pregame_lobby\pregame_lobby_survival.scn3
+setfield ScriptIndex 13
+savetagchanges
+exit
+
+edittag ui\halox\main_menu\main_menu_list.skn3
+setfield textwidgets[0].Definition.flags DoNotApplyOldContentUpscaling,StringFromExportedStringId,NoDropShadow,AllowListItemToOverrideAnimationSkin
+setfield textwidgets[0].Definition.guirenderblock.Bounds720p 2 0 45 378
+setfield textwidgets[0].Definition.CustomFont LargeBodyText
+savetagchanges
+exit
+edittag ui\halox\main_menu\main_menu.scn3
+setfield guirenderblock.Bounds720p -413 -300 420 756
+foreach groupwidgets[0].Definition.bitmapwidgets setfield bitmap null
+foreach groupwidgets[0].Definition.bitmapwidgets setfield flags 0
+setfield groupwidgets[0].Definition.listwidgets[0].Definition.Items[7].guirenderblock.Bounds720p 198 0 0 0
+setfield groupwidgets[0].Definition.listwidgets[0].Definition.Items[7].guirenderblock.Bounds480i 0 0 0 0
+setfield groupwidgets[0].Definition.textwidgets[1].Definition.flags DoNotApplyOldContentUpscaling,Scrollable
+setfield groupwidgets[0].Definition.textwidgets[1].Definition.guirenderblock.Bounds720p 800 111 830 489
+setfield groupwidgets[0].Definition.textwidgets[1].Definition.guirenderblock.Bounds480i 534 52 573 270
+setfield groupwidgets[0].Definition.bitmapwidgets[0].Definition.Flags None
+setfield groupwidgets[0].Definition.bitmapwidgets[0].Definition.Bitmap null
+setfield groupwidgets[0].Definition.bitmapwidgets[1].Definition.Flags None
+setfield groupwidgets[0].Definition.bitmapwidgets[1].Definition.Bitmap null
+setfield groupwidgets[0].Definition.bitmapwidgets[2].Definition.Flags None
+setfield groupwidgets[0].Definition.bitmapwidgets[2].Definition.Bitmap null
+setfield groupwidgets[0].Definition.bitmapwidgets[3].Definition.Flags None
+setfield groupwidgets[0].Definition.bitmapwidgets[3].Definition.Bitmap null
+setfield groupwidgets[1].Definition.bitmapwidgets[0].Definition.Flags DoNotApplyOldContentUpscaling
+setfield groupwidgets[1].Definition.bitmapwidgets[0].Definition.guirenderblock.Bounds720p 250 -25 0 0
+setfield groupwidgets[1].Definition.bitmapwidgets[0].Definition.guirenderblock.Bounds480i 408 337 0 0
+setfield groupwidgets[1].Definition.bitmapwidgets[1].Definition.Flags DoNotApplyOldContentUpscaling
+setfield groupwidgets[1].Definition.bitmapwidgets[1].Definition.guirenderblock.Bounds720p 918 1269 0 0
+setfield groupwidgets[1].Definition.bitmapwidgets[1].Definition.guirenderblock.Bounds480i 551 669 0 0
+savetagchanges
+exit
+exit
+createtag bitm
+nametag * ui\halox\common\main_menu\highlight_bar
+edittag ui\halox\common\main_menu\highlight_bar.bitm
+importbitmap 0 "workingdir\tags\ui\halox\common\main_menu\highlight_bar.dds"
+savetagchanges
+exit
+edittag ui\halox\main_menu\halo3_logo_ui.bitm
+importbitmap 0 "workingdir\tags\ui\halox\main_menu\halo3_logo_ui.dds"
+savetagchanges
+exit
+edittag ui\halox\main_menu\main_menu_offline.bkey
+setfield textwidgets[0].Definition.guirenderblock.Bounds720p 791 841 837 1118
+savetagchanges
+exit
+edittag ui\halox\main_menu\main_menu_list.skn3
+setfield bitmapwidgets[0].Definition.bitmap ui\halox\common\main_menu\highlight_bar.bitm
+savetagchanges
+exit
+
+nametag objects\levels\atlas\tether\tether_strand_c100\tether_strand_c100.mode objects\levels\atlas\city_bridge\city_bridge
+nametag objects\levels\atlas\tether\tether_strand_c100\tether_strand_c100.hlmt objects\levels\atlas\city_bridge\city_bridge
+nametag objects\levels\atlas\tether\tether_strand_c100\tether_strand_c100.scen objects\levels\atlas\city_bridge\city_bridge
+
+generatebitmap objects\levels\atlas\city_bridge\shaders\metal_strips_c "workingdir\tags\mainmenu\scenarios\bitmaps\human\urban\metals\metal_strips_c_dif.dds"
+generatebitmap objects\levels\atlas\city_bridge\shaders\metal_strips_c_bump "workingdir\tags\mainmenu\scenarios\bitmaps\human\urban\metals\metal_strips_c_bump.dds"
+generatebitmap objects\levels\atlas\city_bridge\shaders\street_straight "workingdir\tags\mainmenu\scenarios\bitmaps\human\urban\metals\street_straight.dds"
+generatebitmap objects\levels\atlas\city_bridge\shaders\street_straight_bump "workingdir\tags\mainmenu\scenarios\bitmaps\human\urban\metals\street_straight_bump.dds"
+generatebitmap objects\levels\atlas\city_bridge\shaders\matte_grey "workingdir\tags\mainmenu\scenarios\bitmaps\human\urban\metals\matte_grey.dds"
+generatebitmap objects\levels\atlas\city_bridge\shaders\matte_grey_edge "workingdir\tags\mainmenu\scenarios\bitmaps\human\urban\metals\matte_grey_edge_dif.dds"
+generatebitmap objects\levels\atlas\city_bridge\shaders\matte_grey_edge_bump "workingdir\tags\mainmenu\scenarios\bitmaps\human\urban\metals\matte_grey_edge_bump.dds"
+generatebitmap objects\levels\atlas\city_bridge\shaders\concrete_stained_pier "workingdir\tags\mainmenu\scenarios\bitmaps\human\urban\concrete\concrete_stained_pier_dif.dds"
+
+generaterendermethod objects\levels\atlas\city_bridge\shaders\metal_strips_c_rusty shaders\shader_templates\_0_2_0_1_2_2_0_0_0_0_0_0
+generaterendermethod objects\levels\atlas\city_bridge\shaders\street_straight_unlit shaders\shader_templates\_0_2_0_1_2_2_0_0_0_0_0_0
+generaterendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty shaders\shader_templates\_0_2_0_1_2_2_0_0_0_0_0_0
+generaterendermethod objects\levels\atlas\city_bridge\shaders\matte_grey shaders\shader_templates\_0_2_0_1_2_2_0_0_0_0_0_0
+generaterendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge shaders\shader_templates\_0_2_0_1_2_2_0_0_0_0_0_0
+generaterendermethod objects\levels\atlas\city_bridge\shaders\concrete_stained_pier shaders\shader_templates\_0_2_0_1_2_2_0_0_0_0_0_0
+
+edittag objects\levels\atlas\city_bridge\shaders\metal_strips_c_rusty.rmsh
+setbitmap base_map objects\levels\atlas\city_bridge\shaders\metal_strips_c.bitm
+setbitmap bump_map objects\levels\atlas\city_bridge\shaders\metal_strips_c_bump.bitm
+setbitmap detail_map levels\dlc\docks\bitmaps\metal\hb_metal_rust_detail.bitm
+savetagchanges
+exit
+edittag objects\levels\atlas\city_bridge\shaders\street_straight_unlit.rmsh
+setbitmap base_map objects\levels\atlas\city_bridge\shaders\street_straight.bitm
+setbitmap bump_map objects\levels\atlas\city_bridge\shaders\street_straight_bump.bitm
+savetagchanges
+exit
+edittag objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setbitmap base_map objects\levels\atlas\city_bridge\shaders\matte_grey_edge.bitm
+setbitmap bump_map objects\levels\atlas\city_bridge\shaders\matte_grey_edge_bump.bitm
+setbitmap detail_map levels\dlc\docks\bitmaps\metal\hb_metal_rust_detail.bitm
+savetagchanges
+exit
+edittag objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setbitmap base_map objects\levels\atlas\city_bridge\shaders\matte_grey.bitm
+savetagchanges
+exit
+edittag objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setbitmap base_map objects\levels\atlas\city_bridge\shaders\matte_grey_edge.bitm
+setbitmap bump_map objects\levels\atlas\city_bridge\shaders\matte_grey_edge_bump.bitm
+savetagchanges
+exit
+edittag objects\levels\atlas\city_bridge\shaders\concrete_stained_pier.rmsh
+setbitmap base_map objects\levels\atlas\city_bridge\shaders\concrete_stained_pier.bitm
+savetagchanges
+exit
+
+edittag objects\levels\atlas\city_bridge\city_bridge.mode
+replacerendergeometry workingdir\tags\objects\levels\atlas\city_bridge\city_bridge.dae
+AddBlockElements Materials 54
+setfield materials[0].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[1].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[2].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[5].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[8].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[11].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[14].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[17].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[18].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[21].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[24].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[25].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[26].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[27].rendermethod objects\levels\atlas\city_bridge\shaders\concrete_stained_pier.rmsh
+setfield materials[28].rendermethod objects\levels\atlas\city_bridge\shaders\metal_strips_c_rusty.rmsh
+setfield materials[29].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[30].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[31].rendermethod objects\levels\atlas\city_bridge\shaders\concrete_stained_pier.rmsh
+setfield materials[32].rendermethod objects\levels\atlas\city_bridge\shaders\metal_strips_c_rusty.rmsh
+setfield materials[33].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[34].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[35].rendermethod objects\levels\atlas\city_bridge\shaders\concrete_stained_pier.rmsh
+setfield materials[36].rendermethod objects\levels\atlas\city_bridge\shaders\metal_strips_c_rusty.rmsh
+setfield materials[37].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[38].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[39].rendermethod objects\levels\atlas\city_bridge\shaders\concrete_stained_pier.rmsh
+setfield materials[40].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[41].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[42].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[43].rendermethod objects\levels\atlas\city_bridge\shaders\concrete_stained_pier.rmsh
+setfield materials[44].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[45].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[46].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[47].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[48].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[49].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[50].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[51].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[52].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[53].rendermethod objects\levels\atlas\city_bridge\shaders\street_straight_unlit.rmsh
+savetagchanges
+exit
+
+generatebitmap ui\halox\pregame_lobby\lobby_display "workingdir\tags\ui\global_bitmaps\lobby_display.dds"
+generatebitmap ui\halox\pregame_lobby\framing_center_a "workingdir\tags\ui\global_bitmaps\framing_center_a.dds"
+generatebitmap ui\halox\pregame_lobby\framing_center_b "workingdir\tags\ui\global_bitmaps\framing_center_b.dds"
+generatebitmap ui\halox\pregame_lobby\divider "workingdir\tags\ui\global_bitmaps\divider_new.dds"
+generatebitmap ui\halox\pregame_lobby\divider2 "workingdir\tags\ui\global_bitmaps\divider2_new.dds"
+generatebitmap ui\halox\pregame_lobby\button1 "workingdir\tags\ui\global_bitmaps\button1.dds"
+generatebitmap ui\halox\pregame_lobby\map_bkd "workingdir\tags\ui\global_bitmaps\map_bkd.dds"
+edittag ui\halox\common\roster\roster_unfocused_ui.bitm
+importbitmap 0 "workingdir\tags\ui\global_bitmaps\roster_unfocused_ui.dds"
+importbitmap 1 "workingdir\tags\ui\global_bitmaps\roster_unfocused_ui.dds"
+importbitmap 2 "workingdir\tags\ui\global_bitmaps\roster_unfocused_ui.dds"
+importbitmap 3 "workingdir\tags\ui\global_bitmaps\roster_unfocused_ui.dds"
+savetagchanges
+exit
+edittag ui\halox\common\roster\roster_focused_ui.bitm
+importbitmap 0 "workingdir\tags\ui\global_bitmaps\roster_focused_ui.dds"
+addblockelements Sequences[0].Sprites 3
+SetField Sequences[0].Sprites[0].Top 0.75
+SetField Sequences[0].Sprites[1].BitmapIndex 0 
+SetField Sequences[0].Sprites[1].Left 0 
+SetField Sequences[0].Sprites[1].Right 1
+SetField Sequences[0].Sprites[1].Top 0
+SetField Sequences[0].Sprites[1].Bottom 0.25
+SetField Sequences[0].Sprites[1].RegistrationPoint 0.5 0.125
+SetField Sequences[0].Sprites[2].BitmapIndex 0
+SetField Sequences[0].Sprites[2].Left 0.0
+SetField Sequences[0].Sprites[2].Right 1.0
+SetField Sequences[0].Sprites[2].Top 0.25
+SetField Sequences[0].Sprites[2].Bottom 0.5
+SetField Sequences[0].Sprites[2].RegistrationPoint 0.5 0.125
+SetField Sequences[0].Sprites[3].BitmapIndex 0
+SetField Sequences[0].Sprites[3].Left 0.0
+SetField Sequences[0].Sprites[3].Right 1.0
+SetField Sequences[0].Sprites[3].Top 0.5
+SetField Sequences[0].Sprites[3].Bottom 0.75
+SetField Sequences[0].Sprites[3].RegistrationPoint 0.5 0.125
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\guardian.bitm
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\guardian.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\zanzibar.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\zanzibar.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\s3d_turf.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\s3d_turf.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\construct.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\construct.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\deadlock.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\deadlock.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\guardian.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\guardian.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\isolation.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\isolation.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\riverworld.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\riverworld.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\salvation.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\salvation.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\snowbound.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\snowbound.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\chill.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\chill.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\cyberdyne.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\cyberdyne.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\shrine.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\shrine.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\bunkerworld.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\bunkerworld.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\docks.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\docks.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\sidewinder.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\sidewinder.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\warehouse.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\warehouse.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\descent.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\descent.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\spacecamp.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\spacecamp.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\lockout.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\lockout.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\armory.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\armory.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\ghosttown.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\ghosttown.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\chillout.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\chillout.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\s3d_reactor.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\s3d_reactor.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\s3d_edge.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\s3d_edge.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\s3d_avalanche.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\s3d_avalanche.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\midship.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\midship.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\sandbox.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\sandbox.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\fortress.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\fortress.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\005_intro.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\005_intro.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\010_jungle.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\010_jungle.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\020_base.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\020_base.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\030_outskirts.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\030_outskirts.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\040_voi.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\040_voi.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\050_floodvoi.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\050_floodvoi.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\070_waste.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\070_waste.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\100_citadel.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\100_citadel.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\110_hc.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\110_hc.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\120_halo.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\120_halo.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\130_epilogue.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\130_epilogue.dds"
+savetagchanges
+exit
+edittag ui\eldewrito\common\map_bitmaps\placeholder.bitmap
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\placeholder.dds"
+savetagchanges
+exit
+createtag bitm
+nametag * ui\eldewrito\common\map_bitmaps\ascension
+edittag ui\eldewrito\common\map_bitmaps\ascension.bitm
+importbitmap 0 "workingdir\tags\ui\eldewrito\common\map_bitmaps\ascension.dds"
+savetagchanges
+exit
+edittag *.mlst
+addblockelements mapimages
+setfield mapimages[*].mapid 9004
+setfield mapimages[*].bitmap ui\eldewrito\common\map_bitmaps\ascension.bitm
+savetagchanges
+exit
+createtag bitm
+nametag * ui\eldewrito\common\map_bitmaps\coagulation
+edittag ui\eldewrito\common\map_bitmaps\coagulation.bitm
+importbitmap 0 workingdir\tags\ui\eldewrito\common\map_bitmaps\coagulation.dds
+savetagchanges
+exit
+edittag *.mlst
+addblockelements mapimages
+setfield mapimages[*].mapid 9001
+setfield mapimages[*].bitmap ui\eldewrito\common\map_bitmaps\coagulation.bitm
+savetagchanges
+exit
+
+duplicatetag ui\halox\start_menu\animations\menu_slide_from_left.wpos
+nametag * ui\halox\start_menu\animations\menu_slide_from_left_new
+duplicatetag ui\halox\start_menu\animations\menu_slide_from_left.wpos
+nametag * ui\halox\start_menu\animations\menu_slide_from_right
+duplicatetag ui\halox\start_menu\animations\menu_slide_to_left.wpos
+nametag * ui\halox\start_menu\animations\menu_slide_to_right
+duplicatetag ui\halox\start_menu\animations\menu_slide_to_left.wpos
+nametag * ui\halox\start_menu\animations\menu_slide_to_left_new
+duplicatetag ui\halox\start_menu\animations\start_trans_out.wgan
+nametag * ui\halox\start_menu\animations\ui_trans_out
+duplicatetag ui\halox\start_menu\animations\start_trans_out.wgan
+nametag * ui\halox\start_menu\animations\ui_trans_out_reverse
+duplicatetag ui\halox\start_menu\animations\start_trans_in.wgan
+nametag * ui\halox\start_menu\animations\ui_trans_in
+duplicatetag ui\halox\start_menu\animations\start_trans_in.wgan
+nametag * ui\halox\start_menu\animations\ui_trans_in_reverse
+createtag wacd
+nametag * ui\halox\start_menu\animations\ui_transition
+createtag wacd
+nametag * ui\halox\start_menu\animations\ui_transition_reverse
+edittag ui\halox\start_menu\animations\menu_slide_from_left_new.wpos
+addblockelements Keyframes 1 1
+setfield Keyframes[0].TimeOffset 0
+setfield Keyframes[0].Position -1200 0 0
+setfield Keyframes[1].TimeOffset 333	
+setfield Keyframes[1].Position -1200 0 0
+setfield Keyframes[2].TimeOffset 666
+setfield Keyframes[2].Position 0 0 0
+savetagchanges
+exit
+edittag ui\halox\start_menu\animations\menu_slide_to_left_new.wpos
+setfield Keyframes[0].TimeOffset 0
+setfield Keyframes[0].Position 0 0 0
+setfield Keyframes[1].TimeOffset 333
+setfield Keyframes[1].Position -1200 0 0
+savetagchanges
+exit
+edittag ui\halox\start_menu\animations\menu_slide_from_right.wpos
+addblockelements Keyframes 1 1
+setfield Keyframes[0].TimeOffset 0
+setfield Keyframes[0].Position 1200 0 0
+setfield Keyframes[1].TimeOffset 333
+setfield Keyframes[1].Position 1200 0 0
+setfield Keyframes[2].TimeOffset 666
+setfield Keyframes[2].Position 0 0 0
+savetagchanges
+exit
+edittag ui\halox\start_menu\animations\menu_slide_to_right.wpos
+setfield Keyframes[0].TimeOffset 0
+setfield Keyframes[0].Position 0 0 0
+setfield Keyframes[1].TimeOffset 333
+setfield Keyframes[1].Position 1200 0 0
+savetagchanges
+exit
+
+edittag ui\halox\pregame_lobby\animations\lobby_slide_in.wpos
+setfield Keyframes[0].Position -1200 0 0
+setfield Keyframes[1].Position -1200 0 0
+setfield Keyframes[2].Position 0 0 0
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\animations\lobby_slide_out.wpos
+setfield Keyframes[0].Position 0 0 0
+setfield Keyframes[1].Position -1200 0 0
+setfield Keyframes[2].Position -1200 0 0
+savetagchanges
+exit
+
+edittag ui\halox\start_menu\animations\ui_trans_out.wgan
+setfield PositionAnimation ui\halox\start_menu\animations\menu_slide_to_right.wpos
+savetagchanges
+exit
+edittag ui\halox\start_menu\animations\ui_trans_out_reverse.wgan
+setfield PositionAnimation ui\halox\start_menu\animations\menu_slide_to_left_new.wpos
+savetagchanges
+exit
+edittag ui\halox\start_menu\animations\ui_trans_in.wgan
+setfield PositionAnimation ui\halox\start_menu\animations\menu_slide_from_right.wpos
+savetagchanges
+exit
+edittag ui\halox\start_menu\animations\ui_trans_in_reverse.wgan
+setfield PositionAnimation ui\halox\start_menu\animations\menu_slide_from_left_new.wpos
+savetagchanges
+exit
+
+edittag ui\halox\start_menu\animations\ui_transition.wacd
+setfield TransitionFrom ui\halox\start_menu\animations\ui_trans_out.wgan
+setfield TransitionTo ui\halox\start_menu\animations\ui_trans_in.wgan
+savetagchanges
+exit
+edittag ui\halox\start_menu\animations\ui_transition_reverse.wacd
+setfield TransitionFrom ui\halox\start_menu\animations\ui_trans_out_reverse.wgan
+setfield TransitionTo ui\halox\start_menu\animations\ui_trans_in_reverse.wgan
+savetagchanges
+exit
+
+edittag ui\halox\pregame_lobby\pregame_lobby_template.grup
+SetField TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 47 115 140 714
+SetField TextWidgets[1].Definition.GuiRenderBlock.Bounds720p 70 1110 100 1434
+SetField TextWidgets[2].Definition.GuiRenderBlock.Bounds720p 753 290 803 1032
+SetField TextWidgets[2].Definition.GuiRenderBlock.AnimationCollection ui\halox\start_menu\animations\ui_transition.gui_widget_animation_collection_definition
+SetField TextWidgets[5].Definition.GuiRenderBlock.Bounds720p 255 115 295 704
+SetField BitmapWidgets[0].Definition.GuiRenderBlock.RenderDepthBias -50
+SetField BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 50 0 815 1520
+SetField BitmapWidgets[0].Definition.GuiRenderBlock.AnimationCollection ui\halox\start_menu\animations\ui_transition.gui_widget_animation_collection_definition
+setfield bitmapwidgets[0].Definition.bitmap ui\halox\pregame_lobby\framing_center_a.bitm
+SetField BitmapWidgets[2].Definition.GuiRenderBlock.Bounds720p -5 0 845 1511
+addblockelements bitmapwidgets
+SetField BitmapWidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds
+setfield bitmapwidgets[*].Definition.guirenderblock.name channel
+setfield bitmapwidgets[*].Definition.guirenderblock.RenderDepthBias -51
+setfield bitmapwidgets[*].Definition.guirenderblock.Bounds720p 50 0 815 1520
+setfield bitmapwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition_reverse.wacd
+setfield bitmapwidgets[*].Definition.bitmap ui\halox\pregame_lobby\framing_center_b.bitm
+setfield bitmapwidgets[*].Definition.blendmethod AlphaBlend
+addblockelements bitmapwidgets
+SetField BitmapWidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds
+setfield bitmapwidgets[*].Definition.guirenderblock.name channel_a
+setfield bitmapwidgets[*].Definition.guirenderblock.RenderDepthBias -30
+setfield bitmapwidgets[*].Definition.guirenderblock.Bounds720p 255 95 485 1300
+setfield bitmapwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition_reverse.wacd
+setfield bitmapwidgets[*].Definition.bitmap ui\halox\pregame_lobby\lobby_display.bitm
+setfield bitmapwidgets[*].Definition.blendmethod AlphaBlend
+addblockelements bitmapwidgets
+SetField BitmapWidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds
+setfield bitmapwidgets[*].Definition.guirenderblock.name channel_b
+setfield bitmapwidgets[*].Definition.guirenderblock.RenderDepthBias -20
+setfield bitmapwidgets[*].Definition.guirenderblock.Bounds720p 462 105 732 495
+setfield bitmapwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition_reverse.wacd
+setfield bitmapwidgets[*].Definition.bitmap ui\halox\pregame_lobby\divider.bitm
+setfield bitmapwidgets[*].Definition.blendmethod AlphaBlend
+addblockelements bitmapwidgets
+SetField BitmapWidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds
+setfield bitmapwidgets[*].Definition.guirenderblock.name channel_c
+setfield bitmapwidgets[*].Definition.guirenderblock.RenderDepthBias -20
+setfield bitmapwidgets[*].Definition.guirenderblock.Bounds720p 462 495 732 923
+setfield bitmapwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition.wacd
+setfield bitmapwidgets[*].Definition.bitmap ui\halox\pregame_lobby\divider2.bitm
+setfield bitmapwidgets[*].Definition.blendmethod AlphaBlend
+addblockelements textwidgets
+SetField TextWidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,LeftJustify,NoDropShadow
+SetField TextWidgets[*].Definition.GuiRenderBlock.Name map_description
+SetField TextWidgets[*].Definition.GuiRenderBlock.Bounds720p 275 415 730 923
+SetField TextWidgets[*].Definition.GuiRenderBlock.AnimationCollection ui\halox\start_menu\animations\ui_transition.gui_widget_animation_collection_definition
+setfield textwidgets[*].Definition.ValueIdentifier default_title_multiplayer
+setfield textwidgets[*].Definition.TextColorPreset hilite
+setfield textwidgets[*].Definition.CustomFont BodyText
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\pregame_lobby_template_multiplayer.grup
+SetField TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 47 115 140 714
+SetField TextWidgets[2].Definition.GuiRenderBlock.Bounds720p 148 115 295 704
+SetField TextWidgets[3].Definition.GuiRenderBlock.Bounds720p 70 1110 100 1434
+setfield bitmapwidgets[0].Definition.guirenderblock.RenderDepthBias -50
+setfield bitmapwidgets[0].Definition.guirenderblock.Bounds720p 50 0 815 1520
+setfield bitmapwidgets[0].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition.wacd
+setfield bitmapwidgets[0].Definition.bitmap ui\halox\pregame_lobby\framing_center_a.bitm
+SetField BitmapWidgets[2].Definition.GuiRenderBlock.Bounds720p -5 0 845 1511
+addblockelements bitmapwidgets
+setfield bitmapwidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds
+setfield bitmapwidgets[*].Definition.guirenderblock.name channel
+setfield bitmapwidgets[*].Definition.guirenderblock.RenderDepthBias -51
+setfield bitmapwidgets[*].Definition.guirenderblock.Bounds720p 50 0 815 1520
+setfield bitmapwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition_reverse.wacd
+setfield bitmapwidgets[*].Definition.bitmap ui\halox\pregame_lobby\framing_center_b.bitm
+setfield bitmapwidgets[*].Definition.blendmethod AlphaBlend
+addblockelements bitmapwidgets
+setfield bitmapwidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds
+setfield bitmapwidgets[*].Definition.guirenderblock.name channel_a
+setfield bitmapwidgets[*].Definition.guirenderblock.RenderDepthBias -30
+setfield bitmapwidgets[*].Definition.guirenderblock.Bounds720p 255 95 485 1300
+setfield bitmapwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition_reverse.wacd
+setfield bitmapwidgets[*].Definition.bitmap ui\halox\pregame_lobby\lobby_display.bitm
+setfield bitmapwidgets[*].Definition.blendmethod AlphaBlend
+addblockelements bitmapwidgets
+setfield bitmapwidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds
+setfield bitmapwidgets[*].Definition.guirenderblock.name channel_b
+setfield bitmapwidgets[*].Definition.guirenderblock.RenderDepthBias -20
+setfield bitmapwidgets[*].Definition.guirenderblock.Bounds720p 462 105 732 495
+setfield bitmapwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition_reverse.wacd
+setfield bitmapwidgets[*].Definition.bitmap ui\halox\pregame_lobby\divider.bitm
+setfield bitmapwidgets[*].Definition.blendmethod AlphaBlend
+addblockelements bitmapwidgets
+setfield bitmapwidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds
+setfield bitmapwidgets[*].Definition.guirenderblock.name channel_c
+setfield bitmapwidgets[*].Definition.guirenderblock.RenderDepthBias -20
+setfield bitmapwidgets[*].Definition.guirenderblock.Bounds720p 462 495 732 923
+setfield bitmapwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition.wacd
+setfield bitmapwidgets[*].Definition.bitmap ui\halox\pregame_lobby\divider2.bitm
+setfield bitmapwidgets[*].Definition.blendmethod AlphaBlend
+addblockelements textwidgets
+setfield textwidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,LeftJustify,NoDropShadow
+setfield textwidgets[*].Definition.guirenderblock.name map_description
+setfield textwidgets[*].Definition.guirenderblock.Bounds720p 275 415 730 923
+setfield textwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition.wacd
+setfield textwidgets[*].Definition.ValueIdentifier default_title_multiplayer
+setfield textwidgets[*].Definition.TextColorPreset hilite
+setfield textwidgets[*].Definition.CustomFont BodyText
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\pregame_lobby_template_campaign.grup
+SetField TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 47 115 140 714
+SetField TextWidgets[2].Definition.GuiRenderBlock.Bounds720p 148 115 295 704
+SetField TextWidgets[3].Definition.GuiRenderBlock.Bounds720p 70 1110 100 1434
+setfield bitmapwidgets[0].Definition.guirenderblock.RenderDepthBias -50
+setfield bitmapwidgets[0].Definition.guirenderblock.Bounds720p 50 0 815 1520
+setfield bitmapwidgets[0].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition.wacd
+setfield bitmapwidgets[0].Definition.bitmap ui\halox\pregame_lobby\framing_center_a.bitm
+SetField BitmapWidgets[2].Definition.GuiRenderBlock.Bounds720p -5 0 845 1511
+addblockelements bitmapwidgets
+setfield bitmapwidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds
+setfield bitmapwidgets[*].Definition.guirenderblock.name channel
+setfield bitmapwidgets[*].Definition.guirenderblock.RenderDepthBias -51
+setfield bitmapwidgets[*].Definition.guirenderblock.Bounds720p 50 0 815 1520
+setfield bitmapwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition_reverse.wacd
+setfield bitmapwidgets[*].Definition.bitmap ui\halox\pregame_lobby\framing_center_b.bitm
+setfield bitmapwidgets[*].Definition.blendmethod AlphaBlend
+addblockelements bitmapwidgets
+setfield bitmapwidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds
+setfield bitmapwidgets[*].Definition.guirenderblock.name channel_a
+setfield bitmapwidgets[*].Definition.guirenderblock.RenderDepthBias -30
+setfield bitmapwidgets[*].Definition.guirenderblock.Bounds720p 255 95 485 1300
+setfield bitmapwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition_reverse.wacd
+setfield bitmapwidgets[*].Definition.bitmap ui\halox\pregame_lobby\lobby_display.bitm
+setfield bitmapwidgets[*].Definition.blendmethod AlphaBlend
+addblockelements bitmapwidgets
+setfield bitmapwidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds
+setfield bitmapwidgets[*].Definition.guirenderblock.name channel_b
+setfield bitmapwidgets[*].Definition.guirenderblock.RenderDepthBias -20
+setfield bitmapwidgets[*].Definition.guirenderblock.Bounds720p 462 105 732 495
+setfield bitmapwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition_reverse.wacd
+setfield bitmapwidgets[*].Definition.bitmap ui\halox\pregame_lobby\divider.bitm
+setfield bitmapwidgets[*].Definition.blendmethod AlphaBlend
+addblockelements bitmapwidgets
+setfield bitmapwidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds
+setfield bitmapwidgets[*].Definition.guirenderblock.name channel_c
+setfield bitmapwidgets[*].Definition.guirenderblock.RenderDepthBias -20
+setfield bitmapwidgets[*].Definition.guirenderblock.Bounds720p 462 495 732 923
+setfield bitmapwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition.wacd
+setfield bitmapwidgets[*].Definition.bitmap ui\halox\pregame_lobby\divider2.bitm
+setfield bitmapwidgets[*].Definition.blendmethod AlphaBlend
+addblockelements textwidgets
+setfield textwidgets[*].Definition.Flags DoNotApplyOldContentUpscaling,LeftJustify,NoDropShadow
+setfield textwidgets[*].Definition.guirenderblock.name map_description
+setfield textwidgets[*].Definition.guirenderblock.Bounds720p 275 415 730 923
+setfield textwidgets[*].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition.wacd
+setfield textwidgets[*].Definition.ValueIdentifier default_title_multiplayer
+setfield textwidgets[*].Definition.TextColorPreset hilite
+setfield textwidgets[*].Definition.CustomFont BodyText
+savetagchanges
+exit
+
+stringid add lobby_list_multiplayer_1
+stringid add lobby_list_multiplayer_2
+stringid add lobby_list_campaign_1
+stringid add lobby_list_campaign_2
+stringid add lobby_list_mapeditor_1
+stringid add lobby_list_mapeditor_2
+stringid add lobby_list_survival_1
+stringid add lobby_list_survival_2
+stringid add game_setup
+stringid add setup_menu
+edittag ui\halox\pregame_lobby\strings.unic
+setstring english game_setup "GAME SETUP"
+setstring english multiplayer_game_name "<lobby-multiplayer-game/> |non <lobby-multiplayer-map/>"
+setstring english campaign_difficulty "<lobby-campaign-level/> |non <lobby-campaign-difficulty/>"
+setstring english survival_difficulty "<lobby-campaign-level/> |non <lobby-campaign-difficulty/>"
+setstring english mapeditor_map_name "Edit Objects |non <lobby-mapeditor-map/>"
+savetagchanges
+exit
+createtag dsrc
+nametag * ui\halox\pregame_lobby\lobby_list_multiplayer_1
+edittag ui\halox\pregame_lobby\lobby_list_multiplayer_1.dsrc
+setfield name lobby_list_multiplayer_1
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value start_game
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value switch_multiplayer_map
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name target
+setfield Elements[*].stringidvalues[*].value map
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value switch_multiplayer_game
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name target
+setfield Elements[*].stringidvalues[*].value variant
+savetagchanges
+exit
+createtag dsrc
+nametag * ui\halox\pregame_lobby\lobby_list_multiplayer_2
+edittag ui\halox\pregame_lobby\lobby_list_multiplayer_2.dsrc
+setfield name lobby_list_multiplayer_2
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value advanced_options
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value select_network_mode
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name target
+setfield Elements[*].stringidvalues[*].value network_mode
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value switch_selected_mod
+savetagchanges
+exit
+createtag dsrc
+nametag * ui\halox\pregame_lobby\lobby_list_campaign_1
+edittag ui\halox\pregame_lobby\lobby_list_campaign_1.dsrc
+setfield name lobby_list_campaign_1
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value start_game
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value switch_campaign_level
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name target
+setfield Elements[*].stringidvalues[*].value level
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value switch_campaign_difficulty
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name target
+setfield Elements[*].stringidvalues[*].value difficulty
+savetagchanges
+exit
+createtag dsrc
+nametag * ui\halox\pregame_lobby\lobby_list_campaign_2
+edittag ui\halox\pregame_lobby\lobby_list_campaign_2.dsrc
+setfield name lobby_list_campaign_2
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value select_skulls
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value select_network_mode
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name target
+setfield Elements[*].stringidvalues[*].value network_mode
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value switch_selected_mod
+savetagchanges
+exit
+createtag dsrc
+nametag * ui\halox\pregame_lobby\lobby_list_mapeditor_1
+edittag ui\halox\pregame_lobby\lobby_list_mapeditor_1.dsrc
+setfield name lobby_list_mapeditor_1
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value start_game
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value switch_mapeditor_map
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name target
+setfield Elements[*].stringidvalues[*].value map
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value switch_multiplayer_game
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name target
+setfield Elements[*].stringidvalues[*].value variant
+savetagchanges
+exit
+createtag dsrc
+nametag * ui\halox\pregame_lobby\lobby_list_mapeditor_2
+edittag ui\halox\pregame_lobby\lobby_list_mapeditor_2.dsrc
+setfield name lobby_list_mapeditor_2
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value advanced_options
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value select_network_mode
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name target
+setfield Elements[*].stringidvalues[*].value network_mode
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value switch_selected_mod
+savetagchanges
+exit
+createtag dsrc
+nametag * ui\halox\pregame_lobby\lobby_list_survival_1
+edittag ui\halox\pregame_lobby\lobby_list_survival_1.dsrc
+setfield name lobby_list_survival_1
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value start_survival_solo
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value switch_campaign_level
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name target
+setfield Elements[*].stringidvalues[*].value level
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value switch_campaign_difficulty
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name target
+setfield Elements[*].stringidvalues[*].value difficulty
+savetagchanges
+exit
+createtag dsrc
+nametag * ui\halox\pregame_lobby\lobby_list_survival_2
+edittag ui\halox\pregame_lobby\lobby_list_survival_2.dsrc
+setfield name lobby_list_survival_2
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value select_skulls_survival
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value select_network_mode
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name target
+setfield Elements[*].stringidvalues[*].value network_mode
+addblockelements Elements
+addblockelements Elements[*].stringidvalues
+setfield Elements[*].stringidvalues[*].Name name
+setfield Elements[*].stringidvalues[*].value switch_selected_mod
+savetagchanges
+exit
+
+duplicatetag ui\halox\pregame_lobby\lobby_ui_list.lst3
+nametag * ui\halox\pregame_lobby\lobby_ui_list_multiplayer_1
+edittag ui\halox\pregame_lobby\lobby_ui_list_multiplayer_1.lst3
+setfield datasourcename lobby_list_multiplayer_1
+removeblockelements Items 2 3
+savetagchanges
+exit
+duplicatetag ui\halox\pregame_lobby\lobby_ui_list.lst3
+nametag * ui\halox\pregame_lobby\lobby_ui_list_multiplayer_2
+edittag ui\halox\pregame_lobby\lobby_ui_list_multiplayer_2.lst3
+setfield datasourcename lobby_list_multiplayer_2
+setfield Rows 1
+removeblockelements Items 2 3
+savetagchanges
+exit
+duplicatetag ui\halox\pregame_lobby\lobby_ui_list.lst3
+nametag * ui\halox\pregame_lobby\lobby_ui_list_campaign_1
+edittag ui\halox\pregame_lobby\lobby_ui_list_campaign_1.lst3
+setfield datasourcename lobby_list_campaign_1
+removeblockelements Items 2 3
+savetagchanges
+exit
+duplicatetag ui\halox\pregame_lobby\lobby_ui_list.lst3
+nametag * ui\halox\pregame_lobby\lobby_ui_list_campaign_2
+edittag ui\halox\pregame_lobby\lobby_ui_list_campaign_2.lst3
+setfield datasourcename lobby_list_campaign_2
+setfield Rows 1
+removeblockelements Items 2 3
+savetagchanges
+exit
+duplicatetag ui\halox\pregame_lobby\lobby_ui_list.lst3
+nametag * ui\halox\pregame_lobby\lobby_ui_list_mapeditor_1
+edittag ui\halox\pregame_lobby\lobby_ui_list_mapeditor_1.lst3
+setfield datasourcename lobby_list_mapeditor_1
+removeblockelements Items 2 3
+savetagchanges
+exit
+duplicatetag ui\halox\pregame_lobby\lobby_ui_list.lst3
+nametag * ui\halox\pregame_lobby\lobby_ui_list_mapeditor_2
+edittag ui\halox\pregame_lobby\lobby_ui_list_mapeditor_2.lst3
+setfield datasourcename lobby_list_mapeditor_2
+setfield Rows 1
+removeblockelements Items 2 3
+savetagchanges
+exit
+duplicatetag ui\halox\pregame_lobby\lobby_ui_list.lst3
+nametag * ui\halox\pregame_lobby\lobby_ui_list_survival_1
+edittag ui\halox\pregame_lobby\lobby_ui_list_survival_1.lst3
+setfield datasourcename lobby_list_survival_1
+removeblockelements Items 2 3
+savetagchanges
+exit
+duplicatetag ui\halox\pregame_lobby\lobby_ui_list.lst3
+nametag * ui\halox\pregame_lobby\lobby_ui_list_survival_2
+edittag ui\halox\pregame_lobby\lobby_ui_list_survival_2.lst3
+setfield datasourcename lobby_list_survival_2
+setfield Rows 1
+removeblockelements Items 2 3
+savetagchanges
+exit
+edittag ui\halox\common\roster\roster.lst3
+setfield Rows 2
+savetagchanges
+exit
+
+edittag ui\halox\pregame_lobby\pregame_lobby_multiplayer.scn3
+addblockelements DebugDatasources
+setfield DebugDatasources[*].DataSourceTag ui\halox\pregame_lobby\lobby_list_multiplayer_1.dsrc
+addblockelements DebugDatasources
+setfield DebugDatasources[*].DataSourceTag ui\halox\pregame_lobby\lobby_list_multiplayer_2.dsrc
+SetField GroupWidgets[0].Definition.ListWidgets[0].TemplateReference ui\halox\pregame_lobby\lobby_ui_list_multiplayer_1.gui_list_widget_definition
+SetField GroupWidgets[0].Definition.ListWidgets[0].Definition.GuiRenderBlock.Bounds720p 118 160 0 0
+setfield groupwidgets[0].Definition.listwidgets[0].Definition.datasourcename lobby_list_multiplayer_1
+removeblockelements groupwidgets[0].Definition.listwidgets[0].Definition.Items 2 3
+SetField GroupWidgets[0].Definition.ListWidgets[0].Definition.Items[1].GuiRenderBlock.Bounds720p 50 0 0 0
+SetField GroupWidgets[0].Definition.ListWidgets[0].Definition.Items[2].GuiRenderBlock.Bounds720p 100 0 0 0
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\pregame_lobby_multiplayer.scn3
+copyblockelements groupwidgets[0].Definition.listwidgets 0 1
+pasteblockelements groupwidgets[0].Definition.listwidgets
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\pregame_lobby_multiplayer.scn3
+setfield groupwidgets[0].Definition.listwidgets[1].TemplateReference ui\halox\pregame_lobby\lobby_ui_list_multiplayer_2.lst3
+SetField GroupWidgets[0].Definition.ListWidgets[1].Definition.GuiRenderBlock.Bounds720p 118 580 0 0
+setfield groupwidgets[0].Definition.listwidgets[1].Definition.datasourcename lobby_list_multiplayer_2
+setfield groupwidgets[0].Definition.listwidgets[1].Definition.Items[1].guirenderblock.Bounds720p 50 0 0 0
+setfield groupwidgets[0].Definition.listwidgets[1].Definition.Items[2].guirenderblock.Bounds720p 100 0 0 0
+SetField GroupWidgets[1].Definition.GuiRenderBlock.Bounds720p 104 1025 0 0
+SetField GroupWidgets[2].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 464 107 728 921
+SetField GroupWidgets[2].Definition.BitmapWidgets[1].Definition.GuiRenderBlock.Bounds720p 575 135 635 205
+SetField GroupWidgets[2].Definition.TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 576 206 795 704
+SetField GroupWidgets[2].Definition.TextWidgets[1].Definition.GuiRenderBlock.Bounds720p 280 156 430 744
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\pregame_lobby_campaign.scn3
+addblockelements DebugDatasources
+setfield DebugDatasources[*].DataSourceTag ui\halox\pregame_lobby\lobby_list_campaign_1.dsrc
+addblockelements DebugDatasources
+setfield DebugDatasources[*].DataSourceTag ui\halox\pregame_lobby\lobby_list_campaign_2.dsrc
+setfield groupwidgets[0].Definition.listwidgets[0].TemplateReference ui\halox\pregame_lobby\lobby_ui_list_campaign_1.lst3
+SetField GroupWidgets[0].Definition.ListWidgets[0].Definition.GuiRenderBlock.Bounds720p 118 160 0 0
+setfield groupwidgets[0].Definition.listwidgets[0].Definition.datasourcename lobby_list_campaign_1
+removeblockelements groupwidgets[0].Definition.listwidgets[0].Definition.Items 2 3
+SetField GroupWidgets[0].Definition.ListWidgets[0].Definition.Items[1].GuiRenderBlock.Bounds720p 50 0 0 0
+SetField GroupWidgets[0].Definition.ListWidgets[0].Definition.Items[2].GuiRenderBlock.Bounds720p 100 0 0 0
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\pregame_lobby_campaign.scn3
+copyblockelements groupwidgets[0].Definition.listwidgets 0 1
+pasteblockelements groupwidgets[0].Definition.listwidgets
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\pregame_lobby_campaign.scn3
+setfield groupwidgets[0].Definition.listwidgets[1].TemplateReference ui\halox\pregame_lobby\lobby_ui_list_campaign_2.lst3
+SetField GroupWidgets[0].Definition.ListWidgets[1].Definition.GuiRenderBlock.Bounds720p 118 580 0 0
+setfield groupwidgets[0].Definition.listwidgets[1].Definition.datasourcename lobby_list_campaign_2
+setfield groupwidgets[0].Definition.listwidgets[1].Definition.Items[1].guirenderblock.Bounds720p 50 0 0 0
+setfield groupwidgets[0].Definition.listwidgets[1].Definition.Items[2].guirenderblock.Bounds720p 100 0 0 0
+SetField GroupWidgets[1].Definition.GuiRenderBlock.Bounds720p 104 1025 0 0
+SetField GroupWidgets[2].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 464 107 728 921
+SetField GroupWidgets[2].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds480i 334 73 560 679
+SetField GroupWidgets[2].Definition.BitmapWidgets[1].Definition.GuiRenderBlock.Bounds720p 575 135 635 205
+SetField GroupWidgets[2].Definition.BitmapWidgets[2].Definition.GuiRenderBlock.Bounds720p 636 103 682 711
+SetField GroupWidgets[2].Definition.BitmapWidgets[3].Definition.GuiRenderBlock.Bounds720p 639 107 649 149
+SetField GroupWidgets[2].Definition.BitmapWidgets[4].Definition.GuiRenderBlock.Bounds720p 639 153 649 191
+SetField GroupWidgets[2].Definition.BitmapWidgets[5].Definition.GuiRenderBlock.Bounds720p 639 199 649 233
+SetField GroupWidgets[2].Definition.BitmapWidgets[6].Definition.GuiRenderBlock.Bounds720p 639 245 649 275
+SetField GroupWidgets[2].Definition.BitmapWidgets[7].Definition.GuiRenderBlock.Bounds720p 639 291 649 317
+SetField GroupWidgets[2].Definition.BitmapWidgets[8].Definition.GuiRenderBlock.Bounds720p 639 337 649 359
+SetField GroupWidgets[2].Definition.BitmapWidgets[9].Definition.GuiRenderBlock.Bounds720p 639 383 649 401
+SetField GroupWidgets[2].Definition.BitmapWidgets[10].Definition.GuiRenderBlock.Bounds720p 639 429 649 443
+SetField GroupWidgets[2].Definition.BitmapWidgets[11].Definition.GuiRenderBlock.Bounds720p 639 475 649 485
+SetField GroupWidgets[2].Definition.BitmapWidgets[12].Definition.GuiRenderBlock.Bounds720p 639 521 649 527
+SetField GroupWidgets[2].Definition.BitmapWidgets[13].Definition.GuiRenderBlock.Bounds720p 639 567 649 569
+SetField GroupWidgets[2].Definition.BitmapWidgets[14].Definition.GuiRenderBlock.Bounds720p 639 612 649 611
+SetField GroupWidgets[2].Definition.BitmapWidgets[15].Definition.GuiRenderBlock.Bounds720p 639 658 649 653
+SetField GroupWidgets[2].Definition.BitmapWidgets[16].Definition.GuiRenderBlock.Bounds720p 639 573 649 695
+SetField GroupWidgets[2].Definition.TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 576 206 795 704
+SetField GroupWidgets[2].Definition.TextWidgets[1].Definition.GuiRenderBlock.Bounds720p 685 116 731 704
+SetField GroupWidgets[2].Definition.TextWidgets[2].Definition.GuiRenderBlock.Bounds720p 280 156 430 744
+RemoveBlockElements GroupWidgets[2].Definition.TextWidgets * 1
+SetField GroupWidgets[3].TemplateReference ui\halox\pregame_lobby\map_load.gui_group_widget_definition
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\pregame_lobby_mapeditor.scn3
+addblockelements DebugDatasources
+setfield DebugDatasources[*].DataSourceTag ui\halox\pregame_lobby\lobby_list_mapeditor_1.dsrc
+addblockelements DebugDatasources
+setfield DebugDatasources[*].DataSourceTag ui\halox\pregame_lobby\lobby_list_mapeditor_2.dsrc
+setfield groupwidgets[0].TemplateReference ui\halox\pregame_lobby\pregame_lobby_template.gui_group_widget_definition
+setfield groupwidgets[0].Definition.listwidgets[0].TemplateReference ui\halox\pregame_lobby\lobby_ui_list_mapeditor_1.lst3
+SetField GroupWidgets[0].Definition.ListWidgets[0].Definition.GuiRenderBlock.Bounds720p 118 160 0 0
+setfield groupwidgets[0].Definition.listwidgets[0].Definition.datasourcename lobby_list_mapeditor_1
+removeblockelements groupwidgets[0].Definition.listwidgets[0].Definition.Items 2 3
+SetField GroupWidgets[0].Definition.ListWidgets[0].Definition.Items[1].GuiRenderBlock.Bounds720p 50 0 0 0
+SetField GroupWidgets[0].Definition.ListWidgets[0].Definition.Items[2].GuiRenderBlock.Bounds720p 100 0 0 0
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\pregame_lobby_mapeditor.scn3
+copyblockelements groupwidgets[0].Definition.listwidgets 0 1
+pasteblockelements groupwidgets[0].Definition.listwidgets
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\pregame_lobby_mapeditor.scn3
+setfield groupwidgets[0].Definition.listwidgets[1].TemplateReference ui\halox\pregame_lobby\lobby_ui_list_mapeditor_2.lst3
+SetField GroupWidgets[0].Definition.ListWidgets[1].Definition.GuiRenderBlock.Bounds720p 118 580 0 0
+setfield groupwidgets[0].Definition.listwidgets[1].Definition.datasourcename lobby_list_mapeditor_2
+setfield groupwidgets[0].Definition.listwidgets[1].Definition.Items[1].guirenderblock.Bounds720p 50 0 0 0
+setfield groupwidgets[0].Definition.listwidgets[1].Definition.Items[2].guirenderblock.Bounds720p 100 0 0 0
+SetField GroupWidgets[1].Definition.GuiRenderBlock.Bounds720p 104 1025 0 0
+SetField GroupWidgets[2].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 464 107 728 921
+SetField GroupWidgets[2].Definition.BitmapWidgets[1].Definition.GuiRenderBlock.Bounds720p 575 135 635 205
+SetField GroupWidgets[2].Definition.TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 576 206 795 704
+SetField GroupWidgets[2].Definition.TextWidgets[1].Definition.GuiRenderBlock.Bounds720p 280 156 430 744
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\pregame_lobby_survival.scn3
+addblockelements DebugDatasources
+setfield DebugDatasources[*].DataSourceTag ui\halox\pregame_lobby\lobby_list_survival_1.dsrc
+addblockelements DebugDatasources
+setfield DebugDatasources[*].DataSourceTag ui\halox\pregame_lobby\lobby_list_survival_2.dsrc
+setfield groupwidgets[0].Definition.listwidgets[0].TemplateReference ui\halox\pregame_lobby\lobby_ui_list_survival_1.lst3
+SetField GroupWidgets[0].Definition.ListWidgets[0].Definition.GuiRenderBlock.Bounds720p 118 160 0 0
+setfield groupwidgets[0].Definition.listwidgets[0].Definition.datasourcename lobby_list_survival_1
+removeblockelements groupwidgets[0].Definition.listwidgets[0].Definition.Items 2 3
+SetField GroupWidgets[0].Definition.ListWidgets[0].Definition.Items[1].GuiRenderBlock.Bounds720p 50 0 0 0
+SetField GroupWidgets[0].Definition.ListWidgets[0].Definition.Items[2].GuiRenderBlock.Bounds720p 100 0 0 0
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\pregame_lobby_survival.scn3
+copyblockelements groupwidgets[0].Definition.listwidgets 0 1
+pasteblockelements groupwidgets[0].Definition.listwidgets
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\pregame_lobby_survival.scn3
+setfield groupwidgets[0].Definition.listwidgets[1].TemplateReference ui\halox\pregame_lobby\lobby_ui_list_survival_2.lst3
+SetField GroupWidgets[0].Definition.ListWidgets[1].Definition.GuiRenderBlock.Bounds720p 118 580 0 0
+setfield groupwidgets[0].Definition.listwidgets[1].Definition.datasourcename lobby_list_survival_2
+setfield groupwidgets[0].Definition.listwidgets[1].Definition.Items[1].guirenderblock.Bounds720p 50 0 0 0
+setfield groupwidgets[0].Definition.listwidgets[1].Definition.Items[2].guirenderblock.Bounds720p 100 0 0 0
+SetField GroupWidgets[1].Definition.GuiRenderBlock.Bounds720p 104 1025 0 0
+SetField GroupWidgets[2].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 464 107 728 921
+SetField GroupWidgets[2].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds480i 334 73 560 679
+SetField GroupWidgets[2].Definition.BitmapWidgets[1].Definition.GuiRenderBlock.Bounds720p 575 135 635 205
+SetField GroupWidgets[2].Definition.TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 576 206 795 704
+SetField GroupWidgets[2].Definition.TextWidgets[1].Definition.GuiRenderBlock.Bounds720p 280 156 430 744
+SetField GroupWidgets[3].TemplateReference ui\halox\pregame_lobby\map_load.gui_group_widget_definition
+savetagchanges
+exit
+
+edittag ui\halox\pregame_lobby\selection\pregame_selection.scn3
+SetField GroupWidgets[0].Definition.ListWidgets[0].Definition.GuiRenderBlock.Bounds720p 73 370 0 0
+SetField GroupWidgets[0].Definition.TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 0 345 52 1517
+SetField GroupWidgets[0].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p -20 300 626 1220
+setfield groupwidgets[0].Definition.bitmapwidgets[0].Definition.bitmap ui\halox\pregame_lobby\map_bkd.bitm
+setfield groupwidgets[0].Definition.bitmapwidgets[1].Definition.GuiRenderBlock.Bounds720p -116 -240 840 1752
+setfield groupwidgets[0].Definition.bitmapwidgets[3].Definition.GuiRenderBlock.RenderDepthBias -11
+SetField GroupWidgets[2].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 0 -24 34 212
+SetField GroupWidgets[7].Definition.TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 313 859 521 1163
+SetField GroupWidgets[7].Definition.BitmapWidgets[0].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds,SpriteFromExportedInteger
+SetField GroupWidgets[7].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 77 887 262 1120
+SetField GroupWidgets[8].Definition.TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 313 854 442 1163
+SetField GroupWidgets[8].Definition.TextWidgets[1].Definition.GuiRenderBlock.Bounds720p 442 854 481 999
+SetField GroupWidgets[8].Definition.TextWidgets[2].Definition.GuiRenderBlock.Bounds720p 442 947 481 1167
+SetField GroupWidgets[8].Definition.TextWidgets[3].Definition.GuiRenderBlock.Bounds720p 480 854 519 999
+SetField GroupWidgets[8].Definition.TextWidgets[4].Definition.GuiRenderBlock.Bounds720p 480 999 519 1167
+SetField GroupWidgets[8].Definition.TextWidgets[5].Definition.GuiRenderBlock.Bounds720p 513 854 552 999
+SetField GroupWidgets[8].Definition.TextWidgets[6].Definition.GuiRenderBlock.Bounds720p 513 999 552 1167
+SetField GroupWidgets[8].Definition.BitmapWidgets[0].Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds,SpriteFromExportedInteger
+SetField GroupWidgets[8].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 77 897 262 1120
+SetField GroupWidgets[8].Definition.BitmapWidgets[1].Definition.GuiRenderBlock.Bounds720p 439 843 475 1175
+SetField GroupWidgets[8].Definition.BitmapWidgets[2].Definition.GuiRenderBlock.Bounds720p 438 843 439 1175
+SetField GroupWidgets[8].Definition.BitmapWidgets[3].Definition.GuiRenderBlock.Bounds720p 475 843 476 1175
+SetField GroupWidgets[9].Definition.TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 206 854 521 1163
+SetField GroupWidgets[9].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 77 854 179 1165
+SetField GroupWidgets[9].Definition.BitmapWidgets[1].Definition.GuiRenderBlock.Bounds720p 77 884 203 1079
+SetField GroupWidgets[10].Definition.TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 206 854 521 1163
+SetField GroupWidgets[10].Definition.TextWidgets[1].Definition.GuiRenderBlock.Bounds720p 442 854 481 999
+SetField GroupWidgets[10].Definition.TextWidgets[2].Definition.GuiRenderBlock.Bounds720p 442 947 481 1167
+SetField GroupWidgets[10].Definition.TextWidgets[3].Definition.GuiRenderBlock.Bounds720p 480 854 519 999
+SetField GroupWidgets[10].Definition.TextWidgets[4].Definition.GuiRenderBlock.Bounds720p 480 999 519 1167
+SetField GroupWidgets[10].Definition.TextWidgets[5].Definition.GuiRenderBlock.Bounds720p 513 854 552 999
+SetField GroupWidgets[10].Definition.TextWidgets[6].Definition.GuiRenderBlock.Bounds720p 513 999 552 1167
+SetField GroupWidgets[10].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 77 854 179 1165
+SetField GroupWidgets[10].Definition.BitmapWidgets[1].Definition.GuiRenderBlock.Bounds720p 439 843 475 1175
+SetField GroupWidgets[10].Definition.BitmapWidgets[2].Definition.GuiRenderBlock.Bounds720p 438 843 439 1175
+SetField GroupWidgets[10].Definition.BitmapWidgets[3].Definition.GuiRenderBlock.Bounds720p 475 843 476 1175
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\selection\category.skn3
+SetField TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 2 -3 42 300
+SetField BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 0 -28 34 228
+SetField BitmapWidgets[1].Definition.GuiRenderBlock.Bounds720p 0 -28 34 228
+SetField BitmapWidgets[2].Definition.GuiRenderBlock.Bounds720p 2 205 0 0
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\selection\subitem.skn3
+SetField BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 0 -24 34 212
+SetField BitmapWidgets[1].Definition.GuiRenderBlock.Bounds720p 6 189 0 0
+SetField BitmapWidgets[2].Definition.GuiRenderBlock.Bounds720p 0 -24 34 212
+SetField BitmapWidgets[3].Definition.GuiRenderBlock.Bounds720p 6 149 0 0
+SetField BitmapWidgets[4].Definition.GuiRenderBlock.Bounds720p 6 149 0 0
+savetagchanges
+exit
+
+edittag ui\halox\pregame_lobby\selection\button_key_a_select_b_cancel.bkey
+SetField GuiRenderBlock.Bounds720p 563 985 0 0
+savetagchanges
+exit
+
+duplicatetag ui\halox\global_animations\animations\fade_to_40.wclr
+nametag * ui\halox\global_animations\animations\fade_to_ice
+duplicatetag ui\halox\global_animations\animation_definitions\list_bmp_disable.wgan
+nametag * ui\halox\global_animations\animation_definitions\list_bmp_disable_ice
+duplicatetag ui\halox\pregame_lobby\animations\standard_list_bitmaps.wacd
+nametag * ui\halox\pregame_lobby\animations\standard_list_lobby_bitmaps
+
+edittag ui\halox\global_animations\animations\fade_to_ice.wclr
+SetField Keyframes[1].Color 1 0.4196 0.4863 0.6745
+savetagchanges
+exit
+
+edittag ui\halox\global_animations\animation_definitions\list_bmp_disable_ice.wgan
+SetField ColorAnimation ui\halox\global_animations\animations\fade_to_ice.gui_widget_color_animation_definition
+savetagchanges
+exit
+
+edittag ui\halox\pregame_lobby\animations\standard_list_lobby_bitmaps.wacd
+SetField AmbientUnfocused ui\halox\start_menu\animations\sidebar\unfocused_ice.gui_widget_animation_definition
+SetField AmbientDisabledUnfocused ui\halox\start_menu\animations\sidebar\unfocused_ice.gui_widget_animation_definition
+SetField AmbientUnfocusedAlt ui\halox\start_menu\animations\sidebar\unfocused_ice.gui_widget_animation_definition
+SetField ControlLostFocus ui\halox\global_animations\animation_definitions\list_bmp_disable_ice.gui_widget_animation_definition
+savetagchanges
+exit
+
+edittag ui\halox\common\roster\roster.skn3
+RemoveBlockElements BitmapWidgets * 3
+SetField TextWidgets[4].Definition.GuiRenderBlock.Bounds720p 2 0 45 315
+SetField BitmapWidgets[5].Definition.Flags DoNotApplyOldContentUpscaling
+SetField BitmapWidgets[5].Definition.GuiRenderBlock.Bounds720p 6 262 0 0
+SetField BitmapWidgets[5].Definition.Bitmap ui\halox\common\roster\lvl_sm_ui.bitmap
+SetField BitmapWidgets[6].Definition.Flags DoNotApplyOldContentUpscaling
+SetField BitmapWidgets[6].Definition.GuiRenderBlock.Bounds720p 6 263 0 0
+SetField BitmapWidgets[6].Definition.Bitmap ui\halox\common\roster\lvl_sm_ui.bitmap
+SetField BitmapWidgets[7].Definition.Bitmap ui\halox\common\roster\exp_med_ui.bitmap
+SetField BitmapWidgets[8].Definition.Bitmap ui\halox\common\roster\exp_med_ui.bitmap
+SetField BitmapWidgets[11].Definition.Bitmap null
+SetField BitmapWidgets[15].Definition.GuiRenderBlock.Bounds720p 0 350 0 0
+SetField BitmapWidgets[16].Definition.GuiRenderBlock.Bounds720p -10 350 0 0
+savetagchanges
+exit
+edittag ui\halox\pregame_lobby\list.skn3
+setfield textwidgets[0].Definition.flags 196961
+setfield textwidgets[0].Definition.guirenderblock.Bounds720p 2 -25 45 328
+setfield bitmapwidgets[0].Definition.guirenderblock.Bounds720p -9 -69 41 358
+setfield bitmapwidgets[0].Definition.guirenderblock.AnimationCollection ui\halox\pregame_lobby\animations\standard_list_lobby_bitmaps.wacd
+setfield bitmapwidgets[0].Definition.bitmap ui\halox\pregame_lobby\button1.bitm
+savetagchanges
+exit
+
+edittag ui\halox\pregame_lobby\pregame_lobby_offline.bkey
+setfield guirenderblock.Bounds720p 756 1095 0 0 
+setfield guirenderblock.AnimationCollection null
+setfield TextWidgets[0].Definition.guirenderblock.AnimationCollection ui\halox\start_menu\animations\ui_transition.gui_widget_animation_collection_definition
+savetagchanges
+exit
+
+#edittag sound\music\main_menu_delta\delta_menu\in.snd!
+#importsound M:\Models\Halo\h2b\c_turret\sound\ui\main_menu_music\menu_music\in\
+#savetagchanges
+#exit
+#edittag sound\music\main_menu_delta\delta_menu\loop.snd!
+#importsound M:\Models\Halo\h2b\c_turret\sound\ui\main_menu_music\menu_music\loop\
+#savetagchanges
+#exit
