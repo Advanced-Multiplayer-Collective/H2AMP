@@ -68,6 +68,11 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+EditTag scenarios\shaders\covenant\military\floors\rubber_mat_a.shader
+SetArgument bump_map 16 16 0 0
+SaveTagChanges
+Exit
+
 ## echo Station Shader Fixes
 EditTag scenarios\shaders\multi\triplicate\station_wall.shader
 SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
@@ -105,3 +110,13 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+## echo Midship Shader Fixes
+EditTag scenarios\shaders\multi\midship\midship_rubber_mat_a.shader
+SetArgument bump_map 16 16 0 0
+SaveTagChanges
+Exit
+
+EditTag scenarios\objects\multi\midship\midship_phantom_volume\midship_phantom_volume.render_model
+SetField Materials[0].RenderMethod objects\multi\invisible_box\shaders\invisible_box.shader
+SaveTagChanges
+Exit
