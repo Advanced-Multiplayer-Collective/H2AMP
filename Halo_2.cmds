@@ -6,6 +6,7 @@ SetVariable h2maps ""
 SetVariable h3maps ""
 SetVariable odstmaps ""
 SetVariable workingdir ""
+SetVariable workingdir "C:\Users\zekken\Documents\AMP PROJECTS\H2AMP"
 
 # echo ==Creating Mod Package...==
 CreateModPackage 1 large
