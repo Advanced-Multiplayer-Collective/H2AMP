@@ -1,0 +1,18 @@
+## Setting H2 Movement Speed ##
+EditTag globals\globals.globals
+## Spartan ##
+SetField PlayerInformation[0].RunForward 2.25
+SetField PlayerInformation[0].RunBackward 2
+SetField PlayerInformation[0].RunSideways 2
+SetField PlayerInformation[0].StunTimeRange 0 1.25
+SetField PlayerInformation[0].FirstPersonIdleTimeRange 10 15
+SetField PlayerInformation[0].FirstPersonSkipFraction 0.25
+## Elite ##
+SetField PlayerInformation[1].RunForward 2.25
+SetField PlayerInformation[1].RunBackward 2
+SetField PlayerInformation[1].RunSideways 2
+SetField PlayerInformation[1].StunTimeRange 0 1.25
+SetField PlayerInformation[1].FirstPersonIdleTimeRange 10 15
+SetField PlayerInformation[1].FirstPersonSkipFraction 0.25
+SaveTagChanges
+Exit

@@ -40,7 +40,10 @@ SetField PhysicsModel objects\weapons\rifle\battle_rifle\battle_rifle.physics_mo
 SaveTagChanges
 exit
 
-
+EditTag objects\weapons\rifle\battle_rifle\battle_rifle.weapon
+SetField Barrels[0].Firing.FireRecoveryTime 0.26
+SaveTagChanges
+exit
 
 echo sniper
 
