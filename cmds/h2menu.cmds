@@ -1648,3 +1648,9 @@ SetField ScreenEffects[0].ColorFilter 0.0666667 0.105882 0.270588
 savetagchanges
 exit
 
+echo menu logo
+
+edittag ui\halox\main_menu\halo3_logo_ui.bitmap
+importbitmap 0 workingdir\bitmaps\halo3_logo_ui.dds
+exit
+
