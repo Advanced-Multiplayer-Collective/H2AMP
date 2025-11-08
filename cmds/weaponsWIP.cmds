@@ -158,6 +158,7 @@ exit
 
 edittag objects\weapons\pistol\magnum\magnum.weapon
 SetField Magazines[0].RoundsLoadedMaximum 12
+SetField Magazines[0].RoundsReloaded 12
 SetField Barrels[0].Firing.FireRecoveryTime 0.12
 SetField FirstPersonWeaponOffset 0.06 -0.002 0.005
 SetField CenteredFirstPersonWeaponOffset 0.06 -0.002 0
