@@ -1,9 +1,57 @@
 opencachefile workingdir\maps\H2CHUD.map
 NameBlamTag ui\chud\elite.chud_definition ui\chud\elite_h2
 NameBlamTag ui\chud\spartan.chud_definition ui\chud\spartan_h2
+NameBlamTag ui\chud\bitmaps\hud_reticles.bitmap ms30\ui\chud\bitmaps\hud_reticles
+NameBlamTag ui\chud\bitmaps\hud_vehicle_reticles.bitmap ms30\ui\chud\bitmaps\hud_vehicle_reticles
+
+# Bitmap we don't need to be replaced
+IgnoreBlamTag ms30\ui\chud\bitmaps\hud_reticles.bitmap
+IgnoreBlamTag ms30\ui\chud\bitmaps\hud_vehicle_reticles.bitmap
+IgnoreBlamTag ui\chud\bitmaps\beam_rifle_scope_meter_border.bitmap
+IgnoreBlamTag ui\chud\bitmaps\elite_shield_border.bitmap
+IgnoreBlamTag ui\chud\bitmaps\elite_shield_flash_bleed.bitmap
+IgnoreBlamTag ui\chud\bitmaps\elite_wipe.bitmap
+IgnoreBlamTag ui\chud\bitmaps\emblem_dummy.bitmap
+IgnoreBlamTag ui\chud\bitmaps\energy_meters.bitmap
+# Equipment scematic is now in the consumeable scematic
+IgnoreBlamTag ui\chud\bitmaps\equipment_scematics.bitmap
+IgnoreBlamTag ui\chud\bitmaps\help.bitmap
+
+IgnoreBlamTag ui\chud\bitmaps\monitor_distortion.bitmap
+IgnoreBlamTag ui\chud\bitmaps\monitor_edges.bitmap
+IgnoreBlamTag ui\chud\bitmaps\objectives.bitmap
+
+IgnoreBlamTag ui\chud\bitmaps\scopes\battle_rifle_scope.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\battle_rifle_scope_elements.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\beam_rifle_blur.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\beam_rifle_meter_l.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\beam_rifle_meter_r.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\beam_rifle_scope.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\beam_rifle_scope_overheat_border.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\carbine_scope.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\carbine_scope_elements.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\elite_binocs.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\monitor.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\monitor_chunkstif.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\rocket__launcher_scope.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\rocket_dimming.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\rocket_distortion_scope.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\rocket_scope.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\sniper_rifle_scope.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\sniper_rifle_scope_elements.bitmap
+IgnoreBlamTag ui\chud\bitmaps\scopes\spartan_laser_reticule.bitmap
+IgnoreBlamTag ui\chud\bitmaps\spartan_outerring.bitmap
+
+IgnoreBlamTag ui\chud\bitmaps\scoreboard_meter.bitmap
+IgnoreBlamTag ui\chud\bitmaps\variant_items\ctf_icon.bitmap
+IgnoreBlamTag ui\chud\bitmaps\variant_items\infection_icon.bitmap
+IgnoreBlamTag ui\chud\bitmaps\variant_items\jug_icon.bitmap
+IgnoreBlamTag ui\chud\bitmaps\variant_items\vip_icon.bitmap
+IgnoreBlamTag ui\chud\bitmaps\vox.bitmap
+
 
 ## Weapon HUD ##
-PortTag Replace ui\hud\hud_messages.multilingual_unicode_string_list
+# PortTag Replace ui\hud\hud_messages.multilingual_unicode_string_list
 PortTag Replace ui\chud\assault_rifle.chud_definition
 PortTag Replace ui\chud\automag.chud_definition
 PortTag Replace ui\chud\battle_rifle.chud_definition
@@ -38,37 +86,55 @@ PortTag Replace ui\chud\t_machinegun.chud_definition
 PortTag Replace ui\chud\t_missile.chud_definition
 PortTag Replace ui\chud\t_plasmaturret.chud_definition
 PortTag Replace ui\chud\unarmed.chud_definition
-PortTag Replace ui\chud\v_banshee.chud_definition
-PortTag Replace ui\chud\v_chaingun.chud_definition
-PortTag Replace ui\chud\v_chopper.chud_definition
-PortTag Replace ui\chud\v_driver.chud_definition
-PortTag Replace ui\chud\v_gaussturret.chud_definition
-PortTag Replace ui\chud\v_ghost.chud_definition
-PortTag Replace ui\chud\v_grinderdriver.chud_definition
-PortTag Replace ui\chud\v_grinderturret.chud_definition
-PortTag Replace ui\chud\v_hornet.chud_definition
-PortTag Replace ui\chud\v_mongoose.chud_definition
-PortTag Replace ui\chud\v_scorpion.chud_definition
-PortTag Replace ui\chud\v_scorpionturret.chud_definition
-PortTag Replace ui\chud\v_shade.chud_definition
-PortTag Replace ui\chud\v_wraith.chud_definition
-PortTag Replace ui\chud\v_wraith_anti_air.chud_definition
-PortTag Replace ui\chud\v_wraithturret.chud_definition
+# PortTag Replace ui\chud\v_banshee.chud_definition
+# PortTag Replace ui\chud\v_chaingun.chud_definition
+# PortTag Replace ui\chud\v_chopper.chud_definition
+# PortTag Replace ui\chud\v_driver.chud_definition
+# PortTag Replace ui\chud\v_gaussturret.chud_definition
+# PortTag Replace ui\chud\v_ghost.chud_definition
+# PortTag Replace ui\chud\v_grinderdriver.chud_definition
+# PortTag Replace ui\chud\v_grinderturret.chud_definition
+# PortTag Replace ui\chud\v_hornet.chud_definition
+# PortTag Replace ui\chud\v_mongoose.chud_definition
+# PortTag Replace ui\chud\v_scorpion.chud_definition
+# PortTag Replace ui\chud\v_scorpionturret.chud_definition
+# PortTag Replace ui\chud\v_shade.chud_definition
+# PortTag Replace ui\chud\v_wraith.chud_definition
+# PortTag Replace ui\chud\v_wraith_anti_air.chud_definition
+# PortTag Replace ui\chud\v_wraithturret.chud_definition
 PortTag Replace ui\chud\weapon_backgrounds.chud_definition
-PortTag Replace ui\chud\e_autoturret.chud_definition
-PortTag Replace ui\chud\e_bubbleshield.chud_definition
-PortTag Replace ui\chud\e_flare.chud_definition
-PortTag Replace ui\chud\e_gravlift.chud_definition
-PortTag Replace ui\chud\e_instacover.chud_definition
-PortTag Replace ui\chud\e_invincibility.chud_definition
-PortTag Replace ui\chud\e_invisibility.chud_definition
-PortTag Replace ui\chud\e_jammer.chud_definition
-PortTag Replace ui\chud\e_powerdrain.chud_definition
-PortTag Replace ui\chud\e_regen.chud_definition
-PortTag Replace ui\chud\e_tripmine.chud_definition
+# PortTag Replace ui\chud\e_autoturret.chud_definition
+# PortTag Replace ui\chud\e_bubbleshield.chud_definition
+# PortTag Replace ui\chud\e_flare.chud_definition
+# PortTag Replace ui\chud\e_gravlift.chud_definition
+# PortTag Replace ui\chud\e_instacover.chud_definition
+# PortTag Replace ui\chud\e_invincibility.chud_definition
+# PortTag Replace ui\chud\e_invisibility.chud_definition
+# PortTag Replace ui\chud\e_jammer.chud_definition
+# PortTag Replace ui\chud\e_powerdrain.chud_definition
+# PortTag Replace ui\chud\e_regen.chud_definition
+# PortTag Replace ui\chud\e_tripmine.chud_definition
 PortTag Replace ui\chud\spartan_h2.chud_definition
 PortTag Replace ui\chud\elite_h2.chud_definition
 exit
+
+# HUD RETICLES BITMAP
+EditTag ms30\ui\chud\bitmaps\hud_reticles.bitmap
+ImportBitmap 4 workingdir\bitmaps\HUD_Reticles\4.dds
+ImportBitmap 11 workingdir\bitmaps\HUD_Reticles\11.dds
+
+# SSMG CROSSHAIR, SEQUENCE INDEX IS 33 NOT 32
+AddBlockElements Sequences
+AddBlockElements Sequences[*].Sprites
+SetField Sequences[*].Name "ssmg"
+SetField Sequences[*].BitmapCount 1
+SetField Sequences[*].Sprites[0].BitmapIndex 32
+SetField Sequences[*].Sprites[0].Right 1
+SetField Sequences[*].Sprites[0].Bottom 1
+ImportBitmap 32 workingdir\bitmaps\HUD_Reticles\32.dds
+SaveTagChanges
+Exit
+
 ## APPLY NEW HUD ##
 EditTag objects\characters\elite\mp_elite\mp_elite.biped
 SetField HudInterfaces[0].UnitHudInterface ui\chud\elite_h2.chud_definition
@@ -84,6 +150,7 @@ Exit
 EditTag ui\chud\globals.chud_globals_definition
 SetField HudGlobals[0].HudAttributes[0].WarpDestinationOffsetZ 0
 SetField HudGlobals[0].HudAttributes[0].MotionSensorOrigin 83 990
+SetField HudGlobals[2].HudAttributes[0].MotionSensorOrigin 83 990
 SaveTagChanges
 Exit
 
@@ -577,6 +644,54 @@ SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBack
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
+
+# FIX CROSSHAIR SCALE / SPLASER FLASH FIX
+EditTag ui\chud\spartan_laser.chud_definition
+SetField HudWidgets[1].BitmapWidgets[7].PlacementData[0].Scale 1.45 -1.5
+SetField HudWidgets[1].BitmapWidgets[6].PlacementData[0].Scale 1.45 1.5
+SaveTagChanges
+Exit
+
+ForEach chdt named ui\chud\flamethrower SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+ForEach chdt named ui\chud\fuel_rod_cannon SetField HudWidgets[2].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.6
+ForEach chdt named ui\chud\hammer SetField HudWidgets[1].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.6
+ForEach chdt named ui\chud\needler SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.6
+ForEach chdt named ui\chud\sword SetField HudWidgets[1].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.6
+ForEach chdt named ui\chud\shotgun SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.6
+
+# VEHICLE CROSSHAIR SCALE
+ForEach chdt named ui\chud\v_banshee SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.5 0.5
+ForEach chdt named ui\chud\v_chopper SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.745 0.724
+ForEach chdt named ui\chud\v_ghost SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.75 0.75
+ForEach chdt named ui\chud\v_hornet SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.75 0.75
+
+ForEach chdt named ui\chud\v_mongoose SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.56 0.56
+ForEach chdt named ui\chud\v_mongoose SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Offset 0 -60
+
+ForEach chdt named ui\chud\v_grinderdriver SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.56 0.56
+ForEach chdt named ui\chud\v_grinderdriver SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Offset 0 -120
+
+ForEach chdt named ui\chud\v_grinderturret SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.6
+
+ForEach chdt named ui\chud\v_scorpion SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.745 0.745
+
+ForEach chdt named ui\chud\v_scorpionturret SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.75 0.75
+
+ForEach chdt named ui\chud\v_shade SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.75 0.75
+
+ForEach chdt named ui\chud\v_driver SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.56 0.56
+
+ForEach chdt named ui\chud\v_chaingun SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.75 0.75
+
+ForEach chdt named ui\chud\v_gaussturret SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.5 0.5
+
+ForEach chdt named ui\chud\v_wraith SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.75 0.75
+ForEach chdt named ui\chud\v_wraith SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Offset 0 19
+
+ForEach chdt named ui\chud\v_wraith_anti_air SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Offset 0 19
+ForEach chdt named ui\chud\v_wraith_anti_air SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.75 0.75
+
+ForEach chdt named ui\chud\v_wraithturret SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.75 0.75
 
 ## SPRINT METER, Elite ##
 EditTag ui\chud\elite_h2.chud_definition
