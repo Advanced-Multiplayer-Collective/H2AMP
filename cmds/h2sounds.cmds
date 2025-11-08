@@ -1,0 +1,698 @@
+echo Grenades
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\weapons\frag_grenade\frag_ammo.sound
+PortTag Replace sound\weapons\frag_grenade\frag_projectile\frag_projectile.sound_looping
+PortTag Replace sound\weapons\frag_grenade\frag_bnc_dirt.sound
+PortTag Replace sound\weapons\frag_grenade\frag_bnc_metal.sound
+PortTag Replace sound\weapons\frag_grenade\frag_bnc_stone.sound
+PortTag Replace sound\weapons\frag_grenade\frag_expl.sound
+PortTag Replace sound\weapons\frag_grenade\frag_projectile\frag_proj\loop.sound
+PortTag Replace sound\weapons\frag_grenade\shield_hits_frag_grenade.sound
+PortTag Replace sound\weapons\frag_grenade\frag_throw.sound
+PortTag Replace sound\weapons\plasma_grenade\plas_proj.sound_looping
+PortTag Replace sound\weapons\plasma_grenade\throwgren.sound
+PortTag Replace sound\weapons\plasma_grenade\plasma_proj2.sound
+PortTag Replace sound\weapons\plasma_grenade\grenade_plas_ammo.sound
+Porttag sound\weapons\plasma_grenade\plasma_expl.sound
+exit
+
+EditTag objects\weapons\grenade\plasma_grenade\fx\airborne_detonation.effect
+SetField Events[0].Parts[3].Type sound\weapons\plasma_grenade\plasma_expl.sound
+Savetagchanges
+Exit
+
+echo Plasma Cannon
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\vehicles\spectre\spectre_turret_fire.sound
+PortTag Replace sound\vehicles\phantom\phantom_bolt_impact.sound
+Porttag sound\vehicles\phantom\phantom_turr_flyby_c_ap.sound
+exit
+
+EditTag objects\weapons\turret\plasma_cannon\projectiles\plasma_cannon_bolt.projectile
+SetField FlybySound sound\vehicles\phantom\phantom_turr_flyby_c_ap.sound
+Savetagchanges
+Exit
+
+EditTag sound\vehicles\spectre\spectre_turret_fire.sound
+SetField Playback.GainVariance 1.5
+SetField Playback.GainBase -4.5
+Savetagchanges
+Exit
+
+echo Energy Sword
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\weapons\energy_sword\sword_loop\sword_loop.sound_looping
+PortTag Replace sound\weapons\energy_sword\energy_melee_1.sound
+PortTag Replace sound\weapons\energy_sword\energy_melee_2.sound
+PortTag Replace sound\weapons\energy_sword\energy_sword_pose.sound
+PortTag Replace sound\weapons\energy_sword\energy_sword_drop.sound
+PortTag Replace sound\weapons\energy_sword\sword_impact_character.sound
+PortTag Replace sound\weapons\energy_sword\sword_impact_env.sound
+PortTag Replace sound\weapons\energy_sword\sword_loop\sword_loop\loop.sound
+PortTag Replace sound\weapons\energy_sword\sword_ready.sound
+exit
+
+echo Assault Bomb
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\weapons\assault_bomb\bomb_drop.sound
+exit
+
+echo Ball
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\weapons\ball\ball_drop.sound
+PortTag Replace sound\weapons\ball\ball_melee_var1.sound
+PortTag Replace sound\weapons\ball\ball_melee_var2.sound
+PortTag Replace sound\weapons\ball\ball_melee_var3.sound
+PortTag Replace sound\weapons\ball\ball_posing_var0.sound
+PortTag Replace sound\weapons\ball\ball_posing_var1.sound
+PortTag Replace sound\weapons\ball\ball_put_away.sound
+PortTag Replace sound\weapons\ball\ball_ready.sound
+exit
+
+echo Flag
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\weapons\flag\flag_drop.sound
+PortTag Replace sound\weapons\flag\flag_melee_var1.sound
+PortTag Replace sound\weapons\flag\flag_melee_var2.sound
+PortTag Replace sound\weapons\flag\flag_melee_var3.sound
+PortTag Replace sound\weapons\flag\flag_posing_var1.sound
+PortTag Replace sound\weapons\flag\flag_posing_var2.sound
+PortTag Replace sound\weapons\flag\flag_ready.sound
+exit
+
+echo Magnum
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\weapons\magnum\magnum_ammo.sound
+PortTag Replace sound\weapons\magnum\magnum_drop.sound
+PortTag Replace sound\weapons\magnum\magnum_drop_soft.sound
+PortTag Replace sound\weapons\magnum\magnum_dryfire.sound
+PortTag Replace sound\weapons\magnum\magnum_eject.sound
+PortTag sound\weapons\magnum\mag_dual_ready_l.sound
+PortTag sound\weapons\magnum\mag_dual_ready_r.sound
+PortTag sound\weapons\magnum\mag_dual_reload_l.sound
+PortTag sound\weapons\magnum\mag_dual_reload_r.sound
+PortTag sound\weapons\magnum\magnum_fire.sound
+PortTag sound\weapons\magnum\magnum_melee.sound
+PortTag sound\weapons\magnum\magnum_ready.sound
+PortTag sound\weapons\magnum\magnum_reload.sound
+exit
+
+Edittag objects\weapons\pistol\magnum\fx\firing.effect
+SetField Events[0].Parts[0].Type sound\weapons\magnum\magnum_fire.sound
+Savetagchanges
+Exit
+
+EditTag objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\magnum\mag_dual_ready_l.sound
+SetField SoundReferences[1].Reference sound\weapons\magnum\mag_dual_ready_r.sound
+SetField SoundReferences[2].Reference sound\weapons\magnum\mag_dual_reload_l.sound
+SetField SoundReferences[3].Reference sound\weapons\magnum\mag_dual_reload_r.sound
+SetField SoundReferences[4].Reference sound\weapons\magnum\magnum_melee.sound
+SetField SoundReferences[5].Reference sound\weapons\magnum\magnum_ready.sound
+SetField SoundReferences[6].Reference sound\weapons\magnum\magnum_reload.sound
+Savetagchanges
+Exit
+
+EditTag objects\characters\dervish\fp\weapons\pistol\magnum\fp_magnum\fp_magnum.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\magnum\magnum_ready.sound
+SetField SoundReferences[1].Reference sound\weapons\magnum\mag_dual_ready_r.sound
+SetField SoundReferences[2].Reference sound\weapons\magnum\mag_dual_reload_l.sound
+SetField SoundReferences[3].Reference sound\weapons\magnum\mag_dual_reload_r.sound
+SetField SoundReferences[4].Reference sound\weapons\magnum\magnum_melee.sound
+SetField SoundReferences[5].Reference sound\weapons\magnum\magnum_ready.sound
+SetField SoundReferences[6].Reference sound\weapons\magnum\magnum_reload.sound
+Savetagchanges
+Exit
+
+echo Needler
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\weapons\needler\dryfire.sound
+PortTag Replace sound\weapons\needler\expl.sound
+PortTag Replace sound\weapons\needler\needle_ammo.sound
+PortTag Replace sound\weapons\needler\needle_ricc.sound
+PortTag Replace sound\weapons\needler\needler_drop.sound
+PortTag Replace sound\weapons\needler\needler_drop_soft.sound
+PortTag Replace sound\weapons\needler\needler_flyby.sound
+PortTag Replace sound\weapons\needler\needler_granite.sound
+PortTag Replace sound\weapons\needler\needler_super_expl.sound
+PortTag sound\weapons\needler\needler_dual_pose_0_l.sound
+PortTag sound\weapons\needler\needler_dual_pose_0_r.sound
+PortTag sound\weapons\needler\needler_dual_pose_1_l.sound
+PortTag sound\weapons\needler\needler_dual_pose_1_r.sound
+PortTag sound\weapons\needler\needler_dual_ready.sound
+PortTag sound\weapons\needler\needler_dual_reload_l.sound
+PortTag sound\weapons\needler\needler_dual_reload_r.sound
+PortTag sound\weapons\needler\needler_melee_1.sound
+PortTag sound\weapons\needler\needler_posing_one.sound
+PortTag sound\weapons\needler\needler_posing_zero.sound
+PortTag sound\weapons\needler\needler_ready.sound
+PortTag sound\weapons\needler\needler_reload.sound
+PortTag sound\weapons\needler\fire.sound
+exit
+
+EditTag objects\weapons\pistol\needler\fx\firing.effect
+SetField Events[2].Parts[0].Type sound\weapons\needler\fire.sound
+Savetagchanges
+Exit
+
+EditTag objects\characters\masterchief\fp\weapons\pistol\fp_needler\fp_needler.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\needler\needler_melee_1.sound
+SetField SoundReferences[1].Reference sound\weapons\needler\needler_dual_pose_0_l.sound
+SetField SoundReferences[2].Reference sound\weapons\needler\needler_dual_pose_0_r.sound
+SetField SoundReferences[3].Reference sound\weapons\needler\needler_ready.sound
+SetField SoundReferences[4].Reference sound\weapons\needler\needler_reload.sound
+Savetagchanges
+Exit
+
+EditTag objects\characters\dervish\fp\weapons\pistol\fp_needler\fp_needler.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\needler\needler_melee_1.sound
+SetField SoundReferences[1].Reference sound\weapons\needler\needler_dual_pose_0_l.sound
+SetField SoundReferences[2].Reference sound\weapons\needler\needler_dual_pose_0_r.sound
+SetField SoundReferences[3].Reference sound\weapons\needler\needler_ready.sound
+SetField SoundReferences[4].Reference sound\weapons\needler\needler_reload.sound
+Savetagchanges
+Exit
+
+echo Plasma Pistol
+opencachefile "h2maps\zanzibar.map"
+PortTag sound\weapons\plasma_pistol\startcharge.sound
+PortTag sound\weapons\plasma_pistol\charge.sound
+PortTag Replace sound\weapons\plasma_pistol\plasma_charge_projectile\plasma_charge_proj\loop.sound
+PortTag sound\weapons\plasma_pistol\fire.sound
+PortTag Replace sound\weapons\plasma_pistol\plasma_pistol_drop.sound
+PortTag Replace sound\weapons\plasma_pistol\plasma_pistol_drop_soft.sound
+PortTag sound\weapons\plasma_pistol\plaspistol_dual_overheat_exit_l.sound
+PortTag sound\weapons\plasma_pistol\plaspistol_dual_overheat_exit_r.sound
+PortTag sound\weapons\plasma_pistol\plaspistol_dual_overheat_l.sound
+PortTag sound\weapons\plasma_pistol\plaspistol_dual_overheat_r.sound
+PortTag sound\weapons\plasma_pistol\plaspistol_dual_posing_l.sound
+PortTag sound\weapons\plasma_pistol\plaspistol_dual_posing_r.sound
+PortTag sound\weapons\plasma_pistol\plaspistol_dual_ready.sound
+PortTag sound\weapons\plasma_pistol\plaspistol_melee_one.sound
+PortTag sound\weapons\plasma_pistol\plaspistol_melee_two.sound
+PortTag Replace sound\weapons\plasma_pistol\plaspistol_overheat.sound
+PortTag sound\weapons\plasma_pistol\plaspistol_overheat_exit.sound
+PortTag sound\weapons\plasma_pistol\plaspistol_posing_one.sound
+PortTag sound\weapons\plasma_pistol\plaspistol_posing_zero.sound
+PortTag sound\weapons\plasma_pistol\plaspistol_ready.sound
+exit
+
+EditTag sound\weapons\plasma_pistol\plasmapistol_charging\plasmapistol_charging.sound_looping
+SetField Tracks[0].In sound\weapons\plasma_pistol\startcharge.sound
+SetField Tracks[0].Loop sound\weapons\plasma_pistol\charge.sound
+Savetagchanges
+Exit
+
+EditTag objects\weapons\pistol\plasma_pistol\fx\firing.effect
+SetField Events[0].Parts[0].Type sound\weapons\plasma_pistol\fire.sound
+Savetagchanges
+Exit
+
+EditTag objects\characters\masterchief\fp\weapons\pistol\fp_plasma_pistol\fp_plasma_pistol.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\plasma_pistol\plaspistol_melee_one.sound
+SetField SoundReferences[1].Reference sound\weapons\needler\needler_dual_pose_0_l.sound
+SetField SoundReferences[3].Reference sound\weapons\plasma_pistol\plaspistol_overheat_exit.sound
+SetField SoundReferences[4].Reference sound\weapons\plasma_pistol\plaspistol_posing_zero.sound
+SetField SoundReferences[5].Reference sound\weapons\plasma_pistol\plaspistol_posing_one.sound
+SetField SoundReferences[6].Reference sound\weapons\plasma_pistol\plaspistol_ready.sound
+SetField SoundReferences[7].Reference sound\weapons\plasma_pistol\plaspistol_dual_overheat_exit_l.sound
+SetField SoundReferences[8].Reference sound\weapons\plasma_pistol\plaspistol_dual_overheat_exit_r.sound
+SetField SoundReferences[9].Reference sound\weapons\plasma_pistol\plaspistol_dual_overheat_l.sound
+SetField SoundReferences[10].Reference sound\weapons\plasma_pistol\plaspistol_dual_overheat_r.sound
+SetField SoundReferences[11].Reference sound\weapons\plasma_pistol\plaspistol_dual_posing_l.sound
+SetField SoundReferences[12].Reference sound\weapons\plasma_pistol\plaspistol_dual_posing_r.sound
+SetField SoundReferences[13].Reference sound\weapons\plasma_pistol\plaspistol_dual_posing_l.sound
+SetField SoundReferences[14].Reference sound\weapons\plasma_pistol\plaspistol_dual_posing_r.sound
+SetField SoundReferences[15].Reference sound\weapons\plasma_pistol\plaspistol_dual_ready.sound
+SetField SoundReferences[16].Reference sound\weapons\plasma_pistol\plaspistol_dual_ready.sound
+SetField SoundReferences[17].Reference sound\weapons\plasma_pistol\plaspistol_dual_ready.sound
+SetField SoundReferences[18].Reference sound\weapons\plasma_pistol\plaspistol_dual_ready.sound
+SetField SoundReferences[19].Reference sound\weapons\plasma_pistol\plaspistol_dual_ready.sound
+SetField SoundReferences[20].Reference sound\weapons\plasma_pistol\plaspistol_dual_ready.sound
+Savetagchanges
+Exit
+
+EditTag objects\characters\dervish\fp\weapons\pistol\fp_plasma_pistol\fp_plasma_pistol.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\plasma_pistol\plaspistol_melee_one.sound
+SetField SoundReferences[1].Reference sound\weapons\plasma_pistol\plaspistol_melee_two.sound
+SetField SoundReferences[3].Reference sound\weapons\plasma_pistol\plaspistol_overheat_exit.sound
+SetField SoundReferences[4].Reference sound\weapons\plasma_pistol\plaspistol_posing_one.sound
+SetField SoundReferences[5].Reference sound\weapons\plasma_pistol\plaspistol_posing_zero.sound
+SetField SoundReferences[6].Reference sound\weapons\plasma_pistol\plaspistol_ready.sound
+SetField SoundReferences[7].Reference sound\weapons\plasma_pistol\plaspistol_dual_overheat_exit_l.sound
+SetField SoundReferences[8].Reference sound\weapons\plasma_pistol\plaspistol_dual_overheat_exit_r.sound
+SetField SoundReferences[9].Reference sound\weapons\plasma_pistol\plaspistol_dual_overheat_l.sound
+SetField SoundReferences[10].Reference sound\weapons\plasma_pistol\plaspistol_dual_overheat_r.sound
+SetField SoundReferences[11].Reference sound\weapons\plasma_pistol\plaspistol_dual_posing_l.sound
+SetField SoundReferences[12].Reference sound\weapons\plasma_pistol\plaspistol_dual_posing_r.sound
+SetField SoundReferences[13].Reference sound\weapons\plasma_pistol\plaspistol_dual_posing_l.sound
+SetField SoundReferences[14].Reference sound\weapons\plasma_pistol\plaspistol_dual_posing_r.sound
+SetField SoundReferences[15].Reference sound\weapons\plasma_pistol\plaspistol_dual_ready.sound
+SetField SoundReferences[16].Reference sound\weapons\plasma_pistol\plaspistol_dual_ready.sound
+SetField SoundReferences[17].Reference sound\weapons\plasma_pistol\plaspistol_dual_ready.sound
+SetField SoundReferences[18].Reference sound\weapons\plasma_pistol\plaspistol_dual_ready.sound
+SetField SoundReferences[19].Reference sound\weapons\plasma_pistol\plaspistol_dual_ready.sound
+SetField SoundReferences[20].Reference sound\weapons\plasma_pistol\plaspistol_dual_ready.sound
+Savetagchanges
+Exit
+
+echo battle rifle
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\weapons\battle_rifle\battle_rifle_ammo.sound
+PortTag Replace sound\weapons\battle_rifle\battle_rifle_drop.sound
+PortTag Replace sound\weapons\battle_rifle\battle_rifle_drop_soft.sound
+PortTag sound\weapons\battle_rifle\battle_rifle_ready.sound
+PortTag sound\weapons\battle_rifle\battle_rifle_reload.sound
+PortTag sound\weapons\battle_rifle\battle_rifle_reload_half.sound
+PortTag sound\weapons\battle_rifle\br_melee_strike_1.sound
+PortTag Replace sound\weapons\battle_rifle\dryfire.sound
+PortTag sound\weapons\battle_rifle\fire_burst.sound
+PortTag Replace sound\weapons\battle_rifle\flashlight.sound
+exit
+
+EditTag objects\weapons\rifle\battle_rifle\fx\firing.effect
+SetField Events[0].Parts[0].Type sound\weapons\battle_rifle\fire_burst.sound
+Savetagchanges
+Exit
+
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_battle_rifle\fp_battle_rifle.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\battle_rifle\br_melee_strike_1.sound
+SetField SoundReferences[1].Reference sound\weapons\battle_rifle\br_melee_strike_1.sound
+SetField SoundReferences[2].Reference sound\weapons\battle_rifle\battle_rifle_ready.sound
+SetField SoundReferences[3].Reference sound\weapons\battle_rifle\battle_rifle_reload.sound
+SetField SoundReferences[4].Reference sound\weapons\battle_rifle\battle_rifle_reload.sound
+Savetagchanges
+Exit
+
+EditTag objects\characters\dervish\fp\weapons\rifle\fp_battle_rifle\fp_battle_rifle.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\battle_rifle\battle_rifle_reload.sound
+SetField SoundReferences[1].Reference sound\weapons\battle_rifle\battle_rifle_ready.sound
+SetField SoundReferences[2].Reference sound\weapons\battle_rifle\br_melee_strike_1.sound
+SetField SoundReferences[3].Reference sound\weapons\battle_rifle\battle_rifle_reload_half.sound
+SetField SoundReferences[4].Reference sound\weapons\battle_rifle\br_melee_strike_1.sound
+Savetagchanges
+Exit
+
+EditTag sound\weapons\battle_rifle\fire_burst.sound
+SetField Playback.RandomPitchBounds 1 1
+SetField Playback.GainVariance 0.794328
+SetField Playback.GainBase 0
+Savetagchanges
+Exit
+
+echo Beam Rifle
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\weapons\beam_rifle\beam_rifle_drop.sound
+PortTag Replace sound\weapons\beam_rifle\beam_rifle_drop_soft.sound
+PortTag Replace sound\weapons\beam_rifle\beam_rifle_first_person_fire.sound
+PortTag Replace sound\weapons\beam_rifle\beam_rifle_misfire.sound
+PortTag sound\weapons\beam_rifle\beam_rifle_flyby.sound
+PortTag sound\weapons\beam_rifle\beam_rifle_melee_var1.sound
+PortTag sound\weapons\beam_rifle\beam_rifle_melee_var2.sound
+PortTag Replace sound\weapons\beam_rifle\beam_rifle_overheat\beam_rifle_overheat\in.sound
+PortTag Replace sound\weapons\beam_rifle\beam_rifle_overheat\beam_rifle_overheat\loop.sound
+PortTag Replace sound\weapons\beam_rifle\beam_rifle_overheat\beam_rifle_overheat\out.sound
+PortTag sound\weapons\beam_rifle\beam_rifle_posing_var1.sound
+PortTag sound\weapons\beam_rifle\beam_rifle_posing_var2.sound
+PortTag sound\weapons\beam_rifle\beam_rifle_ready.sound
+PortTag sound\weapons\beam_rifle\beam_rifle_fire.sound
+PortTag Replace sound\weapons\beam_rifle\beam_rifle_zoom_in.sound
+PortTag Replace sound\weapons\beam_rifle\beam_rifle_zoom_out.sound
+exit
+
+EditTag objects\weapons\rifle\beam_rifle\fx\firing.effect
+SetField Events[0].Parts[0].Type sound\weapons\beam_rifle\beam_rifle_fire.sound
+Savetagchanges
+Exit
+
+EditTag objects\weapons\rifle\beam_rifle\beam_rifle.weapon
+SetField ZoomInSound sound\weapons\beam_rifle\beam_rifle_zoom_in.sound
+SetField ZoomOutSound sound\weapons\beam_rifle\beam_rifle_zoom_out.sound
+Savetagchanges
+Exit
+
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_beam_rifle\fp_beam_rifle.model_animation_graph
+SetField SoundReferences[1].Reference sound\weapons\beam_rifle\beam_rifle_melee_var1.sound
+SetField SoundReferences[2].Reference sound\weapons\beam_rifle\beam_rifle_melee_var2.sound
+SetField SoundReferences[3].Reference sound\weapons\beam_rifle\beam_rifle_posing_var1.sound
+SetField SoundReferences[4].Reference sound\weapons\beam_rifle\beam_rifle_posing_var2.sound
+SetField SoundReferences[5].Reference sound\weapons\beam_rifle\beam_rifle_ready.sound
+Savetagchanges
+Exit
+EditTag objects\characters\dervish\fp\weapons\rifle\fp_beam_rifle\fp_beam_rifle.model_animation_graph
+SetField SoundReferences[1].Reference sound\weapons\beam_rifle\beam_rifle_ready.sound
+SetField SoundReferences[2].Reference sound\weapons\beam_rifle\beam_rifle_melee_var1.sound
+SetField SoundReferences[3].Reference sound\weapons\beam_rifle\beam_rifle_posing_var1.sound
+SetField SoundReferences[4].Reference sound\weapons\beam_rifle\beam_rifle_posing_var2.sound
+SetField SoundReferences[5].Reference sound\weapons\beam_rifle\beam_rifle_melee_var2.sound
+Savetagchanges
+Exit
+
+EditTag objects\weapons\rifle\beam_rifle\projectiles\beam_rifle_beam.projectile
+SetField FlybySound sound\weapons\beam_rifle\beam_rifle_flyby.sound
+Savetagchanges
+Exit
+
+echo Brute Plasma Rifle
+opencachefile "h2maps\zanzibar.map"
+exit
+
+echo Carbine
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\weapons\covenant_carbine\carbine_ammo_pickup.sound
+PortTag Replace sound\weapons\covenant_carbine\carbine_drop.sound
+PortTag Replace sound\weapons\covenant_carbine\carbine_drop_soft.sound
+PortTag Replace sound\weapons\covenant_carbine\carbine_posing1.sound
+PortTag Replace sound\weapons\covenant_carbine\carbine_posing2.sound
+PortTag Replace sound\weapons\covenant_carbine\carbine_posing3.sound
+PortTag Replace sound\weapons\covenant_carbine\covy_plasma_hit.sound
+PortTag Replace sound\weapons\covenant_carbine\ready.sound
+PortTag Replace sound\weapons\covenant_carbine\reload_empty.sound
+PortTag Replace sound\weapons\covenant_carbine\melee_2nd_hit.sound
+PortTag sound\weapons\covenant_carbine\fire.sound
+exit
+
+EditTag objects\weapons\rifle\covenant_carbine\fx\firing.effect
+SetField Events[0].Parts[0].Type sound\weapons\covenant_carbine\fire.sound
+Savetagchanges
+Exit
+
+EditTag objects\weapons\rifle\covenant_carbine\covenant_carbine.weapon
+SetField ZoomInSound sound\weapons\beam_rifle\beam_rifle_zoom_in.sound
+SetField ZoomOutSound sound\weapons\beam_rifle\beam_rifle_zoom_out.sound
+Savetagchanges
+Exit
+
+EditTag sound\weapons\covenant_carbine\fire.sound
+SetField Playback.GainBase -4
+SetField Playback.GainVariance 1
+Savetagchanges
+Exit
+
+echo Plasma Rifle
+opencachefile "h2maps\zanzibar.map"
+PortTag sound\weapons\plasma_rifle\plas_rifle_fire.sound
+PortTag Replace sound\weapons\plasma_rifle\plasma_proj.sound
+PortTag Replace sound\weapons\plasma_rifle\plasma_rifle_drop.sound
+PortTag Replace sound\weapons\plasma_rifle\plasma_rifle_drop_soft.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_dual_ohexit_l.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_dual_ohexit_r.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_dual_overheat_l.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_dual_overheat_r.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_dual_pose0_l.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_dual_pose0_r.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_dual_pose1_l.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_dual_pose1_r.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_dual_pose2_l.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_dual_pose2_r.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_dual_pose3_l.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_dual_pose3_r.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_dual_ready.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_melee1.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_oh_exit.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_overheat.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_posing_one.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_posing_zero.sound
+PortTag Replace sound\weapons\plasma_rifle\plasrifle_ready.sound
+exit
+
+EditTag objects\weapons\rifle\plasma_rifle\fx\firing.effect
+SetField Events[0].Parts[0].Type sound\weapons\plasma_rifle\plas_rifle_fire.sound
+Savetagchanges
+Exit
+
+EditTag objects\weapons\rifle\plasma_rifle\projectiles\plasma_rifle_bolt.projectile
+SetField FlybySound sound\weapons\plasma_rifle\plasma_proj.sound
+Savetagchanges
+Exit
+
+EditTag sound\weapons\plasma_rifle\plas_rifle_fire.sound
+SetField Playback.GainBase 1.5
+SetField Playback.GainVariance 0
+Savetagchanges
+Exit
+
+echo Shotgun
+opencachefile "h2maps\zanzibar.map"
+PortTag sound\weapons\shotgun\fire.sound
+PortTag Replace sound\weapons\shotgun\shotgun_ammo.sound
+PortTag Replace sound\weapons\shotgun\shotgun_drop.sound
+PortTag Replace sound\weapons\shotgun\shotgun_drop_soft.sound
+PortTag sound\weapons\shotgun\shotgun_fire_anim.sound
+PortTag sound\weapons\shotgun\shotgun_melee1.sound
+PortTag sound\weapons\shotgun\shotgun_melee2.sound
+PortTag sound\weapons\shotgun\shotgun_posing_one.sound
+PortTag sound\weapons\shotgun\shotgun_posing_zero.sound
+PortTag sound\weapons\shotgun\shotgun_ready.sound
+PortTag sound\weapons\shotgun\shotgun_reload_exit.sound
+PortTag sound\weapons\shotgun\shotgun_reload_loop.sound
+exit
+
+EditTag objects\weapons\rifle\shotgun\fx\firing.effect
+SetField Events[0].Parts[0].Type sound\weapons\shotgun\fire.sound
+Savetagchanges
+Exit
+
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_shotgun\fp_shotgun.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\shotgun\fire.sound
+SetField SoundReferences[1].Reference sound\weapons\shotgun\shotgun_melee1.sound
+SetField SoundReferences[2].Reference sound\weapons\shotgun\shotgun_melee2.sound
+SetField SoundReferences[3].Reference sound\weapons\shotgun\shotgun_posing_zero.sound
+SetField SoundReferences[4].Reference sound\weapons\shotgun\shotgun_posing_one.sound
+SetField SoundReferences[5].Reference sound\weapons\shotgun\shotgun_ready.sound
+SetField SoundReferences[6].Reference sound\weapons\shotgun\shotgun_reload_exit.sound
+SetField SoundReferences[7].Reference sound\weapons\shotgun\shotgun_reload_loop.sound
+Savetagchanges
+Exit
+
+EditTag  objects\characters\dervish\fp\weapons\rifle\fp_shotgun\fp_shotgun.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\shotgun\fire.sound
+SetField SoundReferences[1].Reference sound\weapons\shotgun\shotgun_melee1.sound
+SetField SoundReferences[2].Reference sound\weapons\shotgun\shotgun_melee2.sound
+SetField SoundReferences[3].Reference sound\weapons\shotgun\shotgun_posing_one.sound
+SetField SoundReferences[4].Reference sound\weapons\shotgun\shotgun_posing_zero.sound
+SetField SoundReferences[5].Reference sound\weapons\shotgun\shotgun_ready.sound
+SetField SoundReferences[6].Reference sound\weapons\shotgun\shotgun_reload_exit.sound
+SetField SoundReferences[7].Reference sound\weapons\shotgun\shotgun_reload_loop.sound
+Savetagchanges
+Exit
+
+echo SMG
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\weapons\smg\dryfire.sound
+PortTag sound\weapons\smg\fire.sound
+PortTag Replace sound\weapons\smg\smg_ammo.sound
+PortTag Replace sound\weapons\smg\smg_drop.sound
+PortTag Replace sound\weapons\smg\smg_drop_soft.sound
+PortTag sound\weapons\smg\smg_dual_posing_0_l.sound
+PortTag sound\weapons\smg\smg_dual_posing_0_r.sound
+PortTag sound\weapons\smg\smg_dual_ready.sound
+PortTag sound\weapons\smg\smg_dual_reload_left.sound
+PortTag sound\weapons\smg\smg_dual_reload_right.sound
+PortTag Replace sound\weapons\smg\smg_magazine.sound
+PortTag Replace sound\weapons\smg\smg_magazine_dirt.sound
+PortTag sound\weapons\smg\smg_melee1.sound
+PortTag sound\weapons\smg\smg_posing_var0.sound
+PortTag sound\weapons\smg\smg_posing_var1.sound
+PortTag sound\weapons\smg\smg_ready.sound
+PortTag sound\weapons\smg\smg_reload.sound
+PortTag sound\weapons\smg\smg_reload_full.sound
+exit
+
+EditTag objects\weapons\rifle\smg\fx\firing.effect
+SetField Events[0].Parts[0].Type sound\weapons\smg\fire.sound
+Savetagchanges
+Exit
+
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_smg\fp_smg.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\smg\smg_dual_posing_0_l.sound
+SetField SoundReferences[1].Reference sound\weapons\smg\smg_dual_posing_0_r.sound
+SetField SoundReferences[2].Reference sound\weapons\smg\smg_dual_ready.sound
+SetField SoundReferences[3].Reference sound\weapons\smg\smg_dual_ready.sound
+SetField SoundReferences[4].Reference sound\weapons\smg\smg_dual_reload_left.sound
+SetField SoundReferences[5].Reference sound\weapons\smg\smg_dual_reload_left.sound
+SetField SoundReferences[6].Reference sound\weapons\smg\smg_dual_reload_left.sound
+SetField SoundReferences[7].Reference sound\weapons\smg\smg_dual_reload_right.sound
+SetField SoundReferences[8].Reference sound\weapons\smg\smg_dual_reload_right.sound
+SetField SoundReferences[9].Reference sound\weapons\smg\smg_dual_reload_right.sound
+SetField SoundReferences[10].Reference sound\weapons\smg\smg_melee1.sound
+SetField SoundReferences[11].Reference sound\weapons\smg\smg_posing_var0.sound
+SetField SoundReferences[12].Reference sound\weapons\smg\smg_posing_var1.sound
+SetField SoundReferences[13].Reference sound\weapons\smg\smg_ready.sound
+SetField SoundReferences[14].Reference sound\weapons\smg\smg_reload.sound
+Savetagchanges
+Exit
+
+EditTag objects\characters\dervish\fp\weapons\rifle\fp_smg\fp_smg.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\smg\smg_melee1.sound
+SetField SoundReferences[1].Reference sound\weapons\smg\smg_ready.sound
+SetField SoundReferences[2].Reference sound\weapons\smg\smg_reload.sound
+SetField SoundReferences[0].Reference sound\weapons\smg\smg_dual_posing_0_l.sound
+SetField SoundReferences[1].Reference sound\weapons\smg\smg_dual_posing_0_r.sound
+SetField SoundReferences[2].Reference sound\weapons\smg\smg_dual_ready.sound
+SetField SoundReferences[3].Reference sound\weapons\smg\smg_dual_ready.sound
+SetField SoundReferences[4].Reference sound\weapons\smg\smg_dual_reload_left.sound
+SetField SoundReferences[5].Reference sound\weapons\smg\smg_dual_reload_left.sound
+SetField SoundReferences[6].Reference sound\weapons\smg\smg_dual_reload_left.sound
+SetField SoundReferences[7].Reference sound\weapons\smg\smg_dual_reload_right.sound
+SetField SoundReferences[8].Reference sound\weapons\smg\smg_dual_reload_right.sound
+SetField SoundReferences[9].Reference sound\weapons\smg\smg_dual_reload_right.sound
+SetField SoundReferences[11].Reference sound\weapons\smg\smg_posing_var0.sound
+SetField SoundReferences[12].Reference sound\weapons\smg\smg_posing_var1.sound
+Savetagchanges
+Exit
+
+EditTag sound\weapons\smg\fire.sound
+SetField Playback.RandomPitchBounds 1 1
+SetField Playback.GainVariance 0.562341
+SetField Playback.GainBase 0
+Savetagchanges
+Exit
+
+echo sniper rifle
+opencachefile "h2maps\zanzibar.map"
+PortTag sound\weapons\sniper_rifle\fire.sound
+PortTag Replace sound\weapons\sniper_rifle\sniper_ammo.sound
+PortTag Replace sound\weapons\sniper_rifle\sniper_drop.sound
+PortTag sound\weapons\sniper_rifle\sniper_melee_first.sound
+PortTag sound\weapons\sniper_rifle\sniper_posing.sound
+PortTag sound\weapons\sniper_rifle\sniper_ready.sound
+PortTag sound\weapons\sniper_rifle\sniper_reload.sound
+PortTag Replace sound\weapons\sniper_rifle\zoom_in.sound
+PortTag Replace sound\weapons\sniper_rifle\zoom_out.sound
+exit
+
+Edittag objects\weapons\rifle\sniper_rifle\fx\firing.effect
+SetField Events[0].Parts[0].Type sound\weapons\sniper_rifle\fire.sound
+Savetagchanges
+exit
+
+EditTag objects\weapons\rifle\sniper_rifle\sniper_rifle.weapon
+SetField ZoomInSound sound\weapons\sniper_rifle\zoom_in.sound
+SetField ZoomOutSound sound\weapons\sniper_rifle\zoom_out.sound
+Savetagchanges
+exit
+
+Edittag objects\characters\masterchief\fp\weapons\rifle\fp_sniper_rifle\fp_sniper_rifle.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\sniper_rifle\sniper_melee_first.sound
+SetField SoundReferences[1].Reference sound\weapons\sniper_rifle\sniper_posing.sound
+SetField SoundReferences[2].Reference sound\weapons\sniper_rifle\sniper_ready.sound
+SetField SoundReferences[3].Reference sound\weapons\sniper_rifle\sniper_reload.sound
+SetField SoundReferences[4].Reference sound\weapons\sniper_rifle\sniper_posing.sound
+Savetagchanges
+exit
+
+Edittag objects\characters\dervish\fp\weapons\rifle\fp_sniper_rifle\fp_sniper_rifle.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\sniper_rifle\sniper_melee_first.sound
+SetField SoundReferences[1].Reference sound\weapons\sniper_rifle\sniper_posing.sound
+SetField SoundReferences[2].Reference sound\weapons\sniper_rifle\sniper_ready.sound
+SetField SoundReferences[3].Reference sound\weapons\sniper_rifle\sniper_reload.sound
+Savetagchanges
+exit
+
+echo Fuel Rod
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\weapons\flak_cannon\flak_cannon_drop.sound
+PortTag Replace sound\weapons\flak_cannon\flak_cannon_drop_soft.sound
+PortTag Replace sound\weapons\flak_cannon\flak_cannon_fire_animation.sound
+PortTag Replace sound\weapons\flak_cannon\flak_cannon_melee.sound
+PortTag Replace sound\weapons\flak_cannon\flak_cannon_posing_var1.sound
+PortTag Replace sound\weapons\flak_cannon\flak_cannon_posing_var2.sound
+PortTag Replace sound\weapons\flak_cannon\flak_cannon_ready.sound
+PortTag Replace sound\weapons\flak_cannon\flak_cannon_reload.sound
+PortTag Replace sound\weapons\flak_cannon\flak_expl.sound
+PortTag sound\weapons\flak_cannon\flak_fire.sound
+PortTag Replace sound\weapons\flak_cannon\flak_projectile_loop\flak_proj\loop.sound
+PortTag Replace sound\weapons\flak_cannon\flak_projectlie_loop2\flak_loop2\in.sound
+PortTag Replace sound\weapons\flak_cannon\flak_projectlie_loop2\flak_loop2\loop.sound
+exit
+
+EditTag objects\weapons\support_high\flak_cannon\flak_cannon.weapon
+SetField ZoomInSound sound\weapons\beam_rifle\beam_rifle_zoom_in.sound
+SetField ZoomOutSound sound\weapons\beam_rifle\beam_rifle_zoom_out.sound
+Savetagchanges
+exit
+
+EditTag objects\weapons\support_high\flak_cannon\fx\firing.effect
+SetField Events[0].Parts[0].Type sound\weapons\flak_cannon\flak_fire.sound
+Savetagchanges
+exit
+
+echo Rocket Launcher
+opencachefile "h2maps\zanzibar.map"
+PortTag sound\weapons\rocket_launcher\fire.sound
+PortTag Replace sound\weapons\rocket_launcher\rocket_ammo.sound
+PortTag Replace sound\weapons\rocket_launcher\rocket_fire_anim.sound
+PortTag Replace sound\weapons\rocket_launcher\rocket_launcher_drop.sound
+PortTag Replace sound\weapons\rocket_launcher\rocket_launcher_drop_soft.sound
+PortTag Replace sound\weapons\rocket_launcher\rocket_melee_strike.sound
+PortTag Replace sound\weapons\rocket_launcher\rocket_posing.sound
+PortTag Replace sound\weapons\rocket_launcher\rocket_proj\projectile\loop.sound
+PortTag sound\weapons\rocket_launcher\rocket_ready.sound
+PortTag sound\weapons\rocket_launcher\rocket_reload.sound
+PortTag Replace sound\weapons\rocket_launcher\tracking_locked\locked\loop.sound
+PortTag Replace sound\weapons\rocket_launcher\tracking_locking\locking\loop.sound
+exit
+
+
+EditTag objects\weapons\support_high\rocket_launcher\rocket_launcher.weapon
+SetField ZoomInSound sound\weapons\sniper_rifle\zoom_in.sound
+SetField ZoomOutSound sound\weapons\sniper_rifle\zoom_out.sound
+Savetagchanges
+exit
+
+EditTag objects\characters\masterchief\fp\weapons\support_high\fp_rocket_launcher\fp_rocket_launcher.model_animation_graph
+SetField SoundReferences[4].Reference sound\weapons\rocket_launcher\rocket_ready.sound
+SetField SoundReferences[5].Reference sound\weapons\rocket_launcher\rocket_reload.sound
+SetField SoundReferences[6].Reference sound\weapons\rocket_launcher\fire.sound
+Savetagchanges
+exit
+
+EditTag objects\characters\dervish\fp\weapons\support_high\fp_rocket_launcher\fp_rocket_launcher.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\rocket_launcher\fire.sound
+SetField SoundReferences[3].Reference sound\weapons\rocket_launcher\rocket_ready.sound
+SetField SoundReferences[4].Reference sound\weapons\rocket_launcher\rocket_reload.sound
+Savetagchanges
+exit
+
+echo Brute Shot
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\weapons\brute_shot\brute_round_explode.sound
+PortTag Replace sound\weapons\brute_shot\brute_shot_ammo.sound
+PortTag Replace sound\weapons\brute_shot\brute_shot_bounce.sound
+PortTag Replace sound\weapons\brute_shot\brute_shot_drop.sound
+PortTag Replace sound\weapons\brute_shot\brute_shot_drop_soft.sound
+PortTag sound\weapons\brute_shot\brute_shot_fire.sound
+PortTag sound\weapons\brute_shot\brute_shot_melee.sound
+PortTag Replace sound\weapons\brute_shot\brute_shot_posing_var1.sound
+PortTag Replace sound\weapons\brute_shot\brute_shot_posing_var2.sound
+PortTag Replace sound\weapons\brute_shot\brute_shot_projectile\brute_shot_proj\loop.sound
+PortTag sound\weapons\brute_shot\brute_shot_ready.sound
+PortTag sound\weapons\brute_shot\brute_shot_reload_full.sound
+exit
+
+EditTag objects\weapons\support_low\brute_shot\fx\firing.effect
+SetField Events[0].Parts[0].Type sound\weapons\brute_shot\brute_shot_fire.sound
+Savetagchanges
+exit
+
+EditTag objects\characters\masterchief\fp\weapons\support_low\fp_brute_shot\fp_brute_shot.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\brute_shot\brute_shot_reload_full.sound
+SetField SoundReferences[1].Reference sound\weapons\brute_shot\brute_shot_melee.sound
+SetField SoundReferences[2].Reference sound\weapons\brute_shot\brute_shot_ready.sound
+Savetagchanges
+exit
+
+EditTag objects\characters\dervish\fp\weapons\support_low\fp_brute_shot\fp_brute_shot.model_animation_graph
+SetField SoundReferences[0].Reference sound\weapons\brute_shot\brute_shot_reload_full.sound
+SetField SoundReferences[1].Reference sound\weapons\brute_shot\brute_shot_melee.sound
+SetField SoundReferences[2].Reference sound\weapons\brute_shot\brute_shot_ready.sound
+Savetagchanges
+exit
+
+EditTag sound\weapons\brute_shot\brute_shot_fire.sound
+SetField Playback.GainVariance 0.75
+SetField Playback.GainBase 0
+SetField Playback.RandomPitchBounds 1 1
+Savetagchanges
+exit

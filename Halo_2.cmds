@@ -147,6 +147,8 @@ RunCommands workingdir\cmds\bipeds.cmds
 
 RunCommands workingdir\cmds\weaponsWIP.cmds
 
+RunCommands workingdir\cmds\h2sounds.cmds
+
 ## Setting H2 Movement Speed ##
 EditTag globals\globals.globals
 ## Spartan ##
