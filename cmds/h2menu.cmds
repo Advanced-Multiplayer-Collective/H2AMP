@@ -1639,3 +1639,11 @@ SetField PlayerCharacterCustomizations[1].CharacterPositionData.SettingsCameraIn
 SetField PlayerCharacterCustomizations[1].CharacterPositionData.PlatformNameIndex -1
 savetagchanges
 exit
+
+echo filter colors
+
+EditTag levels\ui\mainmenu\sky\ui.area_screen_effect
+SetField ScreenEffects[0].ColorFilter 0.0666667 0.105882 0.270588
+savetagchanges
+exit
+
