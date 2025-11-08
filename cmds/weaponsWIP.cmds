@@ -245,6 +245,10 @@ exit
 EditTag objects\weapons\rifle\shotgun\projectiles\shotgun_bullet.projectile
 SetField InitialVelocity 120
 SetField FinalVelocity 120
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\shotgun\shotgun.weapon
 SetField Barrels[0].DualWeaponError.ErrorAngle 10 12
 SetField Barrels[0].DualWeaponError.RuntimeDecelerationRate 0
 SetField Barrels[0].DualWeaponError.RuntimeAccelerationRate 0

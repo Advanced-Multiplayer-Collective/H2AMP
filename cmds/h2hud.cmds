@@ -295,8 +295,8 @@ Exit
 Edittag ui\chud\beam_rifle.chud_definition
 SetField HudWidgets[4].BitmapWidgets[2].RenderData[0].OutputColorA HighlightForeground
 SetField HudWidgets[4].BitmapWidgets[2].RenderData[0].OutputColorB PrimaryBackground
-SetField HudWidgets[4].BitmapWidgets[4].RenderData[0].OutputColorA HighlightForeground
-SetField HudWidgets[4].BitmapWidgets[4].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[5].RenderData[0].OutputColorA HighlightForeground
+SetField HudWidgets[4].BitmapWidgets[5].RenderData[0].OutputColorB SecondaryBackground
 
 SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
 SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
