@@ -1652,14 +1652,14 @@ echo menu logo
 
 edittag ui\halox\main_menu\halo3_logo_ui.bitmap
 importbitmap 0 workingdir\bitmaps\halo3_logo_ui.dds
-SetField Images[0].Width 1000
-SetField Images[0].Height 200
+SetField Images[0].Width 500
+SetField Images[0].Height 100
 savetagchanges
 exit
 
 
 edittag ui\halox\main_menu\main_menu.gui_screen_widget_definition
 SetField GroupWidgets[1].Definition.GuiRenderBlock.Bounds720p -110 -375 0 0
-SetField GroupWidgets[1].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 255 -25 0 0
+SetField GroupWidgets[1].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 345 355 0 0
 savetagchanges
 exit
