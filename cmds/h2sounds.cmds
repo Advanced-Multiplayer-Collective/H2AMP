@@ -696,3 +696,14 @@ SetField Playback.GainBase 0
 SetField Playback.RandomPitchBounds 1 1
 Savetagchanges
 exit
+
+echo Shield
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\ui\shield_charge_dervish\new_charge\loop.sound
+PortTag Replace sound\ui\shield_charge\charge\loop.sound
+PortTag Replace sound\ui\shield_depleted_dervish\new_depleted\loop.sound
+PortTag Replace sound\ui\shield_depleted\deplete\loop.sound
+PortTag Replace sound\ui\shield_hit.sound
+PortTag Replace sound\ui\shield_low_dervish\new_low\loop.sound
+PortTag Replace sound\ui\shield_low\low\loop.sound
+exit

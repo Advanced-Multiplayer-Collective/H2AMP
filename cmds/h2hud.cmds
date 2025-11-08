@@ -389,6 +389,7 @@ SaveTagChanges
 Exit
 
 Edittag ui\chud\magnum.chud_definition
+SetField HudWidgets[1].BitmapWidgets[0].BitmapSequenceIndex 18
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackground
