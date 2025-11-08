@@ -132,3 +132,8 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+## echo IvoryTower Shader Fixes
+EditTag scenarios\shaders\nature\trees\palm_frond_a.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
