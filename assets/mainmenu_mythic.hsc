@@ -72,7 +72,7 @@
 	(objects_attach "spartan_appearance" "right_hand" "appearance_ar" "invalid")
 	(objects_attach "elite_appearance" "right_hand_elite" "apperance_pr" "invalid")
 	(sleep 1)
-	(custom_animation_loop "spartan_appearance" "objects\characters\masterchief\masterchief" "ui:rifle:sg:idle:var1" false)
+	(custom_animation_loop "spartan_appearance" "objects\characters\masterchief\masterchief" "ui:rifle:idle:var1" false)
 	(custom_animation_loop "elite_appearance" "objects\characters\elite\elite" "ui:pistol:idle:var1" false)
 )
 
