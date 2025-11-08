@@ -1624,3 +1624,18 @@ exit
 #importsound M:\Models\Halo\h2b\c_turret\sound\ui\main_menu_music\menu_music\loop\
 #savetagchanges
 #exit
+
+
+echo fix missing bipeds
+
+EditTag multiplayer\mod_globals.mod_globals
+SetField PlayerCharacterCustomizations[0].CharacterPositionData.BipedNameIndex 3
+SetField PlayerCharacterCustomizations[0].CharacterPositionData.SettingsCameraIndex 36
+SetField PlayerCharacterCustomizations[0].CharacterPositionData.PlatformNameIndex -1
+SetField PlayerCharacterCustomizations[1].CharacterPositionData.RelativeBipedPosition 0.2 0.08 -0.02
+SetField PlayerCharacterCustomizations[1].CharacterPositionData.RelativeBipedRotation -35
+SetField PlayerCharacterCustomizations[1].CharacterPositionData.BipedNameIndex 2
+SetField PlayerCharacterCustomizations[1].CharacterPositionData.SettingsCameraIndex 36
+SetField PlayerCharacterCustomizations[1].CharacterPositionData.PlatformNameIndex -1
+savetagchanges
+exit
