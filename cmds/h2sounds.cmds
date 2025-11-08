@@ -21,6 +21,8 @@ SetField Events[0].Parts[3].Type sound\weapons\plasma_grenade\plasma_expl.sound
 Savetagchanges
 Exit
 
+echo Weapons
+
 echo Plasma Cannon
 opencachefile "h2maps\zanzibar.map"
 PortTag Replace sound\vehicles\spectre\spectre_turret_fire.sound
@@ -706,4 +708,157 @@ PortTag Replace sound\ui\shield_depleted\deplete\loop.sound
 PortTag Replace sound\ui\shield_hit.sound
 PortTag Replace sound\ui\shield_low_dervish\new_low\loop.sound
 PortTag Replace sound\ui\shield_low\low\loop.sound
+exit
+
+echo vehicles
+
+echo Banshee
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\characters\elite\banshee_b_d_board.sound
+PortTag Replace sound\characters\elite\banshee_b_d_enter.sound
+PortTag Replace sound\characters\masterchief\mc_banshee_b_d_board.sound
+PortTag Replace sound\characters\masterchief\mc_banshee_b_d_enter.sound
+PortTag Replace sound\characters\masterchief\mc_banshee_enter.sound
+PortTag Replace sound\characters\masterchief\mc_banshee_exit.sound
+PortTag Replace sound\vehicles\banshee\banshee_boost_left\track1\in.sound
+PortTag Replace sound\vehicles\banshee\banshee_boost_left\track1\loop.sound
+PortTag Replace sound\vehicles\banshee\banshee_boost_right\track1\in.sound
+PortTag Replace sound\vehicles\banshee\banshee_boost_right\track1\loop.sound
+PortTag Replace sound\vehicles\banshee\banshee_cannon_expl.sound
+PortTag sound\vehicles\banshee\banshee_cannon_fire.sound
+PortTag Replace sound\vehicles\banshee\banshee_close.sound
+PortTag Replace sound\vehicles\banshee\banshee_contrail_left\b_contrail_left\loop.sound
+PortTag Replace sound\vehicles\banshee\banshee_contrail_right\b_contrail_right\loop.sound
+PortTag Replace sound\vehicles\banshee\banshee_fire.sound
+PortTag Replace sound\vehicles\banshee\banshee_multi_eng_left\b_engine_left\in.sound
+PortTag Replace sound\vehicles\banshee\banshee_multi_eng_left\b_engine_left\loop.sound
+PortTag Replace sound\vehicles\banshee\banshee_multi_eng_left\b_engine_left\out.sound
+PortTag Replace sound\vehicles\banshee\banshee_open.sound
+exit
+
+EditTag objects\vehicles\banshee\fx\weapon\banshee_bomb\firing.effect
+SetField Events[0].Parts[0].Type sound\vehicles\banshee\banshee_cannon_fire.sound
+Savetagchanges
+exit
+
+echo Ghost
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\characters\elite\ghost_b_b_board.sound
+PortTag Replace sound\characters\elite\ghost_b_b_enter.sound
+PortTag Replace sound\characters\elite\ghost_b_l_board.sound
+PortTag Replace sound\characters\elite\ghost_d_enter.sound
+PortTag Replace sound\characters\elite\ghost_d_exit.sound
+PortTag Replace sound\characters\masterchief\mc_ghost_b_b_board.sound
+PortTag Replace sound\characters\masterchief\mc_ghost_b_b_enter.sound
+PortTag Replace sound\characters\masterchief\mc_ghost_b_l_board.sound
+PortTag Replace sound\characters\masterchief\mc_ghost_b_l_enter.sound
+PortTag Replace sound\characters\masterchief\mc_ghost_d_enter.sound
+PortTag Replace sound\characters\masterchief\mc_ghost_d_exit.sound
+PortTag Replace sound\vehicles\ghost\ghost_boost_left\track1\in.sound
+PortTag Replace sound\vehicles\ghost\ghost_boost_left\track1\loop.sound
+PortTag Replace sound\vehicles\ghost\ghost_boost_right\track1\in.sound
+PortTag Replace sound\vehicles\ghost\ghost_boost_right\track1\loop.sound
+PortTag Replace sound\vehicles\ghost\ghost_fire.sound
+PortTag Replace sound\vehicles\ghost\ghost_initial_destroyed.sound
+PortTag Replace sound\vehicles\ghost\ghost_left\track1\in.sound
+PortTag Replace sound\vehicles\ghost\ghost_left\track1\loop.sound
+PortTag Replace sound\vehicles\ghost\ghost_left\track1\out.sound
+PortTag Replace sound\vehicles\ghost\ghost_right\track1\in.sound
+PortTag Replace sound\vehicles\ghost\ghost_right\track1\loop.sound
+PortTag Replace sound\vehicles\ghost\ghost_right\track1\out.sound
+exit
+
+EditTag sound\vehicles\ghost\ghost_fire.sound
+SetField Playback.RandomPitchBounds 1 1
+SetField Playback.GainVariance 0.501187
+SetField Playback.GainBase 0
+Savetagchanges
+exit
+
+echo Scorpion
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\characters\elite\scorpion_d_enter.sound
+PortTag Replace sound\characters\elite\scorpion_d_exit.sound
+PortTag Replace sound\characters\masterchief\mc_scorpion_b_b_enter.sound
+PortTag Replace sound\characters\masterchief\mc_scorpion_b_b_exit.sound
+PortTag Replace sound\characters\masterchief\mc_scorpion_b_l_enter.sound
+PortTag Replace sound\characters\masterchief\mc_scorpion_b_l_exit.sound
+PortTag Replace sound\characters\masterchief\mc_scorpion_d_enter.sound
+PortTag Replace sound\characters\masterchief\mc_scorpion_d_exit.sound
+PortTag Replace sound\characters\masterchief\mc_scorpion_melee.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_cannon_fire.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_crash.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_crush\scorp_crush\alt_loop.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_engine_left\scorp_eng_left\in.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_engine_left\scorp_eng_left\loop.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_engine_left\scorp_eng_left\out.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_engine_right\scorp_eng_right\in.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_engine_right\scorp_eng_right\loop.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_engine_right\scorp_eng_right\out.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_explosion.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_hatch_closing.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_hatch_opening.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_projectile.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_treads_left\scorp_treads_left\loop.sound
+PortTag Replace sound\vehicles\scorpion\scorpion_treads_right\scorp_treads_left\loop.sound
+exit
+
+
+echo Warthog
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace effects\objects\vehicles\warthog\chaingun\warthog_gun_fire.effect
+PortTag Replace sound\weapons\chain_gun\fire.sound
+PortTag Replace sound\weapons\chain_gun\ammo_rattle\ammo_rattle\loop.sound
+PortTag Replace sound\weapons\chain_gun\traverse\wart_traverse\track\in.sound
+PortTag Replace sound\weapons\chain_gun\traverse\wart_traverse\track\loop.sound
+PortTag Replace sound\weapons\chain_gun\traverse\traverse\loop.sound
+PortTag Replace sound\weapons\gauss_rifle\fire.sound
+exit
+
+EditTag sound\weapons\chain_gun\fire.sound
+SetField Playback.RandomPitchBounds 1 1
+SetField Playback.GainVariance 0.354813
+SetField Playback.GainBase 0
+Savetagchanges
+exit
+
+echo Wraith
+opencachefile "h2maps\zanzibar.map"
+PortTag Replace sound\characters\elite\wraith_b_b_enter.sound
+PortTag Replace sound\characters\elite\wraith_b_b_melee.sound
+PortTag Replace sound\characters\elite\wraith_b_b_new.sound
+PortTag Replace sound\characters\elite\wraith_b_b_throw_grenade.sound
+PortTag Replace sound\characters\elite\wraith_b_l_exit.sound
+PortTag Replace sound\characters\elite\wraith_b_l_melee.sound
+PortTag Replace sound\characters\elite\wraith_b_l_new.sound
+PortTag Replace sound\characters\elite\wraith_b_l_throw_grenade.sound
+PortTag Replace sound\characters\elite\wraith_b_r_melee.sound
+PortTag Replace sound\characters\elite\wraith_b_r_new.sound
+PortTag Replace sound\characters\elite\wraith_d_enter.sound
+PortTag Replace sound\characters\elite\wraith_d_exit.sound
+PortTag Replace sound\characters\masterchief\mc_wraith_b_b_enter.sound
+PortTag Replace sound\characters\masterchief\mc_wraith_b_b_exit.sound
+PortTag Replace sound\characters\masterchief\mc_wraith_b_b_melee.sound
+PortTag Replace sound\characters\masterchief\mc_wraith_b_b_new.sound
+PortTag Replace sound\characters\masterchief\mc_wraith_b_b_throw_grenade.sound
+PortTag Replace sound\characters\masterchief\mc_wraith_b_l_exit.sound
+PortTag Replace sound\characters\masterchief\mc_wraith_b_l_melee.sound
+PortTag Replace sound\characters\masterchief\mc_wraith_b_l_throw_grenade.sound
+PortTag Replace sound\characters\masterchief\mc_wraith_d_enter.sound
+PortTag Replace sound\characters\masterchief\mc_wraith_d_exit.sound
+PortTag Replace sound\characters\masterchief\mc_wraith_melee_new.sound
+PortTag Replace sound\vehicles\wraith\w_boost_left\track1\in.sound
+PortTag Replace sound\vehicles\wraith\w_boost_left\track1\loop.sound
+PortTag Replace sound\vehicles\wraith\w_boost_right\track1\in.sound
+PortTag Replace sound\vehicles\wraith\w_boost_right\track1\loop.sound
+PortTag Replace sound\vehicles\wraith\wraith_engine_left\track1\in.sound
+PortTag Replace sound\vehicles\wraith\wraith_engine_left\track1\loop.sound
+PortTag Replace sound\vehicles\wraith\wraith_engine_left\track1\out.sound
+PortTag Replace sound\vehicles\wraith\wraith_engine_right\track1\in.sound
+PortTag Replace sound\vehicles\wraith\wraith_engine_right\track1\loop.sound
+PortTag Replace sound\vehicles\wraith\wraith_engine_right\track1\out.sound
+PortTag Replace sound\vehicles\wraith\wraith_fire_mortar.sound
+PortTag sound\vehicles\wraith\wraith_mortar_charge.sound
+PortTag Replace sound\vehicles\wraith\wraith_open.sound
+PortTag Replace sound\vehicles\wraith\wraith_projectile\track1\loop.sound
 exit
