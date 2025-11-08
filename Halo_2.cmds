@@ -62,6 +62,17 @@ OpenCacheFile "h2maps\cyclotron.map"
 PortTag *.scnr
 Exit
 
+EditTag scenarios\objects\multi\cyclotron\elevator_cyclotron\elevator_cyclotron.model_animation_graph
+AddAnimation "workingdir\animations\elevator_cyclotron\device position.JMO"
+SetField Animations[0].AnimationData.AnimationType Overlay
+SaveTagChanges
+Exit
+
+EditTag scenarios\objects\multi\cyclotron\elevator_cyclotron\elevator_cyclotron.device_machine
+SetField PositionTransitionTime .083
+SaveTagChanges
+Exit
+
 OpenCacheFile "h2maps\deltatap.map"
 PortTag *.scnr
 Exit
