@@ -150,10 +150,10 @@ UpdateMapFiles
 
 RunCommands workingdir\cmds\MapFiles.cmds
 
-RunCommands workingdir\cmds\h2hud.cmds
-
 # EpicPerry what changed on the HUD message?
-# RunCommands worknigdir\cmds\unic_hud_message.cmds
+RunCommands workingdir\cmds\unic_hud_message.cmds
+
+RunCommands workingdir\cmds\h2hud.cmds
 
 RunCommands workingdir\cmds\Halo_2_Shader_Fixes.cmds
 
