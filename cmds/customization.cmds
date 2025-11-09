@@ -8,6 +8,7 @@ EditTag objects\characters\masterchief\shaders\mp_cobra_h2.shader
 SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\characters\masterchief\bitmaps\mp_cobra.bitmap
 SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\characters\masterchief\bitmaps\mp_cobra_cc.bitmap
 SetField ShaderProperties[0].TextureConstants[4].Bitmap objects\characters\masterchief\bitmaps\mp_cobra_bump.bitmap
+SetArgument specular_coefficient 0.5
 savetagchanges
 exit
 
@@ -17,6 +18,7 @@ EditTag objects\characters\masterchief\shaders\mp_intruder_h2.shader
 SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\characters\masterchief\bitmaps\mp_intruder.bitmap
 SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\characters\masterchief\bitmaps\mp_intruder_cc.bitmap
 SetField ShaderProperties[0].TextureConstants[4].Bitmap objects\characters\masterchief\bitmaps\mp_intruder_bump.bitmap
+SetArgument specular_coefficient 0.5
 savetagchanges
 exit
 
@@ -27,6 +29,7 @@ EditTag objects\characters\masterchief\shaders\mp_ninja_h2.shader
 SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\characters\masterchief\bitmaps\mp_ninja.bitmap
 SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\characters\masterchief\bitmaps\mp_ninja_cc.bitmap
 SetField ShaderProperties[0].TextureConstants[4].Bitmap objects\characters\masterchief\bitmaps\mp_ninja_bump.bitmap
+SetArgument specular_coefficient 0.5
 savetagchanges
 exit
 
@@ -38,6 +41,7 @@ EditTag objects\characters\masterchief\shaders\mp_regulator_h2.shader
 SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\characters\masterchief\bitmaps\mp_regulator.bitmap
 SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\characters\masterchief\bitmaps\mp_regulator_cc.bitmap
 SetField ShaderProperties[0].TextureConstants[4].Bitmap objects\characters\masterchief\bitmaps\mp_regulator_zbump.bitmap
+SetArgument specular_coefficient 0.5
 savetagchanges
 exit
 
@@ -50,6 +54,7 @@ EditTag objects\characters\masterchief\shaders\mp_ryu_h2.shader
 SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\characters\masterchief\bitmaps\mp_ryu.bitmap
 SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\characters\masterchief\bitmaps\mp_ryu_cc.bitmap
 SetField ShaderProperties[0].TextureConstants[4].Bitmap objects\characters\masterchief\bitmaps\mp_ryu_bump.bitmap
+SetArgument specular_coefficient 0.5
 savetagchanges
 exit
 
@@ -62,6 +67,7 @@ EditTag objects\characters\masterchief\shaders\mp_marathon_h2.shader
 SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\characters\masterchief\bitmaps\mp_marathon.bitmap
 SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\characters\masterchief\bitmaps\mp_marathon_cc.bitmap
 SetField ShaderProperties[0].TextureConstants[4].Bitmap objects\characters\masterchief\bitmaps\mp_marathon_bump.bitmap
+SetArgument specular_coefficient 0.5
 savetagchanges
 exit
 
@@ -73,6 +79,7 @@ EditTag objects\characters\masterchief\shaders\mp_scout_h2.shader
 SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\characters\masterchief\bitmaps\mp_scout.bitmap
 SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\characters\masterchief\bitmaps\mp_scout_cc.bitmap
 SetField ShaderProperties[0].TextureConstants[4].Bitmap objects\characters\masterchief\bitmaps\mp_scout_zbump.bitmap
+SetArgument specular_coefficient 0.5
 savetagchanges
 exit
 
@@ -104,6 +111,7 @@ EditTag objects\characters\masterchief\shaders\mp_odst_h2.shader
 SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\characters\marine\bitmaps\marine_odst.bitmap
 SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\characters\masterchief\bitmaps\mp_odst_cc.bitmap
 SetField ShaderProperties[0].TextureConstants[4].Bitmap objects\characters\marine\bitmaps\marine_odst_bump.bitmap
+SetArgument specular_coefficient 0.5
 savetagchanges
 exit
 
@@ -161,6 +169,7 @@ EditTag objects\characters\masterchief\shaders\mp_rogue_h2.shader
 SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\characters\masterchief\bitmaps\mp_rogue.bitmap
 SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\characters\masterchief\bitmaps\mp_rogue_cc.bitmap
 SetField ShaderProperties[0].TextureConstants[4].Bitmap objects\characters\masterchief\bitmaps\mp_rogue_zbump.bitmap
+SetArgument specular_coefficient 0.5
 savetagchanges
 exit
 
