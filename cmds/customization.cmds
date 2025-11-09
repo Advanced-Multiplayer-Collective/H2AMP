@@ -16,10 +16,12 @@ exit
 
 edittag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.model
 UpdateModelRegions 0
-SetField Variants[0].Regions[5].Permutations[1].RenderModelPermutationIndex 0
-SetField Variants[0].Regions[5].Permutations[0].RenderModelPermutationIndex 1
-SetField Variants[0].Regions[6].Permutations[1].RenderModelPermutationIndex 0
-SetField Variants[0].Regions[6].Permutations[0].RenderModelPermutationIndex 1
+SetField Variants[0].Regions[5].Permutations[0].Probability 0
+SetField Variants[0].Regions[5].Permutations[7].Probability 0.1
+
+
+SetField Variants[0].Regions[6].Permutations[0].Probability 0
+SetField Variants[0].Regions[6].Permutations[7].Probability 0.1
 
 savetagchanges
 exit
@@ -233,7 +235,7 @@ SetField Materials[22].RenderMethod objects\characters\masterchief\shaders\mp_ro
 
 SetField Materials[24].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shader
 
-SetField Materials[25].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shade
+SetField Materials[25].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shader
 
 SetField Materials[26].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shader
 
