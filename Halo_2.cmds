@@ -1,12 +1,12 @@
-"E:\ElDewrito 0.7 Official\maps\tags.dat"
+D:\eldewrito\eldewrito 0.7\ElDewrito\maps
+SetVariable modsfolder "D:\eldewrito\eldewrito 0.7\ElDewrito\mods"
+SetVariable h2maps "E:\Halo Resources\Halo2V"
+SetVariable h3maps "E:\Halo Resources\Halo3"
+SetVariable h3mythicmaps "E:\Halo Resources\Halo3mythic"
+SetVariable odstmaps "E:\Halo Resources\Halo3odst"
+SetVariable workingdir "C:\Users\Matthew\Documents\GitHub\H2AMP"
 
-# echo ==Set Variables...==
-SetVariable modsfolder "E:\ElDewrito 0.7 Official\mods"
-SetVariable h2maps "Z:\Halo Stuff\retail maps for porting and ed caches\Halo 2 maps"
-SetVariable h3maps "Z:\Halo Stuff\retail maps for porting and ed caches\Halo 3 maps"
-SetVariable h3mythicmaps "Z:\Halo Stuff\retail maps for porting and ed caches\Halo 3 Mythic maps"
-SetVariable odstmaps "Z:\Halo Stuff\retail maps for porting and ed caches\Halo 3 ODST maps"
-SetVariable workingdir "C:\Users\zekken\Documents\AMP PROJECTS\H2AMP"
+
 
 # echo ==Creating Mod Package...==
 CreateModPackage 1 large
@@ -166,6 +166,57 @@ RunCommands workingdir\cmds\h2sounds.cmds
 RunCommands workingdir\cmds\h2stats.cmds
 
 RunCommands workingdir\cmds\customization.cmds
+
+
+echo WHY DOES THIS NEED TO BE HERE
+
+
+edittag objects\levels\atlas\city_bridge\city_bridge.mode
+replacerendergeometry workingdir\tags\objects\levels\atlas\city_bridge\city_bridge.dae
+AddBlockElements Materials 54
+setfield materials[0].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[1].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[2].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[5].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[8].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[11].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[14].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[17].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[18].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[21].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[24].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[25].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[26].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[27].rendermethod objects\levels\atlas\city_bridge\shaders\concrete_stained_pier.rmsh
+setfield materials[28].rendermethod objects\levels\atlas\city_bridge\shaders\metal_strips_c_rusty.rmsh
+setfield materials[29].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[30].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[31].rendermethod objects\levels\atlas\city_bridge\shaders\concrete_stained_pier.rmsh
+setfield materials[32].rendermethod objects\levels\atlas\city_bridge\shaders\metal_strips_c_rusty.rmsh
+setfield materials[33].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[34].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[35].rendermethod objects\levels\atlas\city_bridge\shaders\concrete_stained_pier.rmsh
+setfield materials[36].rendermethod objects\levels\atlas\city_bridge\shaders\metal_strips_c_rusty.rmsh
+setfield materials[37].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[38].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[39].rendermethod objects\levels\atlas\city_bridge\shaders\concrete_stained_pier.rmsh
+setfield materials[40].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[41].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[42].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[43].rendermethod objects\levels\atlas\city_bridge\shaders\concrete_stained_pier.rmsh
+setfield materials[44].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge.rmsh
+setfield materials[45].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey_edge_rusty.rmsh
+setfield materials[46].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[47].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[48].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[49].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[50].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[51].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[52].rendermethod objects\levels\atlas\city_bridge\shaders\matte_grey.rmsh
+setfield materials[53].rendermethod objects\levels\atlas\city_bridge\shaders\street_straight_unlit.rmsh
+savetagchanges
+exit
+
 
 ##EditTag multiplayer\forge_globals.forge_globals_definition
 ##MaximizeBudget All
