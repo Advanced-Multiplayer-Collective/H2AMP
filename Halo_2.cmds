@@ -165,6 +165,8 @@ RunCommands workingdir\cmds\h2sounds.cmds
 
 RunCommands workingdir\cmds\h2stats.cmds
 
+RunCommands workingdir\cmds\customization.cmds
+
 ##EditTag multiplayer\forge_globals.forge_globals_definition
 ##MaximizeBudget All
 ##SaveTagChanges

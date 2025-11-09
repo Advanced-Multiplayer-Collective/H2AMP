@@ -1616,14 +1616,14 @@ setfield TextWidgets[0].Definition.guirenderblock.AnimationCollection ui\halox\s
 savetagchanges
 exit
 
-#edittag sound\music\main_menu_delta\delta_menu\in.snd!
-#importsound M:\Models\Halo\h2b\c_turret\sound\ui\main_menu_music\menu_music\in\
-#savetagchanges
-#exit
-#edittag sound\music\main_menu_delta\delta_menu\loop.snd!
-#importsound M:\Models\Halo\h2b\c_turret\sound\ui\main_menu_music\menu_music\loop\
-#savetagchanges
-#exit
+edittag sound\music\main_menu_delta\delta_menu\in.snd!
+importsound workingdir\sounds\in\
+savetagchanges
+exit
+edittag sound\music\main_menu_delta\delta_menu\loop.snd!
+importsound  workingdir\sounds\loop\
+savetagchanges
+exit
 
 
 echo fix missing bipeds
