@@ -1,36 +1,6 @@
 
 
 
-edittag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.render_model
-replacerendergeometry workingdir\models\chief.dae TriangleList
-exit
-
-
-edittag bean\objects\characters\masterchief\h2_masterchief\bitmaps\masterchief_cc.bitmap
-importbitmap 0 workingdir\bitmaps\mkvi\masterchief_cc.dds
-exit
-
-edittag bean\objects\characters\masterchief\h2_masterchief\fp\bitmaps\fp_arms_cc.bitmap
-importbitmap 0 workingdir\bitmaps\mkvi\fp_arms_cc.dds
-exit
-
-edittag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.model
-UpdateModelRegions 0
-SetField Variants[0].Regions[5].Permutations[0].Probability 0
-SetField Variants[0].Regions[5].Permutations[7].Probability 0.1
-
-
-SetField Variants[0].Regions[6].Permutations[0].Probability 0
-SetField Variants[0].Regions[6].Permutations[7].Probability 0.1
-
-savetagchanges
-exit
-
-
-
-
-
-
 
 duplicatetag bean\objects\characters\masterchief\h2_masterchief\shaders\mp_masterchief.shader objects\characters\masterchief\shaders\mp_cobra_h2
 
@@ -195,55 +165,81 @@ savetagchanges
 exit
 
 
+edittag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.render_model
+
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shader
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_cobra_visor.shader
+
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_intruder_h2.shader
+AddBlockElements Materials
+SetField Materials[*].RenderMethod  objects\characters\masterchief\shaders\mp_intruder_visor.shader
+
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_ninja_h2.shader
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_ninja_visor.shader
+
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_regulator_h2.shader
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_regulator_visor.shader
+
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_ryu_h2.shader
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_ryu_visor.shader
+
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_marathon_h2.shader
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_marathon_visor.shader
+
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_scout_h2.shader
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_scout_visor.shader
+
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_odst_h2.shader
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_odst_visor.shader
+
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_markv_h2.shader
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_markv_h2_visor.shader
+
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_rogue_h2.shader
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\mp_rogue_visor.shader
+
+AddBlockElements Materials
+SetField Materials[*].RenderMethod objects\characters\masterchief\shaders\lights.shader
+
+replacerendergeometry workingdir\models\chief.dae TriangleList
+savetagchanges
+exit
 
 
+edittag bean\objects\characters\masterchief\h2_masterchief\bitmaps\masterchief_cc.bitmap
+importbitmap 0 workingdir\bitmaps\mkvi\masterchief_cc.dds
+exit
 
-EditTag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.render_model
-SetField Materials[3].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shader
-SetField Materials[4].RenderMethod objects\characters\masterchief\shaders\mp_cobra_visor.shader
+edittag bean\objects\characters\masterchief\h2_masterchief\fp\bitmaps\fp_arms_cc.bitmap
+importbitmap 0 workingdir\bitmaps\mkvi\fp_arms_cc.dds
+exit
 
-
-SetField Materials[5].RenderMethod objects\characters\masterchief\shaders\mp_intruder_h2.shader
-SetField Materials[6].RenderMethod  objects\characters\masterchief\shaders\mp_intruder_visor.shader
-
-
-SetField Materials[7].RenderMethod objects\characters\masterchief\shaders\mp_ninja_h2.shader
-SetField Materials[8].RenderMethod objects\characters\masterchief\shaders\mp_ninja_visor.shader
-
-SetField Materials[9].RenderMethod objects\characters\masterchief\shaders\mp_regulator_h2.shader
-SetField Materials[10].RenderMethod objects\characters\masterchief\shaders\mp_regulator_visor.shader
-
-SetField Materials[11].RenderMethod objects\characters\masterchief\shaders\mp_ryu_h2.shader
-SetField Materials[12].RenderMethod objects\characters\masterchief\shaders\mp_ryu_visor.shader
+edittag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.model
+UpdateModelRegions 0
+SetField Variants[0].Regions[5].Permutations[0].Probability 0
+SetField Variants[0].Regions[5].Permutations[7].Probability 0.1
 
 
-SetField Materials[13].RenderMethod objects\characters\masterchief\shaders\mp_marathon_h2.shader
-SetField Materials[14].RenderMethod objects\characters\masterchief\shaders\mp_marathon_visor.shader
-
-SetField Materials[15].RenderMethod objects\characters\masterchief\shaders\mp_scout_h2.shader
-SetField Materials[16].RenderMethod objects\characters\masterchief\shaders\mp_scout_visor.shader
-
-SetField Materials[17].RenderMethod objects\characters\masterchief\shaders\mp_odst_h2.shader
-SetField Materials[18].RenderMethod objects\characters\masterchief\shaders\mp_odst_visor.shader
-
-SetField Materials[19].RenderMethod objects\characters\masterchief\shaders\mp_markv_h2.shader
-SetField Materials[20].RenderMethod objects\characters\masterchief\shaders\mp_markv_h2_visor.shader
-
-SetField Materials[21].RenderMethod objects\characters\masterchief\shaders\mp_rogue_h2.shader
-SetField Materials[22].RenderMethod objects\characters\masterchief\shaders\mp_rogue_visor.shader
-
-
-SetField Materials[24].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shader
-
-SetField Materials[25].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shader
-
-SetField Materials[26].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shader
-
-SetField Materials[28].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shader
-SetField Materials[30].RenderMethod objects\characters\masterchief\shaders\mp_ninja_h2.shader
-
-SetField Materials[34].RenderMethod objects\characters\masterchief\shaders\mp_ryu_h2.shader
-
-SaveTagChanges
-Exit
-
+SetField Variants[0].Regions[6].Permutations[0].Probability 0
+SetField Variants[0].Regions[6].Permutations[7].Probability 0.1
+savetagchanges
+exit
