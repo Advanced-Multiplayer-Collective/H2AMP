@@ -252,3 +252,20 @@ SetField Variants[0].Regions[6].Permutations[0].Probability 0
 SetField Variants[0].Regions[6].Permutations[7].Probability 0.1
 savetagchanges
 exit
+
+
+EditTag globals\globals.globals
+StringId Add masterchief_h2
+SetField PlayerCharacterTypes[0].Name masterchief_h2
+SaveTagChanges
+Exit
+
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+SetField Universal[0].CustomizableCharacters[0].CharacterName masterchief_h2
+SaveTagChanges
+Exit
+
+EditTag multiplayer\mod_globals.mod_globals
+SetField PlayerCharacterSets[0].Characters[0].Name masterchief_h2
+SaveTagChanges
+Exit
