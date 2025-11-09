@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 4.5.4 LTS commit date:2025-10-27, commit time:12:46, hash:b3efe983cc58</authoring_tool>
     </contributor>
-    <created>2025-11-08T20:07:50</created>
-    <modified>2025-11-08T20:07:50</modified>
+    <created>2025-11-08T20:19:23</created>
+    <modified>2025-11-08T20:19:23</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -55,7 +55,7 @@
         </technique>
       </profile_COMMON>
     </effect>
-    <effect id="mp_markv_h2-effect">
+    <effect id="mp_markv_h2_visor-effect">
       <profile_COMMON>
         <technique sid="common">
           <lambert>
@@ -72,7 +72,7 @@
         </technique>
       </profile_COMMON>
     </effect>
-    <effect id="mp_markv_h2_visor-effect">
+    <effect id="mp_markv_h2-effect">
       <profile_COMMON>
         <technique sid="common">
           <lambert>
@@ -510,11 +510,11 @@
     <material id="mc_emblem-material" name="mc_emblem">
       <instance_effect url="#mc_emblem-effect"/>
     </material>
-    <material id="mp_markv_h2-material" name="mp_markv_h2">
-      <instance_effect url="#mp_markv_h2-effect"/>
-    </material>
     <material id="mp_markv_h2_visor-material" name="mp_markv_h2_visor">
       <instance_effect url="#mp_markv_h2_visor-effect"/>
+    </material>
+    <material id="mp_markv_h2-material" name="mp_markv_h2">
+      <instance_effect url="#mp_markv_h2-effect"/>
     </material>
     <material id="lights-material" name="lights">
       <instance_effect url="#lights-effect"/>
@@ -720,13 +720,13 @@
         <vertices id="helmet_mp_markv-mesh-vertices">
           <input semantic="POSITION" source="#helmet_mp_markv-mesh-positions"/>
         </vertices>
-        <triangles material="mp_markv_h2-material" count="104">
+        <triangles material="mp_markv_h2_visor-material" count="104">
           <input semantic="VERTEX" source="#helmet_mp_markv-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#helmet_mp_markv-mesh-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#helmet_mp_markv-mesh-map-0" offset="2" set="0"/>
           <p>32 0 0 0 1 1 1 2 2 1 2 3 0 1 4 2 3 5 1 2 6 2 3 7 3 4 8 2 3 9 0 1 10 31 5 11 2 3 12 31 5 13 30 6 14 30 6 15 31 5 16 29 7 17 30 6 18 29 7 19 27 8 20 27 8 21 29 7 22 28 9 23 27 8 24 28 9 25 26 10 26 27 8 27 26 10 28 25 11 29 25 11 30 26 10 31 24 12 32 25 11 33 24 12 34 23 13 35 23 13 36 24 12 37 22 14 38 23 13 39 22 14 40 21 15 41 21 15 42 22 14 43 20 16 44 21 15 45 20 16 46 18 17 47 18 17 48 20 16 49 19 18 50 18 17 51 19 18 52 17 19 53 18 17 54 17 19 55 15 20 56 15 20 57 17 19 58 16 21 59 15 20 60 16 21 61 14 22 62 15 20 63 14 22 64 12 23 65 12 23 66 14 22 67 13 24 68 12 23 69 13 24 70 11 25 71 12 23 72 11 25 73 10 26 74 10 26 75 11 25 76 9 27 77 10 26 78 9 27 79 8 28 80 8 28 81 9 27 82 7 29 83 8 28 84 7 29 85 6 30 86 6 30 87 7 29 88 5 31 89 6 30 90 5 31 91 4 32 92 4 32 93 5 31 94 3 4 95 4 32 96 3 4 97 2 3 98 4 32 99 2 3 100 30 6 101 4 32 102 30 6 103 62 33 104 62 33 105 30 6 106 27 8 107 62 33 108 27 8 109 25 11 110 62 33 111 25 11 112 63 34 113 63 34 114 25 11 115 23 13 116 63 34 117 23 13 118 64 35 119 64 35 120 23 13 121 21 15 122 64 35 123 21 15 124 65 36 125 64 35 126 65 36 127 10 26 128 10 26 129 65 36 130 12 23 131 12 23 132 65 36 133 15 20 134 15 20 135 65 36 136 18 17 137 18 17 138 65 36 139 21 15 140 4 32 141 62 33 142 6 30 143 6 30 144 62 33 145 63 34 146 6 30 147 63 34 148 8 28 149 8 28 150 63 34 151 64 35 152 8 28 153 64 35 154 10 26 155 0 1 156 32 0 157 33 37 158 0 1 159 33 37 160 34 38 161 34 38 162 33 37 163 35 39 164 34 38 165 35 39 166 36 40 167 36 40 168 35 39 169 37 41 170 0 1 171 34 38 172 31 5 173 31 5 174 34 38 175 61 42 176 31 5 177 61 42 178 29 7 179 29 7 180 61 42 181 59 43 182 29 7 183 59 43 184 60 44 185 60 44 186 59 43 187 58 45 188 58 45 189 59 43 190 57 46 191 58 45 192 57 46 193 56 47 194 61 42 195 34 38 196 36 40 197 61 42 198 36 40 199 66 48 200 66 48 201 36 40 202 38 49 203 38 49 204 36 40 205 37 41 206 38 49 207 37 41 208 39 50 209 38 49 210 39 50 211 40 51 212 40 51 213 39 50 214 41 52 215 61 42 216 66 48 217 59 43 218 59 43 219 66 48 220 57 46 221 57 46 222 66 48 223 67 53 224 57 46 225 67 53 226 55 54 227 57 46 228 55 54 229 56 47 230 56 47 231 55 54 232 54 55 233 54 55 234 55 54 235 53 56 236 54 55 237 53 56 238 52 57 239 67 53 240 66 48 241 38 49 242 67 53 243 38 49 244 40 51 245 67 53 246 40 51 247 68 58 248 68 58 249 40 51 250 42 59 251 42 59 252 40 51 253 41 52 254 42 59 255 41 52 256 43 60 257 42 59 258 43 60 259 44 61 260 44 61 261 43 60 262 45 62 263 44 61 264 45 62 265 46 63 266 44 61 267 46 63 268 47 64 269 47 64 270 46 63 271 48 65 272 47 64 273 48 65 274 49 66 275 47 64 276 49 66 277 50 67 278 50 67 279 49 66 280 51 68 281 50 67 282 51 68 283 52 57 284 50 67 285 52 57 286 53 56 287 50 67 288 53 56 289 69 69 290 69 69 291 53 56 292 68 58 293 69 69 294 68 58 295 42 59 296 69 69 297 42 59 298 44 61 299 69 69 300 44 61 301 47 64 302 69 69 303 47 64 304 50 67 305 68 58 306 53 56 307 55 54 308 68 58 309 55 54 310 67 53 311</p>
         </triangles>
-        <triangles material="mp_markv_h2_visor-material" count="277">
+        <triangles material="mp_markv_h2-material" count="277">
           <input semantic="VERTEX" source="#helmet_mp_markv-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#helmet_mp_markv-mesh-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#helmet_mp_markv-mesh-map-0" offset="2" set="0"/>
@@ -5494,10 +5494,10 @@
             <skeleton>#Armature_pelvis</skeleton>
             <bind_material>
               <technique_common>
-                <instance_material symbol="mp_markv_h2-material" target="#mp_markv_h2-material">
+                <instance_material symbol="mp_markv_h2_visor-material" target="#mp_markv_h2_visor-material">
                   <bind_vertex_input semantic="helmet_mp_markv-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
                 </instance_material>
-                <instance_material symbol="mp_markv_h2_visor-material" target="#mp_markv_h2_visor-material">
+                <instance_material symbol="mp_markv_h2-material" target="#mp_markv_h2-material">
                   <bind_vertex_input semantic="helmet_mp_markv-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
                 </instance_material>
               </technique_common>
