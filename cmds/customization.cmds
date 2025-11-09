@@ -233,7 +233,7 @@ SetField Materials[22].RenderMethod objects\characters\masterchief\shaders\mp_ro
 
 SetField Materials[24].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shader
 
-SetField Materials[25].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shade
+SetField Materials[25].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shader
 
 SetField Materials[26].RenderMethod objects\characters\masterchief\shaders\mp_cobra_h2.shader
 
