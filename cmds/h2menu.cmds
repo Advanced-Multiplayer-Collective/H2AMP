@@ -1664,6 +1664,30 @@ SetField GroupWidgets[1].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.B
 savetagchanges
 exit
 
+# 4:3 Menu
+EditTag ui\halox\main_menu\main_menu.gui_screen_widget_definition
+# TEXT WIDGETS MENU 4:3
+# SetField GuiRenderBlock.Bounds480i -315 -200 315 420
+SetField GroupWidgets[0].Definition.GuiRenderBlock.Bounds480i 0 225 0 0
+
+# HALO 2 LOGO 4:3
+# SetField GroupWidgets[1].Definition.GuiRenderBlock.Bounds480i -200 -360 0 0
+SetField GroupWidgets[1].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds480i 290 460 0 0
+
+# HIDING THE DEVELOPER LOGO ON 4:3
+SetField GroupWidgets[1].Definition.BitmapWidgets[1].Definition.GuiRenderBlock.Bounds480i -900 900 0 0
+
+# 0.7 VERSION NUMBER 4:3
+SetField GroupWidgets[0].Definition.TextWidgets[1].Definition.GuiRenderBlock.Bounds480i 600 150 630 242
+SaveTagChanges
+Exit
+
+# FIX HIGHLIGHT 4:3
+EditTag ui\halox\main_menu\main_menu_list.gui_skin_definition
+SetField BitmapWidgets[0].Definition.GuiRenderBlock.Bounds480i 0 -9 23 260
+SaveTagChanges
+Exit
+
 echo Move ranks to correct position
 EditTag ui\halox\common\roster\roster.gui_skin_definition
 SetField BitmapWidgets[7].Definition.GuiRenderBlock.Bounds720p -7 369 43 407
