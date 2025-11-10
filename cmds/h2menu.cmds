@@ -1688,9 +1688,22 @@ SetField BitmapWidgets[0].Definition.GuiRenderBlock.Bounds480i 0 -9 23 260
 SaveTagChanges
 Exit
 
-echo Move ranks to correct position
+echo Move ranks to correct position and move name to the right
 EditTag ui\halox\common\roster\roster.gui_skin_definition
+SetField TextWidgets[0].Definition.GuiRenderBlock.Bounds720p 6 7 43 272
 SetField BitmapWidgets[7].Definition.GuiRenderBlock.Bounds720p -7 369 43 407
 SetField BitmapWidgets[8].Definition.GuiRenderBlock.Bounds720p -13 364 51 412
+SetField BitmapWidgets[16].Definition.Bitmap null
+SetField BitmapWidgets[15].Definition.Bitmap null
 SaveTagChanges
 Exit
+
+echo More Halo 2 like roster background
+EditTag ui\halox\common\roster\roster_unfocused_ui.bitmap
+ImportBitmap 0 "workingdir\bitmaps\roster_unfocused_ui\1.dds"
+ImportBitmap 1 "workingdir\bitmaps\roster_unfocused_ui\1.dds"
+ImportBitmap 2 "workingdir\bitmaps\roster_unfocused_ui\1.dds"
+ImportBitmap 3 "workingdir\bitmaps\roster_unfocused_ui\1.dds"
+SaveTagChanges
+Exit
+
