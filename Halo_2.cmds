@@ -219,6 +219,17 @@ setfield materials[53].rendermethod objects\levels\atlas\city_bridge\shaders\str
 savetagchanges
 exit
 
+echo add ranks
+
+edittag ui\halox\spartan_program\exp_lg_ui.bitmap
+importbitmap 0 workingdir\bitmaps\ranks\exp_lg_ui.dds
+exit
+
+edittag ui\halox\common\roster\exp_med_ui.bitmap
+importbitmap 0 workingdir\bitmaps\ranks\exp_med_ui.dds
+exit
+
+
 
 ##EditTag multiplayer\forge_globals.forge_globals_definition
 ##MaximizeBudget All
