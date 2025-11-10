@@ -616,13 +616,7 @@ generatebitmap ui\halox\pregame_lobby\divider "workingdir\tags\ui\global_bitmaps
 generatebitmap ui\halox\pregame_lobby\divider2 "workingdir\tags\ui\global_bitmaps\divider2_new.dds"
 generatebitmap ui\halox\pregame_lobby\button1 "workingdir\tags\ui\global_bitmaps\button1.dds"
 generatebitmap ui\halox\pregame_lobby\map_bkd "workingdir\tags\ui\global_bitmaps\map_bkd.dds"
-edittag ui\halox\common\roster\roster_unfocused_ui.bitm
-importbitmap 0 "workingdir\tags\ui\global_bitmaps\roster_unfocused_ui.dds"
-importbitmap 1 "workingdir\tags\ui\global_bitmaps\roster_unfocused_ui.dds"
-importbitmap 2 "workingdir\tags\ui\global_bitmaps\roster_unfocused_ui.dds"
-importbitmap 3 "workingdir\tags\ui\global_bitmaps\roster_unfocused_ui.dds"
-savetagchanges
-exit
+
 edittag ui\halox\common\roster\roster_focused_ui.bitm
 importbitmap 0 "workingdir\tags\ui\global_bitmaps\roster_focused_ui.dds"
 addblockelements Sequences[0].Sprites 3
@@ -645,24 +639,6 @@ SetField Sequences[0].Sprites[3].Right 1.0
 SetField Sequences[0].Sprites[3].Top 0.5
 SetField Sequences[0].Sprites[3].Bottom 0.75
 SetField Sequences[0].Sprites[3].RegistrationPoint 0.5 0.125
-savetagchanges
-exit
-edittag *.mlst
-addblockelements mapimages
-setfield mapimages[*].mapid 9004
-setfield mapimages[*].bitmap ui\eldewrito\common\map_bitmaps\ascension.bitm
-savetagchanges
-exit
-createtag bitm
-nametag * ui\eldewrito\common\map_bitmaps\coagulation
-edittag ui\eldewrito\common\map_bitmaps\coagulation.bitm
-importbitmap 0 workingdir\tags\ui\eldewrito\common\map_bitmaps\coagulation.dds
-savetagchanges
-exit
-edittag *.mlst
-addblockelements mapimages
-setfield mapimages[*].mapid 9001
-setfield mapimages[*].bitmap ui\eldewrito\common\map_bitmaps\coagulation.bitm
 savetagchanges
 exit
 
@@ -1530,10 +1506,9 @@ Exit
 
 echo More Halo 2 like roster background
 EditTag ui\halox\common\roster\roster_unfocused_ui.bitmap
-ImportBitmap 0 "workingdir\bitmaps\roster_unfocused_ui\1.dds"
-ImportBitmap 1 "workingdir\bitmaps\roster_unfocused_ui\1.dds"
-ImportBitmap 2 "workingdir\bitmaps\roster_unfocused_ui\1.dds"
-ImportBitmap 3 "workingdir\bitmaps\roster_unfocused_ui\1.dds"
+ImportBitmap 0 "workingdir\bitmaps\roster_unfocused_ui.dds"
+ImportBitmap 1 "workingdir\bitmaps\roster_unfocused_ui.dds"
+ImportBitmap 2 "workingdir\bitmaps\roster_unfocused_ui.dds"
+ImportBitmap 3 "workingdir\bitmaps\roster_unfocused_ui.dds"
 SaveTagChanges
 Exit
-
