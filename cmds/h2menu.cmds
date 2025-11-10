@@ -1663,3 +1663,10 @@ SetField GroupWidgets[1].Definition.GuiRenderBlock.Bounds720p -110 -375 0 0
 SetField GroupWidgets[1].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 345 355 0 0
 savetagchanges
 exit
+
+echo Move ranks to correct position
+EditTag ui\halox\common\roster\roster.gui_skin_definition
+SetField BitmapWidgets[7].Definition.GuiRenderBlock.Bounds720p -7 369 43 407
+SetField BitmapWidgets[8].Definition.GuiRenderBlock.Bounds720p -13 364 51 412
+SaveTagChanges
+Exit
