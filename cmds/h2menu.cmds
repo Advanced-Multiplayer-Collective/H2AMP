@@ -1507,3 +1507,13 @@ ImportBitmap 2 "workingdir\bitmaps\roster_unfocused_ui.dds"
 ImportBitmap 3 "workingdir\bitmaps\roster_unfocused_ui.dds"
 SaveTagChanges
 Exit
+## FIX ARROW ON MAP PICKER ##
+EditTag ui\halox\pregame_lobby\selection\arrow_down_category.gui_bitmap_widget_definition
+SetField GuiRenderBlock.Bounds720p 450 80 465 110
+SaveTagChanges
+Exit
+
+EditTag ui\halox\pregame_lobby\selection\arrow_up_category.gui_bitmap_widget_definition
+SetField GuiRenderBlock.Bounds720p -20 80 -4 110
+SaveTagChanges
+Exit
