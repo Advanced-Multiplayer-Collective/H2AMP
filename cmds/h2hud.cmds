@@ -803,7 +803,7 @@ AddBlockElements HudWidgets[21].BitmapWidgets[1].PlacementData
 AddBlockElements HudWidgets[21].BitmapWidgets[1].RenderData
 SetField HudWidgets[21].BitmapWidgets[1].RuntimeWidgetIndex 175
 SetField HudWidgets[21].BitmapWidgets[1].Bitmap ui\chud\bitmaps\consumable_activation.bitmap
-SetField HudWidgets[21].BitmapWidgets[1].StateData[0].ConsumableState Consumable1Available
+SetField HudWidgets[21].BitmapWidgets[1].StateData[0].ConsumableState Consumable1Active
 SetField HudWidgets[21].BitmapWidgets[1].PlacementData[0].Anchor Parent
 SetField HudWidgets[21].BitmapWidgets[1].PlacementData[0].Offset 120 125
 SetField HudWidgets[21].BitmapWidgets[1].PlacementData[0].Scale -0.6 -0.6
@@ -863,7 +863,7 @@ AddBlockElements HudWidgets[19].BitmapWidgets[1].PlacementData
 AddBlockElements HudWidgets[19].BitmapWidgets[1].RenderData
 SetField HudWidgets[19].BitmapWidgets[1].RuntimeWidgetIndex 175
 SetField HudWidgets[19].BitmapWidgets[1].Bitmap ui\chud\bitmaps\consumable_activation.bitmap
-SetField HudWidgets[19].BitmapWidgets[1].StateData[0].ConsumableState Consumable1Available
+SetField HudWidgets[19].BitmapWidgets[1].StateData[0].ConsumableState Consumable1Active
 SetField HudWidgets[19].BitmapWidgets[1].PlacementData[0].Anchor Parent
 SetField HudWidgets[19].BitmapWidgets[1].PlacementData[0].Offset 120 125
 SetField HudWidgets[19].BitmapWidgets[1].PlacementData[0].Scale -0.6 -0.6
