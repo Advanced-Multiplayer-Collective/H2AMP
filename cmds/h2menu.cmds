@@ -499,10 +499,6 @@ edittag ui\halox\common\main_menu\highlight_bar.bitm
 importbitmap 0 "workingdir\tags\ui\halox\common\main_menu\highlight_bar.dds"
 savetagchanges
 exit
-edittag ui\halox\main_menu\halo3_logo_ui.bitm
-importbitmap 0 "workingdir\tags\ui\halox\main_menu\halo3_logo_ui.dds"
-savetagchanges
-exit
 edittag ui\halox\main_menu\main_menu_offline.bkey
 setfield textwidgets[0].Definition.guirenderblock.Bounds720p 791 841 837 1118
 savetagchanges
@@ -1462,7 +1458,6 @@ SetField Images[0].Width 500
 SetField Images[0].Height 100
 savetagchanges
 exit
-
 
 edittag ui\halox\main_menu\main_menu.gui_screen_widget_definition
 SetField GroupWidgets[1].Definition.GuiRenderBlock.Bounds720p -110 -375 0 0
