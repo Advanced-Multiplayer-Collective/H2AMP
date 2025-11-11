@@ -24,10 +24,10 @@ OpenCacheFile "h2maps\ascension.map"
 PortTag *.scnr
 Exit
 
-EditTag scenarios\multi\ascension\ascension.scenario
-importmapvariant MapFile "workingdir\map_variants\ascension\sandbox.map"
-SaveTagChanges
-Exit
+#EditTag scenarios\multi\ascension\ascension.scenario
+#importmapvariant MapFile "workingdir\map_variants\ascension\sandbox.map"
+#SaveTagChanges
+#Exit
 
 OpenCacheFile "h2maps\backwash.map"
 PortTag *.scnr
