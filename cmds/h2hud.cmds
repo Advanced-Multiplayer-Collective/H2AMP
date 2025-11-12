@@ -1,4 +1,4 @@
-opencachefile workingdir\maps\H2CHUD.map
+opencachefile workingdir\maps\h2assets.map
 NameBlamTag ui\chud\elite.chud_definition ui\chud\elite_h2
 NameBlamTag ui\chud\spartan.chud_definition ui\chud\spartan_h2
 NameBlamTag ui\chud\bitmaps\hud_reticles.bitmap ms30\ui\chud\bitmaps\hud_reticles
