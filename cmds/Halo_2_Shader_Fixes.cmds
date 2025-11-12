@@ -44,6 +44,8 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+
+
 ## echo Relic Shader Fixes
 EditTag incompetent\default_object.render_model
 SetField Materials[0].RenderMethod objects\multi\shaders\invisible.shader
@@ -137,3 +139,66 @@ EditTag scenarios\shaders\nature\trees\palm_frond_a.shader
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
+
+## echo backwash
+
+Edittag scenarios\multi\backwash\backwash.scenario_structure_bsp
+SetField Materials[14].RenderMethod scenarios\shaders\multi\backwash\tree_trunk.shader
+SetField Materials[228].RenderMethod scenarios\shaders\multi\backwash\tree_trunk.shader
+savetagchanges
+
+SetField Materials[1].RenderMethod null
+SetField Materials[6].RenderMethod null
+SetField Materials[12].RenderMethod null
+SetField Materials[16].RenderMethod null
+SetField Materials[27].RenderMethod null
+SetField Materials[31].RenderMethod null
+SetField Materials[32].RenderMethod null
+SetField Materials[33].RenderMethod null
+SetField Materials[34].RenderMethod null
+SetField Materials[35].RenderMethod null
+SetField Materials[36].RenderMethod null
+SetField Materials[37].RenderMethod null
+SetField Materials[38].RenderMethod null
+SetField Materials[39].RenderMethod null
+SetField Materials[182].RenderMethod null
+SetField Materials[183].RenderMethod null
+SetField Materials[184].RenderMethod null
+SetField Materials[185].RenderMethod null
+SetField Materials[193].RenderMethod null
+SetField Materials[194].RenderMethod null
+SetField Materials[195].RenderMethod null
+SetField Materials[196].RenderMethod null
+SetField Materials[197].RenderMethod null
+SetField Materials[198].RenderMethod null
+SetField Materials[199].RenderMethod null
+SetField Materials[200].RenderMethod null
+SetField Materials[201].RenderMethod null
+SetField Materials[202].RenderMethod null
+SetField Materials[203].RenderMethod null
+SetField Materials[203].RenderMethod null
+SetField Materials[211].RenderMethod null
+SetField Materials[215].RenderMethod null
+SetField Materials[221].RenderMethod null
+SetField Materials[222].RenderMethod null
+
+savetagchanges
+exit
+
+## echo burial ground
+
+EditTag scenarios\multi\burial_mounds\burial_mounds.scenario_structure_bsp
+SetField Materials[9].RenderMethod scenarios\shaders\multi\burial_mounds\burial_wreckage.shader
+savetagchanges
+exit
+
+
+
+
+
+
+
+
+
+
+
