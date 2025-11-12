@@ -219,6 +219,16 @@ setfield materials[53].rendermethod objects\levels\atlas\city_bridge\shaders\str
 savetagchanges
 exit
 
+echo halo 2 flashlight
+EditTag objects\characters\masterchief\flashlight_1p.light
+SetField Flags AllowShadowsAndGels,ShadowCasting,RenderFirstPersonOnly,MoveToCameraInFirstPerson,NeverPriorityCull
+SetField MaximumDistance 12
+SetField DistanceDiffusion 0.2
+SetField AngularSmoothness 0
+SetField FrustumNearWidth 0.2
+savetagchanges
+exit
+
 echo add ranks
 
 edittag ui\halox\spartan_program\exp_lg_ui.bitmap
