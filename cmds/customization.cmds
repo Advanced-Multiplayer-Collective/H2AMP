@@ -269,3 +269,25 @@ EditTag multiplayer\mod_globals.mod_globals
 SetField PlayerCharacterSets[0].Characters[0].Name masterchief_h2
 SaveTagChanges
 Exit
+
+
+##echo shields effects
+
+EditTag objects\characters\masterchief\mp_masterchief\mp_masterchief.model
+SetField ShieldImpactThirdPerson fx\shield_impacts\spartan_3p.shield_impact
+SetField ShieldImpactFirstPerson fx\shield_impacts\spartan_1p.shield_impact
+SetField OvershieldThirdPerson fx\shield_impacts\overshield_3p.shield_impact
+SetField OvershieldFirstPerson fx\shield_impacts\overshield_1p.shield_impact
+SaveTagChanges
+Exit
+
+EditTag objects\characters\elite\mp_elite\mp_elite.model
+SetField ShieldImpactThirdPerson fx\shield_impacts\elite_3p.shield_impact
+SetField ShieldImpactFirstPerson fx\shield_impacts\elite_1p.shield_impact
+SetField OvershieldThirdPerson fx\shield_impacts\elite_overshield_3p.shield_impact
+SetField OvershieldFirstPerson fx\shield_impacts\elite_overshield_1p.shield_impact
+savetagchanges
+exit
+
+
+
