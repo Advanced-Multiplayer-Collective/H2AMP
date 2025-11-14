@@ -62,7 +62,7 @@
             <param name="groupTag">The group tag of the final layout. Can be <c>null</c>.</param>
             <returns></returns>
         </member>
-        <member name="M:TagTool.Analysis.TagAnalyzer.BuildTagMap(TagTool.Cache.Eldorado.CachedTagData)">
+        <member name="M:TagTool.Analysis.TagAnalyzer.BuildTagMap(TagTool.Cache.HaloOnline.CachedTagData)">
             <summary>
             Builds a memory map for a tag.
             </summary>
@@ -192,7 +192,7 @@
             additional attenuation to sound
             </summary>
         </member>
-        <member name="F:TagTool.Audio.Permutation.PermutationFlagsEldorado.SequencedBit">
+        <member name="F:TagTool.Audio.Permutation.PermutationFlagsHaloOnline.SequencedBit">
             <summary>
             Wait for the currently playing permutation to finish
             </summary>
@@ -318,17 +318,17 @@
             sound will play using the current scale modifier multiplied by the values specified above. (0 values are ignored.)
             </summary>
         </member>
-        <member name="M:TagTool.Audio.Utils.SoundExtractorEldorado.ExtractSound(TagTool.Cache.GameCacheEldoradoBase,TagTool.Tags.Definitions.Sound,System.Int32,System.Int32)">
-            <summary>
-            Extracts raw sound data for a given permutation
-            </summary>
-        </member>
         <member name="M:TagTool.Audio.Utils.SoundExtractorGen2.ExtractSound(TagTool.Cache.GameCacheGen2,TagTool.Tags.Definitions.Gen2.SoundCacheFileGestalt,TagTool.Tags.Definitions.Gen2.Sound,System.Int32,System.Int32)">
             <summary>
             Extracts raw sound data for a given permutation
             </summary>
         </member>
         <member name="M:TagTool.Audio.Utils.SoundExtractorGen3.ExtractSound(TagTool.Cache.GameCacheGen3,TagTool.Tags.Definitions.SoundCacheFileGestalt,TagTool.Tags.Definitions.Sound,System.String,System.Int32,System.Int32)">
+            <summary>
+            Extracts raw sound data for a given permutation
+            </summary>
+        </member>
+        <member name="M:TagTool.Audio.Utils.SoundExtractorHO.ExtractSound(TagTool.Cache.GameCacheHaloOnlineBase,TagTool.Tags.Definitions.Sound,System.Int32,System.Int32)">
             <summary>
             Extracts raw sound data for a given permutation
             </summary>
@@ -803,7 +803,7 @@
             <param name="version"></param>
             <returns></returns>
         </member>
-        <member name="F:TagTool.Cache.CacheVersionDetection.EldoradoTimestampMapping">
+        <member name="F:TagTool.Cache.CacheVersionDetection.HaloOnlineTimestampMapping">
             <summary>
             tags.dat timestamps for each halo online game version.
             Timestamps in here map directly to a <see cref="T:TagTool.Cache.CacheVersion"/> value.
@@ -824,390 +824,6 @@
             Belongs only to the MCC version
             </summary>
         </member>
-        <member name="T:TagTool.Cache.Eldorado.CachedTagData">
-            <summary>
-            Contains tag data and a description of it.
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagData.Group">
-            <summary>
-            The tag data's group.
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagData.MainStructOffset">
-            <summary>
-            The offset of the main structure in the tag data.
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagData.Dependencies">
-            <summary>
-            Gets the indices of tags that the tag data depends on.
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagData.PointerFixups">
-            <summary>
-            Gets a list of fixups for pointers in the tag data.
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagData.ResourcePointerOffsets">
-            <summary>
-            Gets a list of offsets to each resource pointer in the tag data.
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagData.TagReferenceOffsets">
-            <summary>
-            Gets a list of offsets to each tag reference in the tag data.
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagData.Data">
-            <summary>
-            The serialized tag data.
-            </summary>
-        </member>
-        <member name="T:TagTool.Cache.Eldorado.CachedTagData.PointerFixup">
-            <summary>
-            Contains information about a pointer in tag data that needs to be adjusted.
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagData.PointerFixup.WriteOffset">
-            <summary>
-            The offset (from the start of the tag's data) of the pointer.
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagData.PointerFixup.TargetOffset">
-            <summary>
-            The offset (from the start of the tag's data) that the pointer should point to.
-            </summary>
-        </member>
-        <member name="F:TagTool.Cache.Eldorado.CachedTagEldorado.TagCache">
-            <summary>
-            The tag cache this instance belongs to
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagEldorado.HeaderOffset">
-            <summary>
-            Gets the offset of the tag's header, or -1 if the tag is not in a file.
-            </summary>
-        </member>
-        <member name="F:TagTool.Cache.Eldorado.CachedTagEldorado.Offset">
-            <summary>
-            Gets the offset of the tag's main structure from the start of its header.
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagEldorado.TotalSize">
-            <summary>
-            Gets the total size of the tag (including both its header and data), or 0 if the tag is not in a file.
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagEldorado.Checksum">
-            <summary>
-            Gets the checksum (adler32?) of the tag's data. Ignored if checksum verification is patched out.
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagEldorado.Dependencies">
-            <summary>
-            Gets the indices of tags that this tag depends on.
-            </summary>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagEldorado.PointerOffsets">
-            <summary>
-            Gets a list of offsets to each pointer in the tag, relative to the beginning of the tag's header.
-            </summary>
-            <remarks>
-            This previously used offsets relative to the beginning of the tag's data.
-            This was changed in order to speed up loading and be more closer to the engine.
-            </remarks>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagEldorado.ResourcePointerOffsets">
-            <summary>
-            Gets a list of offsets to each resource pointer in the tag, relative to the beginning of the tag's header.
-            </summary>
-            <remarks>
-            See the remarks for <see cref="P:TagTool.Cache.Eldorado.CachedTagEldorado.PointerOffsets"/>.
-            </remarks>
-        </member>
-        <member name="P:TagTool.Cache.Eldorado.CachedTagEldorado.TagReferenceOffsets">
-            <summary>
-            Gets a list of offsets to each tag reference in the tag, relative to the beginning of the tag's header.
-            </summary>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.CachedTagEldorado.PointerToOffset(System.UInt32)">
-            <summary>
-            Converts a pointer to an offset relative to the tag's header.
-            </summary>
-            <param name="pointer">The pointer to convert.</param>
-            <returns>The offset.</returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.CachedTagEldorado.OffsetToPointer(System.UInt32)">
-            <summary>
-            Converts an offset relative to the tag's header to a pointer.
-            </summary>
-            <param name="offset">The offset to convert.</param>
-            <returns>The pointer.</returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.CachedTagEldorado.ReadHeader(System.IO.BinaryReader,TagTool.Cache.StringTable)">
-            <summary>
-            Reads the header for the tag instance from a stream.
-            </summary>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.CachedTagEldorado.WriteHeader(System.IO.BinaryWriter,TagTool.Cache.StringTable)">
-            <summary>
-            Writes the header for the tag instance to a stream.
-            </summary>
-            <param name="writer">The stream to write to.</param>
-            <param name="stringTable">Reference to the Halo Online String Table</param>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.CachedTagEldorado.CalculateHeaderSize(TagTool.Cache.Eldorado.CachedTagData)">
-            <summary>
-            Calculates the header size that would be needed for a given block of tag data.
-            </summary>
-            <param name="data">The descriptor to use.</param>
-            <returns>The size of the tag's header.</returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.CachedTagEldorado.Update(TagTool.Cache.Eldorado.CachedTagData,System.UInt32)">
-            <summary>
-            Updates the tag instance's state from a block of tag data.
-            </summary>
-            <param name="data">The tag data.</param>
-            <param name="dataOffset">The offset of the tag data relative to the tag instance's header.</param>
-        </member>
-        <member name="T:TagTool.Cache.Eldorado.Resolvers.StringIdResolverMS23">
-            <summary>
-            StringID resolver for 1.106708.
-            </summary>
-        </member>
-        <member name="T:TagTool.Cache.Eldorado.Resolvers.StringIdResolverMS28">
-            <summary>
-            StringID resolver for 11.1.498295.
-            </summary>
-        </member>
-        <member name="T:TagTool.Cache.Eldorado.Resolvers.StringIdResolverMS30">
-            <summary>
-            StringID resolver for 12.1.700123.
-            </summary>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.Add(System.IO.Stream,System.ReadOnlySpan{System.Byte},System.UInt32@)">
-            <summary>
-            Adds a resource to the cache.
-            </summary>
-            <param name="resourceCacheStream">The stream open on the resource cache.</param>
-            <param name="tagResourceData">The data to compress.</param>
-            <param name="compressedSize">On return, the size of the compressed data.</param>
-            <returns>The index of the resource that was added.</returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.AddRaw(System.IO.Stream,System.ReadOnlySpan{System.Byte})">
-            <summary>
-            Adds a raw, pre-compressed resource to the cache.
-            </summary>
-            <param name="resourceCacheStream">The stream open on the resource cache.</param>
-            <param name="rawData">The raw data to add.</param>
-            <returns>The index of the resource that was added.</returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.ExtractRaw(System.IO.Stream,System.Int32,System.UInt32)">
-            <summary>
-            Extracts raw, compressed resource data.
-            </summary>
-            <param name="resourceCacheStream">The stream open on the resource cache.</param>
-            <param name="resourceIndex">The index of the resource to decompress.</param>
-            <param name="compressedSize">Total size of the compressed data, including chunk headers.</param>
-            <returns>The raw, compressed resource data.</returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.ImportRaw(System.IO.Stream,System.Int32,System.ReadOnlySpan{System.Byte})">
-            <summary>
-            Overwrites a resource with raw, pre-compressed data.
-            </summary>
-            <param name="resourceCacheStream">The stream open on the resource cache.</param>
-            <param name="resourceIndex">The index of the resource to overwrite.</param>
-            <param name="data">The raw, pre-compressed data to overwrite it with.</param>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.Decompress(System.IO.Stream,System.Int32,System.UInt32,System.IO.Stream)">
-            <summary>
-            Decompresses a resource.
-            </summary>
-            <param name="resourceStream">The stream open on the resource cache.</param>
-            <param name="resourceIndex">The index of the resource to decompress.</param>
-            <param name="compressedSize">Total size of the compressed data, including chunk headers.</param>
-            <param name="outStream">The stream to write the decompressed resource data to.</param>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCacheEldorado.Compress(System.IO.Stream,System.Int32,System.ReadOnlySpan{System.Byte})">
-            <summary>
-            Compresses and saves data for a resource.
-            </summary>
-            <param name="resourceStream">The stream open on the resource data. It must have read/write access.</param>
-            <param name="resourceIndex">The index of the resource to edit.</param>
-            <param name="data">The data to compress.</param>
-            <returns>The total size of the compressed resource in bytes.</returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.AddResource(TagTool.Common.PageableResource,System.ReadOnlySpan{System.Byte})">
-            <summary>
-            Adds a new pageable_resource to the current cache.
-            </summary>
-            <param name="resource">The pageable_resource to add.</param>
-            <param name="data">Resource data</param>
-            <exception cref="T:System.ArgumentNullException">resource</exception>
-            <exception cref="T:System.ArgumentException">The input stream is not open for reading;dataStream</exception>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.AddRawResource(TagTool.Common.PageableResource,System.ReadOnlySpan{System.Byte})">
-            <summary>
-            Adds raw, pre-compressed resource data to a cache.
-            </summary>
-            <param name="resource">The resource reference to initialize.</param>
-            <param name="data">The pre-compressed data to store.</param>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.ExtractResource(TagTool.Common.PageableResource,System.IO.Stream)">
-            <summary>
-            Extracts and decompresses the data for a resource from the current cache.
-            </summary>
-            <param name="pageable">The resource.</param>
-            <param name="outStream">The stream to write the extracted data to.</param>
-            <exception cref="T:System.ArgumentException">Thrown if the output stream is not open for writing.</exception>
-            <exception cref="T:System.InvalidOperationException">Thrown if the file containing the resource has not been loaded.</exception>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.ExtractRawResource(TagTool.Common.PageableResource)">
-            <summary>
-            Extracts raw, compressed resource data.
-            </summary>
-            <param name="resource">The resource.</param>
-            <returns>The raw, compressed resource data.</returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.ReplaceResource(TagTool.Common.PageableResource,System.ReadOnlySpan{System.Byte})">
-            <summary>
-            Compresses and replaces the data for a resource.
-            </summary>
-            <param name="resource">The resource whose data should be replaced. On success, the reference will be adjusted to account for the new data.</param>
-            <param name="data">The new resource data</param>
-            <exception cref="T:System.ArgumentException">Thrown if the input stream is not open for reading.</exception>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.ResourceCachesEldoradoBase.ReplaceRawResource(TagTool.Common.PageableResource,System.Byte[])">
-            <summary>
-            Replaces a resource with raw, pre-compressed data.
-            </summary>
-            <param name="resource">The resource whose data should be replaced. On success, the reference will be adjusted to account for the new data.</param>
-            <param name="data">The raw, pre-compressed data to use.</param>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.StringTableEldorado.AddStringBlocking(System.String)">
-            <summary>
-            AddString() but blocks other threads
-            </summary>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.StringTableEldorado.CreateFromStrings">
-            <summary>
-            Creates a string table exactly like the ms23 one up to the last hardcoded stringid in the engine. Do not modify this.
-            </summary>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.AllocateTag(TagTool.Tags.TagGroup,System.String)">
-            <summary>
-            Allocates a new tag at the end of the tag list without updating the file.
-            You can give the tag data by using one of the overwrite functions.
-            </summary>
-            <param name="type">The tag's type information.</param>
-            <param name="name">The name of the tag instance.</param>
-            <returns>The allocated tag.</returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.CreateCachedTag(System.Int32,TagTool.Tags.TagGroup,System.String)">
-            <summary>
-            Returns a new CachedTag instance without updating the tag cache.
-            </summary>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.ExtractTagRaw(System.IO.Stream,TagTool.Cache.Eldorado.CachedTagEldorado)">
-            <summary>
-            Reads a tag's raw data from the file, including its header.
-            </summary>
-            <param name="stream">The stream to read from.</param>
-            <param name="tag">The tag to read.</param>
-            <returns>The data that was read.</returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.ExtractTag(System.IO.Stream,TagTool.Cache.Eldorado.CachedTagEldorado)">
-            <summary>
-            Reads a tag's data from the file.
-            </summary>
-            <param name="stream">The stream to read from.</param>
-            <param name="tag">The tag to read.</param>
-            <returns>The data that was read.</returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.SetTagDataRaw(System.IO.Stream,TagTool.Cache.Eldorado.CachedTagEldorado,System.Byte[])">
-            <summary>
-            Overwrites a tag's raw data, including its header.
-            </summary>
-            <param name="stream">The stream to write to.</param>
-            <param name="tag">The tag to overwrite.</param>
-            <param name="data">The data to overwrite the tag with.</param>
-            <exception cref="T:System.ArgumentNullException">tag</exception>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.SetTagData(System.IO.Stream,TagTool.Cache.Eldorado.CachedTagEldorado,TagTool.Cache.Eldorado.CachedTagData)">
-            <summary>
-            Overwrites a tag's data.
-            </summary>
-            <param name="stream">The stream to write to.</param>
-            <param name="tag">The tag to overwrite.</param>
-            <param name="data">The data to store.</param>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.BuildTagData(System.IO.Stream,TagTool.Cache.Eldorado.CachedTagEldorado,System.UInt32@)">
-            <summary>
-            Builds a description for a tag's data without extracting anything.
-            </summary>
-            <param name="stream">The stream to read from.</param>
-            <param name="tag">The tag to read.</param>
-            <param name="dataOffset">On return, this will contain the offset of the tag's data relative to its header.</param>
-            <returns>The description that was built. </returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.ResizeBlock(System.IO.Stream,TagTool.Cache.Eldorado.CachedTagEldorado,System.Int64,System.Int64,System.Int64)">
-            <summary>
-            Resizes a block of data in the file.
-            </summary>
-            <param name="stream">The stream.</param>
-            <param name="tag">The tag that the block belongs to, if any.</param>
-            <param name="startOffset">The offset where the block to resize begins at.</param>
-            <param name="oldSize">The current size of the block to resize.</param>
-            <param name="newSize">The new size of the block.</param>
-            <exception cref="T:System.ArgumentException">Cannot resize a block to a negative size</exception>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.FixTagOffsets(System.Int64,System.Int64,TagTool.Cache.Eldorado.CachedTagEldorado)">
-            <summary>
-            Fixes tag offsets after a resize operation.
-            </summary>
-            <param name="startOffset">The offset where the resize operation took place.</param>
-            <param name="sizeDelta">The amount to add to each tag offset after the start offset.</param>
-            <param name="ignore">A tag to ignore.</param>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.GetNewTagOffset(System.Int32)">
-            <summary>
-            Gets the offset that a new tag should be inserted at so that the tags are stored in order by index.
-            </summary>
-            <param name="index">The index of the new tag.</param>
-            <returns>The offset that the tag data should be written to.</returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.GetTagDataEndOffset">
-            <summary>
-            Gets the tag data end offset.
-            </summary>
-            <returns>The offset of the first byte past the last tag in the file.</returns>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.UpdateTagOffsets(TagTool.IO.EndianWriter)">
-            <summary>
-            Updates the tag offset table in the file.
-            </summary>
-            <param name="writer">The stream to write to.</param>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.UpdateFileHeader(TagTool.IO.EndianWriter,System.UInt32)">
-            <summary>
-            Updates the file header.
-            </summary>
-            <param name="writer">The stream to write to.</param>
-            <param name="offsetTableOffset">The offset table offset.</param>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.LoadTagNames(System.String)">
-            <summary>
-            Loads tag file names from the appropriate tag_list.csv file.
-            </summary>
-            <param name="path">The path to the tag_list.csv file.</param>
-        </member>
-        <member name="M:TagTool.Cache.Eldorado.TagCacheEldorado.SaveTagNames(System.String)">
-            <summary>
-            Saves tag file names to the appropriate tag_list.csv file.
-            </summary>
-            <param name="path">The path to the tag_list.csv file.</param>
-        </member>
         <member name="T:TagTool.Cache.Gen2.Resolvers.StringIdResolverHalo2">
             <summary>
             StringID resolver for Halo 2.
@@ -1223,14 +839,34 @@
             StringID resolver for Halo 3.
             </summary>
         </member>
+        <member name="T:TagTool.Cache.Gen3.Resolvers.StringIdResolverHalo3Alpha">
+            <summary>
+            StringID resolver for Halo 3 Alpha.
+            </summary>
+        </member>
         <member name="T:TagTool.Cache.Gen3.Resolvers.StringIdResolverHalo3Beta">
             <summary>
             StringID resolver for Halo 3 Beta.
             </summary>
         </member>
+        <member name="T:TagTool.Cache.Gen3.Resolvers.StringIdResolverHalo3March7Delta">
+            <summary>
+            StringID resolver for Halo 3 March 7 Delta.
+            </summary>
+        </member>
+        <member name="T:TagTool.Cache.Gen3.Resolvers.StringIdResolverHalo3MarchDelta">
+            <summary>
+            StringID resolver for Halo 3 March 8 Delta.
+            </summary>
+        </member>
         <member name="T:TagTool.Cache.Gen3.Resolvers.StringIdResolverHalo3ODST">
             <summary>
             StringID resolver for Halo 3 ODST.
+            </summary>
+        </member>
+        <member name="T:TagTool.Cache.Gen3.Resolvers.StringIdResolverHalo3PreAlpha">
+            <summary>
+            StringID resolver for Halo 3 Alpha.
             </summary>
         </member>
         <member name="T:TagTool.Cache.Gen3.Resolvers.StringIdResolverHaloReach">
@@ -1290,15 +926,389 @@
             Alignment of resource pages in the resource section.
             </summary>
         </member>
-        <member name="T:TagTool.Cache.MCC.Resolvers.StringIdResolverHalo3XboxOneA">
+        <member name="T:TagTool.Cache.HaloOnline.CachedTagData">
             <summary>
-            StringID resolver for Halo 3 MCC Xbox One (Oct  1 2014 16:20:07)
+            Contains tag data and a description of it.
             </summary>
         </member>
-        <member name="T:TagTool.Cache.MCC.Resolvers.StringIdResolverHalo3XboxOneB">
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagData.Group">
             <summary>
-            StringID resolver for Halo 3 MCC Xbox One (Oct 30 2014 19:01:55)
+            The tag data's group.
             </summary>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagData.MainStructOffset">
+            <summary>
+            The offset of the main structure in the tag data.
+            </summary>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagData.Dependencies">
+            <summary>
+            Gets the indices of tags that the tag data depends on.
+            </summary>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagData.PointerFixups">
+            <summary>
+            Gets a list of fixups for pointers in the tag data.
+            </summary>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagData.ResourcePointerOffsets">
+            <summary>
+            Gets a list of offsets to each resource pointer in the tag data.
+            </summary>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagData.TagReferenceOffsets">
+            <summary>
+            Gets a list of offsets to each tag reference in the tag data.
+            </summary>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagData.Data">
+            <summary>
+            The serialized tag data.
+            </summary>
+        </member>
+        <member name="T:TagTool.Cache.HaloOnline.CachedTagData.PointerFixup">
+            <summary>
+            Contains information about a pointer in tag data that needs to be adjusted.
+            </summary>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagData.PointerFixup.WriteOffset">
+            <summary>
+            The offset (from the start of the tag's data) of the pointer.
+            </summary>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagData.PointerFixup.TargetOffset">
+            <summary>
+            The offset (from the start of the tag's data) that the pointer should point to.
+            </summary>
+        </member>
+        <member name="F:TagTool.Cache.HaloOnline.CachedTagHaloOnline.TagCache">
+            <summary>
+            The tag cache this instance belongs to
+            </summary>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagHaloOnline.HeaderOffset">
+            <summary>
+            Gets the offset of the tag's header, or -1 if the tag is not in a file.
+            </summary>
+        </member>
+        <member name="F:TagTool.Cache.HaloOnline.CachedTagHaloOnline.Offset">
+            <summary>
+            Gets the offset of the tag's main structure from the start of its header.
+            </summary>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagHaloOnline.TotalSize">
+            <summary>
+            Gets the total size of the tag (including both its header and data), or 0 if the tag is not in a file.
+            </summary>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagHaloOnline.Checksum">
+            <summary>
+            Gets the checksum (adler32?) of the tag's data. Ignored if checksum verification is patched out.
+            </summary>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagHaloOnline.Dependencies">
+            <summary>
+            Gets the indices of tags that this tag depends on.
+            </summary>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagHaloOnline.PointerOffsets">
+            <summary>
+            Gets a list of offsets to each pointer in the tag, relative to the beginning of the tag's header.
+            </summary>
+            <remarks>
+            This previously used offsets relative to the beginning of the tag's data.
+            This was changed in order to speed up loading and be more closer to the engine.
+            </remarks>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagHaloOnline.ResourcePointerOffsets">
+            <summary>
+            Gets a list of offsets to each resource pointer in the tag, relative to the beginning of the tag's header.
+            </summary>
+            <remarks>
+            See the remarks for <see cref="P:TagTool.Cache.HaloOnline.CachedTagHaloOnline.PointerOffsets"/>.
+            </remarks>
+        </member>
+        <member name="P:TagTool.Cache.HaloOnline.CachedTagHaloOnline.TagReferenceOffsets">
+            <summary>
+            Gets a list of offsets to each tag reference in the tag, relative to the beginning of the tag's header.
+            </summary>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.CachedTagHaloOnline.PointerToOffset(System.UInt32)">
+            <summary>
+            Converts a pointer to an offset relative to the tag's header.
+            </summary>
+            <param name="pointer">The pointer to convert.</param>
+            <returns>The offset.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.CachedTagHaloOnline.OffsetToPointer(System.UInt32)">
+            <summary>
+            Converts an offset relative to the tag's header to a pointer.
+            </summary>
+            <param name="offset">The offset to convert.</param>
+            <returns>The pointer.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.CachedTagHaloOnline.ReadHeader(System.IO.BinaryReader,TagTool.Cache.StringTable)">
+            <summary>
+            Reads the header for the tag instance from a stream.
+            </summary>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.CachedTagHaloOnline.WriteHeader(System.IO.BinaryWriter,TagTool.Cache.StringTable)">
+            <summary>
+            Writes the header for the tag instance to a stream.
+            </summary>
+            <param name="writer">The stream to write to.</param>
+            <param name="stringTable">Reference to the Halo Online String Table</param>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.CachedTagHaloOnline.CalculateHeaderSize(TagTool.Cache.HaloOnline.CachedTagData)">
+            <summary>
+            Calculates the header size that would be needed for a given block of tag data.
+            </summary>
+            <param name="data">The descriptor to use.</param>
+            <returns>The size of the tag's header.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.CachedTagHaloOnline.Update(TagTool.Cache.HaloOnline.CachedTagData,System.UInt32)">
+            <summary>
+            Updates the tag instance's state from a block of tag data.
+            </summary>
+            <param name="data">The tag data.</param>
+            <param name="dataOffset">The offset of the tag data relative to the tag instance's header.</param>
+        </member>
+        <member name="T:TagTool.Cache.HaloOnline.Resolvers.StringIdResolverMS23">
+            <summary>
+            StringID resolver for 1.106708.
+            </summary>
+        </member>
+        <member name="T:TagTool.Cache.HaloOnline.Resolvers.StringIdResolverMS28">
+            <summary>
+            StringID resolver for 11.1.498295.
+            </summary>
+        </member>
+        <member name="T:TagTool.Cache.HaloOnline.Resolvers.StringIdResolverMS30">
+            <summary>
+            StringID resolver for 12.1.700123.
+            </summary>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.ResourceCacheHaloOnline.Add(System.IO.Stream,System.ReadOnlySpan{System.Byte},System.UInt32@)">
+            <summary>
+            Adds a resource to the cache.
+            </summary>
+            <param name="resourceCacheStream">The stream open on the resource cache.</param>
+            <param name="tagResourceData">The data to compress.</param>
+            <param name="compressedSize">On return, the size of the compressed data.</param>
+            <returns>The index of the resource that was added.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.ResourceCacheHaloOnline.AddRaw(System.IO.Stream,System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Adds a raw, pre-compressed resource to the cache.
+            </summary>
+            <param name="resourceCacheStream">The stream open on the resource cache.</param>
+            <param name="rawData">The raw data to add.</param>
+            <returns>The index of the resource that was added.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.ResourceCacheHaloOnline.ExtractRaw(System.IO.Stream,System.Int32,System.UInt32)">
+            <summary>
+            Extracts raw, compressed resource data.
+            </summary>
+            <param name="resourceCacheStream">The stream open on the resource cache.</param>
+            <param name="resourceIndex">The index of the resource to decompress.</param>
+            <param name="compressedSize">Total size of the compressed data, including chunk headers.</param>
+            <returns>The raw, compressed resource data.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.ResourceCacheHaloOnline.ImportRaw(System.IO.Stream,System.Int32,System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Overwrites a resource with raw, pre-compressed data.
+            </summary>
+            <param name="resourceCacheStream">The stream open on the resource cache.</param>
+            <param name="resourceIndex">The index of the resource to overwrite.</param>
+            <param name="data">The raw, pre-compressed data to overwrite it with.</param>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.ResourceCacheHaloOnline.Decompress(System.IO.Stream,System.Int32,System.UInt32,System.IO.Stream)">
+            <summary>
+            Decompresses a resource.
+            </summary>
+            <param name="resourceStream">The stream open on the resource cache.</param>
+            <param name="resourceIndex">The index of the resource to decompress.</param>
+            <param name="compressedSize">Total size of the compressed data, including chunk headers.</param>
+            <param name="outStream">The stream to write the decompressed resource data to.</param>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.ResourceCacheHaloOnline.Compress(System.IO.Stream,System.Int32,System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Compresses and saves data for a resource.
+            </summary>
+            <param name="resourceStream">The stream open on the resource data. It must have read/write access.</param>
+            <param name="resourceIndex">The index of the resource to edit.</param>
+            <param name="data">The data to compress.</param>
+            <returns>The total size of the compressed resource in bytes.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.ResourceCachesHaloOnlineBase.AddResource(TagTool.Common.PageableResource,System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Adds a new pageable_resource to the current cache.
+            </summary>
+            <param name="resource">The pageable_resource to add.</param>
+            <param name="data">Resource data</param>
+            <exception cref="T:System.ArgumentNullException">resource</exception>
+            <exception cref="T:System.ArgumentException">The input stream is not open for reading;dataStream</exception>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.ResourceCachesHaloOnlineBase.AddRawResource(TagTool.Common.PageableResource,System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Adds raw, pre-compressed resource data to a cache.
+            </summary>
+            <param name="resource">The resource reference to initialize.</param>
+            <param name="data">The pre-compressed data to store.</param>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.ResourceCachesHaloOnlineBase.ExtractResource(TagTool.Common.PageableResource,System.IO.Stream)">
+            <summary>
+            Extracts and decompresses the data for a resource from the current cache.
+            </summary>
+            <param name="pageable">The resource.</param>
+            <param name="outStream">The stream to write the extracted data to.</param>
+            <exception cref="T:System.ArgumentException">Thrown if the output stream is not open for writing.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the file containing the resource has not been loaded.</exception>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.ResourceCachesHaloOnlineBase.ExtractRawResource(TagTool.Common.PageableResource)">
+            <summary>
+            Extracts raw, compressed resource data.
+            </summary>
+            <param name="resource">The resource.</param>
+            <returns>The raw, compressed resource data.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.ResourceCachesHaloOnlineBase.ReplaceResource(TagTool.Common.PageableResource,System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Compresses and replaces the data for a resource.
+            </summary>
+            <param name="resource">The resource whose data should be replaced. On success, the reference will be adjusted to account for the new data.</param>
+            <param name="data">The new resource data</param>
+            <exception cref="T:System.ArgumentException">Thrown if the input stream is not open for reading.</exception>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.ResourceCachesHaloOnlineBase.ReplaceRawResource(TagTool.Common.PageableResource,System.Byte[])">
+            <summary>
+            Replaces a resource with raw, pre-compressed data.
+            </summary>
+            <param name="resource">The resource whose data should be replaced. On success, the reference will be adjusted to account for the new data.</param>
+            <param name="data">The raw, pre-compressed data to use.</param>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.StringTableHaloOnline.AddStringBlocking(System.String)">
+            <summary>
+            AddString() but blocks other threads
+            </summary>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.StringTableHaloOnline.CreateFromStrings">
+            <summary>
+            Creates a string table exactly like the ms23 one up to the last hardcoded stringid in the engine. Do not modify this.
+            </summary>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.AllocateTag(TagTool.Tags.TagGroup,System.String)">
+            <summary>
+            Allocates a new tag at the end of the tag list without updating the file.
+            You can give the tag data by using one of the overwrite functions.
+            </summary>
+            <param name="type">The tag's type information.</param>
+            <param name="name">The name of the tag instance.</param>
+            <returns>The allocated tag.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.CreateCachedTag(System.Int32,TagTool.Tags.TagGroup,System.String)">
+            <summary>
+            Returns a new CachedTag instance without updating the tag cache.
+            </summary>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.ExtractTagRaw(System.IO.Stream,TagTool.Cache.HaloOnline.CachedTagHaloOnline)">
+            <summary>
+            Reads a tag's raw data from the file, including its header.
+            </summary>
+            <param name="stream">The stream to read from.</param>
+            <param name="tag">The tag to read.</param>
+            <returns>The data that was read.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.ExtractTag(System.IO.Stream,TagTool.Cache.HaloOnline.CachedTagHaloOnline)">
+            <summary>
+            Reads a tag's data from the file.
+            </summary>
+            <param name="stream">The stream to read from.</param>
+            <param name="tag">The tag to read.</param>
+            <returns>The data that was read.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.SetTagDataRaw(System.IO.Stream,TagTool.Cache.HaloOnline.CachedTagHaloOnline,System.Byte[])">
+            <summary>
+            Overwrites a tag's raw data, including its header.
+            </summary>
+            <param name="stream">The stream to write to.</param>
+            <param name="tag">The tag to overwrite.</param>
+            <param name="data">The data to overwrite the tag with.</param>
+            <exception cref="T:System.ArgumentNullException">tag</exception>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.SetTagData(System.IO.Stream,TagTool.Cache.HaloOnline.CachedTagHaloOnline,TagTool.Cache.HaloOnline.CachedTagData)">
+            <summary>
+            Overwrites a tag's data.
+            </summary>
+            <param name="stream">The stream to write to.</param>
+            <param name="tag">The tag to overwrite.</param>
+            <param name="data">The data to store.</param>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.BuildTagData(System.IO.Stream,TagTool.Cache.HaloOnline.CachedTagHaloOnline,System.UInt32@)">
+            <summary>
+            Builds a description for a tag's data without extracting anything.
+            </summary>
+            <param name="stream">The stream to read from.</param>
+            <param name="tag">The tag to read.</param>
+            <param name="dataOffset">On return, this will contain the offset of the tag's data relative to its header.</param>
+            <returns>The description that was built. </returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.ResizeBlock(System.IO.Stream,TagTool.Cache.HaloOnline.CachedTagHaloOnline,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Resizes a block of data in the file.
+            </summary>
+            <param name="stream">The stream.</param>
+            <param name="tag">The tag that the block belongs to, if any.</param>
+            <param name="startOffset">The offset where the block to resize begins at.</param>
+            <param name="oldSize">The current size of the block to resize.</param>
+            <param name="newSize">The new size of the block.</param>
+            <exception cref="T:System.ArgumentException">Cannot resize a block to a negative size</exception>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.FixTagOffsets(System.Int64,System.Int64,TagTool.Cache.HaloOnline.CachedTagHaloOnline)">
+            <summary>
+            Fixes tag offsets after a resize operation.
+            </summary>
+            <param name="startOffset">The offset where the resize operation took place.</param>
+            <param name="sizeDelta">The amount to add to each tag offset after the start offset.</param>
+            <param name="ignore">A tag to ignore.</param>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.GetNewTagOffset(System.Int32)">
+            <summary>
+            Gets the offset that a new tag should be inserted at so that the tags are stored in order by index.
+            </summary>
+            <param name="index">The index of the new tag.</param>
+            <returns>The offset that the tag data should be written to.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.GetTagDataEndOffset">
+            <summary>
+            Gets the tag data end offset.
+            </summary>
+            <returns>The offset of the first byte past the last tag in the file.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.UpdateTagOffsets(TagTool.IO.EndianWriter)">
+            <summary>
+            Updates the tag offset table in the file.
+            </summary>
+            <param name="writer">The stream to write to.</param>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.UpdateFileHeader(TagTool.IO.EndianWriter,System.UInt32)">
+            <summary>
+            Updates the file header.
+            </summary>
+            <param name="writer">The stream to write to.</param>
+            <param name="offsetTableOffset">The offset table offset.</param>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.LoadTagNames(System.String)">
+            <summary>
+            Loads tag file names from the appropriate tag_list.csv file.
+            </summary>
+            <param name="path">The path to the tag_list.csv file.</param>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.TagCacheHaloOnline.SaveTagNames(System.String)">
+            <summary>
+            Saves tag file names to the appropriate tag_list.csv file.
+            </summary>
+            <param name="path">The path to the tag_list.csv file.</param>
         </member>
         <member name="F:TagTool.Cache.ModPackageSectionTable.Count">
             <summary>
@@ -1516,7 +1526,7 @@
             <param name="path">Tag path including long or short tag group name.</param>
             <returns>True if valid and available else false</returns>
         </member>
-        <member name="M:TagTool.Cache.Utils.TagReplacer.ReplaceTag(TagTool.Cache.GameCacheEldoradoBase,System.IO.Stream,TagTool.Cache.CachedTag,TagTool.Cache.CachedTag)">
+        <member name="M:TagTool.Cache.Utils.TagReplacer.ReplaceTag(TagTool.Cache.GameCacheHaloOnlineBase,System.IO.Stream,TagTool.Cache.CachedTag,TagTool.Cache.CachedTag)">
             <summary>
             Replaces all references to <paramref name="tag"/> with <paramref name="replacementTag"/>
             </summary>
@@ -3291,7 +3301,7 @@
             Initialise the physics model to be built
             </summary>
         </member>
-        <member name="M:TagTool.Geometry.PhysicsModelBuilder.AddShape(TagTool.Tags.Definitions.PhysicsModel,SimpleJSON.JSONNode,TagTool.Tags.Definitions.Globals,TagTool.Cache.GameCacheEldoradoBase)">
+        <member name="M:TagTool.Geometry.PhysicsModelBuilder.AddShape(TagTool.Tags.Definitions.PhysicsModel,SimpleJSON.JSONNode,TagTool.Tags.Definitions.Globals,TagTool.Cache.GameCacheHaloOnlineBase)">
             <summary>
             Finds the type of the shape and adds it. Currently, only 'Polyhedron' is supported.
             </summary>
@@ -5042,7 +5052,7 @@
             Set of blam tag indices to ignore when porting
             </summary>
         </member>
-        <member name="M:TagTool.Porting.PortingContext.Create(TagTool.Cache.GameCacheEldoradoBase,TagTool.Cache.GameCache)">
+        <member name="M:TagTool.Porting.PortingContext.Create(TagTool.Cache.GameCacheHaloOnlineBase,TagTool.Cache.GameCache)">
             <summary>
             Create context for porting from sourceCache to destCache
             </summary>
@@ -5359,17 +5369,17 @@
             Expression syntax delimiters.
             </summary>
         </member>
-        <member name="T:TagTool.Serialization.EldoradoSerializationContext">
+        <member name="T:TagTool.Serialization.HaloOnlineSerializationContext">
             <summary>
             A serialization context for serializing and deserializing tags.
             </summary>
         </member>
-        <member name="P:TagTool.Serialization.EldoradoSerializationContext.Tag">
+        <member name="P:TagTool.Serialization.HaloOnlineSerializationContext.Tag">
             <summary>
             Gets the tag that the context is operating on.
             </summary>
         </member>
-        <member name="M:TagTool.Serialization.EldoradoSerializationContext.#ctor(System.IO.Stream,TagTool.Cache.GameCacheEldoradoBase,TagTool.Cache.Eldorado.CachedTagEldorado)">
+        <member name="M:TagTool.Serialization.HaloOnlineSerializationContext.#ctor(System.IO.Stream,TagTool.Cache.GameCacheHaloOnlineBase,TagTool.Cache.HaloOnline.CachedTagHaloOnline)">
             <summary>
             Creates a tag serialization context which serializes data into a tag.
             </summary>
@@ -26947,7 +26957,7 @@
             ID is an index in ResourceGestalt.TagResources
             </summary>
         </member>
-        <member name="F:TagTool.Tags.TagResourceReference.EldoradoPageableResource">
+        <member name="F:TagTool.Tags.TagResourceReference.HaloOnlinePageableResource">
             <summary>
             PageableResource structure (as a pointer)
             </summary>

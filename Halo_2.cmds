@@ -261,7 +261,8 @@ edittag ui\halox\common\roster\exp_med_ui.bitmap
 importbitmap 0 workingdir\bitmaps\ranks\exp_med_ui.dds
 exit
 
-
+MapFile Remove 8765
+MapFile Remove 0
 
 ##EditTag multiplayer\forge_globals.forge_globals_definition
 ##MaximizeBudget All
