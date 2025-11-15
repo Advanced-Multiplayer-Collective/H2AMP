@@ -10,7 +10,7 @@ SetVariable workingdir "C:\Users\Matthew\Documents\GitHub\H2AMP"
 
 # echo ==Creating Mod Package...==
 CreateModPackage 1 large
-Halo 2 Anniversary Multiplayer
+Halo 2 Advanced Multiplayer
 Halo 2 Multiplayer maps in ElDewrito.
 AMP Collective
 0.1
