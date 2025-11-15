@@ -191,9 +191,6 @@ setinheritance MCC objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp
 savetagchanges
 exit
 
-objects\characters\dervish\fp\weapons\pistol\magnum\fp_magnum\fp_magnum.model_animation_graph
-
-
 edittag objects\characters\dervish\fp\weapons\pistol\fp_magnum\fp_magnum.jmad
 setinheritance MCC objects\characters\dervish\fp\weapons\pistol\magnum\fp_magnum\fp_magnum.model_animation_graph
 savetagchanges

@@ -1,5 +1,5 @@
 
-opencachefile "workingdir\maps\bipeds.map"
+opencachefile "workingdir\maps\h2assets.map"
 porttag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.biped
 porttag objects\characters\h2_elite\mp_elite.biped
 porttag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\fp\fp.mode

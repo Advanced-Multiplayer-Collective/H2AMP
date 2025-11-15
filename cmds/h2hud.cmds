@@ -1,4 +1,4 @@
-opencachefile workingdir\maps\H2CHUD.map
+opencachefile workingdir\maps\h2assets.map
 NameBlamTag ui\chud\elite.chud_definition ui\chud\elite_h2
 NameBlamTag ui\chud\spartan.chud_definition ui\chud\spartan_h2
 NameBlamTag ui\chud\bitmaps\hud_reticles.bitmap ms30\ui\chud\bitmaps\hud_reticles
@@ -121,7 +121,11 @@ exit
 # HUD RETICLES BITMAP
 EditTag ms30\ui\chud\bitmaps\hud_reticles.bitmap
 ImportBitmap 4 workingdir\bitmaps\HUD_Reticles\4.dds
+ImportBitmap 10 workingdir\bitmaps\HUD_Reticles\10.dds
 ImportBitmap 11 workingdir\bitmaps\HUD_Reticles\11.dds
+ImportBitmap 13 workingdir\bitmaps\HUD_Reticles\13.dds
+ImportBitmap 16 workingdir\bitmaps\HUD_Reticles\16.dds
+ImportBitmap 17 workingdir\bitmaps\HUD_Reticles\17.dds
 
 # SSMG CROSSHAIR, SEQUENCE INDEX IS 33 NOT 32
 AddBlockElements Sequences
@@ -655,9 +659,14 @@ Exit
 ForEach chdt named ui\chud\flamethrower SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
 ForEach chdt named ui\chud\fuel_rod_cannon SetField HudWidgets[2].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.6
 ForEach chdt named ui\chud\hammer SetField HudWidgets[1].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.6
-ForEach chdt named ui\chud\needler SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.6
+ForEach chdt named ui\chud\needler SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.62 0.62
+ForEach chdt named ui\chud\sword SetField HudWidgets[1].BitmapWidgets[0].PlacementData[0].Offset -2 0
 ForEach chdt named ui\chud\sword SetField HudWidgets[1].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.6
 ForEach chdt named ui\chud\shotgun SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.6
+ForEach chdt named ui\chud\plasma_pistol SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Offset 0 -16
+ForEach chdt named ui\chud\plasma_pistol SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.65 0.65
+ForEach chdt named ui\chud\brute_shot SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Offset 0 48
+ForEach chdt named ui\chud\brute_shot SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.65 0.65
 
 # VEHICLE CROSSHAIR SCALE
 ForEach chdt named ui\chud\v_banshee SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 0.5 0.5

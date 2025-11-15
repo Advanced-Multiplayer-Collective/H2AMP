@@ -20,6 +20,28 @@ RunCommands "workingdir\cmds\shaderupdates.cmds"
 
 RunCommands "workingdir\cmds\h2menu.cmds"
 
+EditTag objects\gear\human\military\crate_packing_giant\crate_packing_giant.render_model
+SaveTagChanges
+Exit
+NameTag objects\gear\human\military\crate_packing_giant\crate_packing_giant.render_model objects\gear\human\military\crate_packing_giant\crate_packing_giant_ho
+EditTag objects\gear\human\military\crate_packing_giant\crate_packing_giant_mp.model
+SetField RenderModel objects\gear\human\military\crate_packing_giant\crate_packing_giant_ho.render_model
+SaveTagChanges
+Exit
+
+EditTag objects\gear\human\military\crate_packing\crate_packing.crate
+SaveTagChanges
+Exit
+EditTag objects\gear\human\military\crate_packing\crate_packing.model
+SaveTagChanges
+Exit
+EditTag objects\gear\human\military\crate_packing\crate_packing.render_model
+SaveTagChanges
+Exit
+NameTag objects\gear\human\military\crate_packing\crate_packing.crate objects\gear\human\military\crate_packing\crate_packing_ho
+NameTag objects\gear\human\military\crate_packing\crate_packing.model objects\gear\human\military\crate_packing\crate_packing_ho
+NameTag objects\gear\human\military\crate_packing\crate_packing.render_model objects\gear\human\military\crate_packing\crate_packing_ho
+
 OpenCacheFile "h2maps\ascension.map"
 PortTag *.scnr
 Exit
@@ -239,7 +261,8 @@ edittag ui\halox\common\roster\exp_med_ui.bitmap
 importbitmap 0 workingdir\bitmaps\ranks\exp_med_ui.dds
 exit
 
-
+MapFile Remove 8765
+MapFile Remove 0
 
 ##EditTag multiplayer\forge_globals.forge_globals_definition
 ##MaximizeBudget All
