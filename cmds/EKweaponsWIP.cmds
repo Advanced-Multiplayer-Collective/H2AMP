@@ -190,7 +190,7 @@ EditTag objects\weapons\rifle\sniper_rifle\shaders\sniper_rifle_scope_screen_h2.
 SetField ShaderProperties[0].TextureConstants[0].ExternTextureMode Scope
 SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\temp\zekken\weapons\sniper_rifle\bitmaps\sniper_rifle_scope_view_fp.bitmap
 SetArgument base_map 0.1 0.1 0.45 0.45
-SetArgument self_illum_intensity 0.1
+SetArgument self_illum_intensity 0.5
 SaveTagChanges
 Exit
 
