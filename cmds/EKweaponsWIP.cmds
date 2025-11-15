@@ -171,16 +171,44 @@ Exit
 # -------------------------------------
 # |             MISC FIXUP            |
 # -------------------------------------
+DuplicateTag objects\weapons\rifle\sniper_rifle\sniper_rifle.render_model objects\weapons\rifle\sniper_rifle\fp_sniper_rifle_h2\fp_sniper_rifle_h2
 EditTag objects\weapons\rifle\sniper_rifle\sniper_rifle.weapon
-SetField FirstPerson[0].FirstPersonModel objects\weapons\rifle\sniper_rifle\sniper_rifle.render_model
-SetField FirstPerson[1].FirstPersonModel objects\weapons\rifle\sniper_rifle\sniper_rifle.render_model
+SetField FirstPerson[0].FirstPersonModel objects\weapons\rifle\sniper_rifle\fp_sniper_rifle_h2\fp_sniper_rifle_h2.render_model
+SetField FirstPerson[1].FirstPersonModel objects\weapons\rifle\sniper_rifle\fp_sniper_rifle_h2\fp_sniper_rifle_h2.render_model
 SaveTagChanges
 Exit
 
+# Fix sniper scope
+DuplicateTag objects\temp\zekken\weapons\sniper_rifle\bitmaps\sniper_rifle_scope_view.bitmap objects\temp\zekken\weapons\sniper_rifle\bitmaps\sniper_rifle_scope_view_fp
+EditTag objects\temp\zekken\weapons\sniper_rifle\bitmaps\sniper_rifle_scope_view_fp.bitmap
+ImportBitmap 0 workingdir\bitmaps\sniper_scope\sniper_rifle_scope_view3.dds
+SaveTagChanges
+Exit
 
+DuplicateTag levels\multi\shrine\sky\shaders\sundisk.shader objects\weapons\rifle\sniper_rifle\shaders\sniper_rifle_scope_screen_h2
+EditTag objects\weapons\rifle\sniper_rifle\shaders\sniper_rifle_scope_screen_h2.shader
+SetField ShaderProperties[0].TextureConstants[0].ExternTextureMode Scope
+SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\temp\zekken\weapons\sniper_rifle\bitmaps\sniper_rifle_scope_view_fp.bitmap
+SetArgument base_map 0.1 0.1 0.45 0.45
+SetArgument self_illum_intensity 0.1
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\sniper_rifle\fp_sniper_rifle_h2\fp_sniper_rifle_h2.render_model
+SetField Materials[1].RenderMethod objects\weapons\rifle\sniper_rifle\shaders\sniper_rifle_scope_screen_h2.shader
+SaveTagChanges
+Exit
+
+DuplicateTag objects\weapons\rifle\battle_rifle\battle_rifle.render_model objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2
 EditTag objects\weapons\rifle\battle_rifle\battle_rifle.weapon
-SetField FirstPerson[0].FirstPersonModel objects\weapons\rifle\battle_rifle\battle_rifle.render_model
-SetField FirstPerson[1].FirstPersonModel objects\weapons\rifle\battle_rifle\battle_rifle.render_model
+SetField FirstPerson[0].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2.render_model
+SetField FirstPerson[1].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2.render_model
+SaveTagChanges
+Exit
+
+# Battle rifle blue lens scope
+EditTag objects\temp\zekken\weapons\battle_rifle\shaders\battle_rifle_lens.shader
+SetArgument env_tint_color 0.027450982 0.14117648 0.5803922 1
 SaveTagChanges
 Exit
 
