@@ -1,0 +1,184 @@
+# -------------------------------------
+# |           ASSAULT RIFLE           |
+# -------------------------------------
+OpenCacheFile "h3maps\zanzibar.map"
+
+PortTag Replace objects\weapons\rifle\assault_rifle\assault_rifle.model
+PortTag Replace objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_rifle.mode
+Exit
+
+# Weapons are still WIP
+# Thanks alot Oli ( I Can't Think of a Good Username )
+# -------------------------------------
+# |           BATTLE RIFLE            |
+# -------------------------------------
+OpenCacheFile workingdir\maps\h2weapons.map
+NameBlamTag objects\weapons\rifle\battle_rifle\battle_rifle.render_model fuckyoubr1
+# THIS RENDER MODEL IS USED FOR FP AND TP MODEL
+NameBlamTag objects\temp\zekken\weapons\battle_rifle\battle_rifle.render_model objects\weapons\rifle\battle_rifle\battle_rifle
+PortTag Replace objects\weapons\rifle\battle_rifle\battle_rifle.render_model
+Exit
+
+# -------------------------------------
+# |            BEAM RIFLE             |
+# -------------------------------------
+NameBlamTag objects\weapons\rifle\beam_rifle\fp_beam_rifle\fp_beam_rifle.render_model fuckyoubeamrifle2
+
+NameBlamTag objects\temp\zekken\weapons\beam_rifle\beam_rifle.render_model objects\weapons\rifle\beam_rifle\beam_rifle
+NameBlamTag objects\temp\zekken\weapons\beam_rifle\fp_beam_rifle\fp_beam_rifle.render_model objects\weapons\rifle\beam_rifle\fp_beam_rifle\fp_beam_rifle
+
+PortTag Replace objects\weapons\rifle\beam_rifle\beam_rifle.render_model
+PortTag Replace objects\weapons\rifle\beam_rifle\fp_beam_rifle\fp_beam_rifle.render_model
+
+# -------------------------------------
+# |            BRUTE SHOT             |
+# -------------------------------------
+NameBlamTag objects\weapons\support_low\brute_shot\fp_brute_shot\fp_brute_shot.render_model fuckyoubruteshot2
+
+NameBlamTag objects\temp\zekken\weapons\brute_shot\brute_shot.render_model objects\weapons\support_low\brute_shot\brute_shot
+NameBlamTag objects\temp\zekken\weapons\brute_shot\fp_brute_shot\fp_brute_shot.render_model objects\weapons\support_low\brute_shot\fp_brute_shot\fp_brute_shot
+
+PortTag Replace objects\weapons\support_low\brute_shot\brute_shot.render_model
+PortTag Replace objects\weapons\support_low\brute_shot\fp_brute_shot\fp_brute_shot.render_model
+
+# -------------------------------------
+# |             CARBINE               |
+# -------------------------------------
+NameBlamTag objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine.render_model fuckyoucarb1
+
+NameBlamTag objects\temp\zekken\weapons\covenant_carbine\covenant_carbine.render_model objects\weapons\rifle\covenant_carbine\covenant_carbine
+NameBlamTag objects\temp\zekken\weapons\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine.render_model objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine
+
+PortTag Replace objects\weapons\rifle\covenant_carbine\covenant_carbine.render_model
+PortTag Replace objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine.render_model
+
+# -------------------------------------
+# |           ENERGY SWORD            |
+# -------------------------------------
+# ENERGY BLADE, SWORD
+NameBlamTag objects\weapons\melee\energy_blade\fp_energy_blade\fp_energy_blade.render_model fuckyousword1
+
+NameBlamTag objects\temp\zekken\weapons\energy_blade\fp_energy_blade\fp_energy_blade.render_model objects\weapons\melee\energy_blade\fp_energy_blade\fp_energy_blade
+PortTag Replace objects\weapons\melee\energy_blade\fp_energy_blade\fp_energy_blade.render_model
+
+# -------------------------------------
+# |             FUEL ROD              |
+# -------------------------------------
+# FLAK CANNON, FUEL CANNON
+NameBlamTag objects\weapons\support_high\flak_cannon\flak_cannon.render_model fuckyouflak1
+
+NameBlamTag objects\temp\zekken\weapons\flak_cannon\flak_cannon.render_model objects\weapons\support_high\flak_cannon\flak_cannon
+NameBlamTag objects\temp\zekken\weapons\flak_cannon\fp_flak_cannon\fp_flak_cannon.render_model objects\weapons\support_high\flak_cannon\fp_flak_cannon\fp_flak_cannon
+
+PortTag Replace objects\weapons\support_high\flak_cannon\flak_cannon.render_model
+PortTag Replace objects\weapons\support_high\flak_cannon\fp_flak_cannon\fp_flak_cannon.render_model
+
+# -------------------------------------
+# |              MAGNUM               |
+# -------------------------------------
+NameBlamTag objects\weapons\pistol\magnum\fp_magnum\fp_magnum.render_model fuckyoumagnum1
+
+NameBlamTag objects\temp\zekken\weapons\magnum\magnum.render_model objects\weapons\pistol\magnum\magnum
+NameBlamTag objects\temp\zekken\weapons\magnum\fp_magnum\fp_magnum.render_model objects\weapons\pistol\magnum\fp_magnum\fp_magnum
+
+PortTag Replace objects\weapons\pistol\magnum\magnum.render_model
+PortTag Replace objects\weapons\pistol\magnum\fp_magnum\fp_magnum.render_model
+
+# -------------------------------------
+# |             NEEDLER               |
+# -------------------------------------
+NameBlamTag objects\weapons\pistol\needler\fp_needler\fp_needler.render_model fuckyouneedler1
+
+NameBlamTag objects\temp\zekken\weapons\needler\needler.render_model objects\weapons\pistol\needler\needler
+NameBlamTag objects\temp\zekken\weapons\needler\fp_needler\fp_needler.render_model objects\weapons\pistol\needler\fp_needler\fp_needler
+
+PortTag Replace objects\weapons\pistol\needler\needler.render_model
+PortTag Replace objects\weapons\pistol\needler\fp_needler\fp_needler.render_model
+
+# -------------------------------------
+# |           PLASMA PISTOL           |
+# -------------------------------------
+NameBlamTag objects\weapons\pistol\plasma_pistol\fp_plasma_pistol\fp_plasma_pistol.render_model fuckyoupp1
+
+NameBlamTag objects\temp\zekken\weapons\plasma_pistol\plasma_pistol.render_model objects\weapons\pistol\plasma_pistol\plasma_pistol
+NameBlamTag objects\temp\zekken\weapons\plasma_pistol\fp_plasma_pistol\fp_plasma_pistol.render_model objects\weapons\pistol\plasma_pistol\fp_plasma_pistol\fp_plasma_pistol
+
+PortTag Replace objects\weapons\pistol\plasma_pistol\plasma_pistol.render_model
+PortTag Replace objects\weapons\pistol\plasma_pistol\fp_plasma_pistol\fp_plasma_pistol.render_model
+
+# -------------------------------------
+# |           PLASMA RIFLE            |
+# -------------------------------------
+NameBlamTag objects\weapons\rifle\plasma_rifle\fp_plasma_rifle\fp_plasma_rifle.render_model fuckyoupr1
+
+NameBlamTag objects\temp\zekken\weapons\plasma_rifle\plasma_rifle.render_model objects\weapons\rifle\plasma_rifle\plasma_rifle
+NameBlamTag objects\temp\zekken\weapons\plasma_rifle\fp_plasma_rifle\fp_plasma_rifle.render_model objects\weapons\rifle\plasma_rifle\fp_plasma_rifle\fp_plasma_rifle
+
+PortTag Replace objects\weapons\rifle\plasma_rifle\plasma_rifle.render_model
+PortTag Replace objects\weapons\rifle\plasma_rifle\fp_plasma_rifle\fp_plasma_rifle.render_model
+
+# -------------------------------------
+# |          ROCKET LAUNCHER          |
+# -------------------------------------
+NameBlamTag objects\weapons\support_high\rocket_launcher\fp_rocket_launcher\fp_rocket_launcher.render_model fuckyourocket1
+
+NameBlamTag objects\temp\zekken\weapons\rocket_launcher\rocket_launcher.render_model objects\weapons\support_high\rocket_launcher\rocket_launcher
+NameBlamTag objects\temp\zekken\weapons\rocket_launcher\fp_rocket_launcher\fp_rocket_launcher.render_model objects\weapons\support_high\rocket_launcher\fp_rocket_launcher\fp_rocket_launcher
+
+PortTag Replace objects\weapons\support_high\rocket_launcher\rocket_launcher.render_model
+PortTag Replace objects\weapons\support_high\rocket_launcher\fp_rocket_launcher\fp_rocket_launcher.render_model
+
+# -------------------------------------
+# |           SENTINEL BEAM           |
+# -------------------------------------
+NameBlamTag objects\weapons\support_low\sentinel_gun\fp_sentinel_gun\fp_sentinel_gun.render_model fuckyousentinel1
+
+NameBlamTag objects\temp\zekken\weapons\sentinel_beam\sentinel_beam.render_model objects\weapons\support_low\sentinel_gun\sentinel_gun
+NameBlamTag objects\temp\zekken\weapons\sentinel_beam\fp_sentinel_beam\fp_sentinel_beam.render_model objects\weapons\support_low\sentinel_gun\fp_sentinel_gun\fp_sentinel_gun
+
+PortTag Replace objects\weapons\support_low\sentinel_gun\sentinel_gun.render_model
+PortTag Replace objects\weapons\support_low\sentinel_gun\fp_sentinel_gun\fp_sentinel_gun.render_model
+
+# -------------------------------------
+# |              SHOTGUN              |
+# -------------------------------------
+NameBlamTag objects\weapons\rifle\shotgun\fp_shotgun\fp_shotgun.render_model fuckyoushotgun1
+
+NameBlamTag objects\temp\zekken\weapons\shotgun\shotgun.render_model objects\weapons\rifle\shotgun\shotgun
+NameBlamTag objects\temp\zekken\weapons\shotgun\fp_shotgun\fp_shotgun.render_model objects\weapons\rifle\shotgun\fp_shotgun\fp_shotgun
+
+PortTag Replace objects\weapons\rifle\shotgun\shotgun.render_model
+PortTag Replace objects\weapons\rifle\shotgun\fp_shotgun\fp_shotgun.render_model
+
+# -------------------------------------
+# |                SMG                |
+# -------------------------------------
+NameBlamTag objects\weapons\rifle\smg\fp_smg\fp_smg.render_model fuckyousmg1
+
+NameBlamTag objects\temp\zekken\weapons\smg\smg.render_model objects\weapons\rifle\smg\smg
+NameBlamTag objects\temp\zekken\weapons\smg\fp_smg\fp_smg.render_model objects\weapons\rifle\smg\fp_smg\fp_smg
+
+PortTag Replace objects\weapons\rifle\smg\smg.render_model
+PortTag Replace objects\weapons\rifle\smg\fp_smg\fp_smg.render_model
+
+# -------------------------------------
+# |               SNIPER              |
+# -------------------------------------
+NameBlamTag objects\temp\zekken\weapons\sniper_rifle\sniper_rifle.render_model objects\weapons\rifle\sniper_rifle\sniper_rifle
+
+PortTag Replace objects\weapons\rifle\sniper_rifle\sniper_rifle.render_model
+Exit
+
+# -------------------------------------
+# |             MISC FIXUP            |
+# -------------------------------------
+EditTag objects\weapons\rifle\sniper_rifle\sniper_rifle.weapon
+SetField FirstPerson[0].FirstPersonModel objects\weapons\rifle\sniper_rifle\sniper_rifle.render_model
+SetField FirstPerson[1].FirstPersonModel objects\weapons\rifle\sniper_rifle\sniper_rifle.render_model
+SaveTagChanges
+Exit
+
+
+EditTag objects\weapons\rifle\battle_rifle\battle_rifle.weapon
+SetField FirstPerson[0].FirstPersonModel objects\weapons\rifle\battle_rifle\battle_rifle.render_model
+SetField FirstPerson[1].FirstPersonModel objects\weapons\rifle\battle_rifle\battle_rifle.render_model
