@@ -16,3 +16,102 @@ SetField PlayerInformation[1].FirstPersonIdleTimeRange 10 15
 SetField PlayerInformation[1].FirstPersonSkipFraction 0.25
 SaveTagChanges
 Exit
+
+
+## H2 WEAPONS STAT ##
+
+## FRAG GRENADE
+EditTag objects\weapons\grenade\frag_grenade\damage_effects\frag_grenade_explosion.damage_effect
+SetField DamageUpperBound 150 150
+SaveTagChanges
+exit
+
+## BATTLE RIFLE
+EditTag objects\weapons\rifle\battle_rifle\battle_rifle.weapon
+SetField Barrels[0].Firing.FireRecoveryTime 0.26
+SaveTagChanges
+exit
+
+EditTag objects\weapons\rifle\battle_rifle\projectiles\battle_rifle_bullet.projectile
+SetField FinalVelocity 400
+SetField InitialVelocity 400
+SaveTagChanges
+exit
+
+# CARBINE
+EditTag objects\weapons\rifle\covenant_carbine\damage_effects\carbine_slug.damage_effect
+SetField DamageUpperBound 11 11
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\covenant_carbine\covenant_carbine.weapon
+SetField Magazines[0].RoundsTotalInitial 36
+SetField Magazines[0].RoundsReloaded 24
+SetField Barrels[0].Firing.FireRecoveryTime 0.35
+SetField Barrels[0].Firing.SoftRecoveryFraction 0.65
+SaveTagChanges
+Exit
+
+## SNIPER RIFLE
+EditTag objects\weapons\rifle\sniper_rifle\sniper_rifle.weapon
+SetField Barrels[0].Firing.FireRecoveryTime 0.5
+SaveTagChanges
+exit
+
+EditTag objects\weapons\rifle\sniper_rifle\damage_effects\sniper_rifle_bullet.damage_effect
+SetField DamageUpperBound 45 45
+SaveTagChanges
+exit
+
+EditTag objects\weapons\rifle\sniper_rifle\projectiles\sniper_bullet.projectile
+SetField MaximumRange 120
+SetField InitialVelocity 1200
+SetField FinalVelocity 1200
+SaveTagChanges
+exit
+
+## SMG
+EditTag objects\weapons\rifle\smg\damage_effects\smg_bullet.damage_effect
+SetField DamageUpperBound 4.75 4.75
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\smg\projectiles\smg_bullet.projectile
+SetField FinalVelocity 400
+SetField InitialVelocity 400
+savetagchanges
+exit
+
+## MAGNUM
+EditTag objects\weapons\pistol\magnum\magnum.weapon
+SetField Magazines[0].RoundsLoadedMaximum 12
+SetField Magazines[0].RoundsReloaded 12
+SetField Barrels[0].Firing.FireRecoveryTime 0.12
+# SetField FirstPersonWeaponOffset 0.06 -0.002 0.005
+# SetField CenteredFirstPersonWeaponOffset 0.06 -0.002 0
+savetagchanges
+exit
+
+EditTag objects\weapons\pistol\magnum\damage_effects\magnum_bullet.damage_effect
+SetField DamageUpperBound 8 8
+savetagchanges
+exit
+
+## SHOTGUN
+EditTag objects\weapons\rifle\shotgun\damage_effects\shotgun_bullet.damage_effect
+SetField DamageUpperBound 16.5 16.5
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\shotgun\projectiles\shotgun_bullet.projectile
+SetField InitialVelocity 120
+SetField FinalVelocity 120
+Savetagchanges
+Exit
+
+EditTag objects\weapons\rifle\shotgun\shotgun.weapon
+SetField Barrels[0].DualWeaponError.ErrorAngle 10 12
+SetField Barrels[0].DualWeaponError.RuntimeDecelerationRate 0
+SetField Barrels[0].DualWeaponError.RuntimeAccelerationRate 0
+SaveTagChanges
+Exit
