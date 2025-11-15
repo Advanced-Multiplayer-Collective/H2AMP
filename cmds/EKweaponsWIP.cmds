@@ -13,11 +13,10 @@ Exit
 # |           BATTLE RIFLE            |
 # -------------------------------------
 OpenCacheFile workingdir\maps\h2weapons.map
-NameBlamTag objects\weapons\rifle\battle_rifle\battle_rifle.render_model fuckyoubr1
+#NameBlamTag objects\weapons\rifle\battle_rifle\battle_rifle.render_model fuckyoubr1
 # THIS RENDER MODEL IS USED FOR FP AND TP MODEL
 NameBlamTag objects\temp\zekken\weapons\battle_rifle\battle_rifle.render_model objects\weapons\rifle\battle_rifle\battle_rifle
 PortTag Replace objects\weapons\rifle\battle_rifle\battle_rifle.render_model
-Exit
 
 # -------------------------------------
 # |            BEAM RIFLE             |
@@ -182,3 +181,6 @@ Exit
 EditTag objects\weapons\rifle\battle_rifle\battle_rifle.weapon
 SetField FirstPerson[0].FirstPersonModel objects\weapons\rifle\battle_rifle\battle_rifle.render_model
 SetField FirstPerson[1].FirstPersonModel objects\weapons\rifle\battle_rifle\battle_rifle.render_model
+SaveTagChanges
+Exit
+
