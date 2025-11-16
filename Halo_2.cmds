@@ -164,6 +164,12 @@ NameBlamTag scenarios\multi\zanzibar\zanzibar.scnr scenarios\multi\zanzibar\zanz
 PortTag scenarios\multi\zanzibar\zanzibar2.scnr
 Exit
 
+EditTag scenarios\objects\multi\zanzibar\main_crane\main_crane.model
+SetField NewDamageInfo[0].DamageConstraints[0].Type LimitedHinge
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[0].PrimaryTransitionEffect fx\scenery_fx\explosions\human_explosion_small\human_explosion_small.effect
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[0].SecondaryTransitionEffect objects\levels\multi\zanzibar\main_crane\fx\main_crane_destroyed_for_sound.effect
+SaveTagChanges
+Exit
 
 
 AddModFiles workingdir\assets
