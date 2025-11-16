@@ -1,0 +1,176 @@
+# ------------------------------------------
+# |             ASSAULT RIFLE              |
+# ------------------------------------------
+EditTag objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_rifle.render_model
+SetField MarkerGroups[1].Markers[0].Translation 0.1010085 -0.0022603422 0.015601369
+SetField MarkerGroups[1].Markers[0].Rotation -0.6241202 0.16707711 -0.45504004 0.6127788
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |             BATTLE RIFLE               |
+# ------------------------------------------
+EditTag objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2.render_model
+SetField MarkerGroups[1].Markers[0].Translation 0.10097668 -0.003126469 0.01598142
+SetField MarkerGroups[1].Markers[0].Rotation -0.61014426 0.17827488 -0.45197728 0.6258264
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |              BRUTE SHOT                |
+# ------------------------------------------
+EditTag objects\weapons\support_low\brute_shot\fp_brute_shot\fp_brute_shot.render_model
+SetField MarkerGroups[0].Markers[0].Translation 0.032291897 0.017064476 0.0525696
+SetField MarkerGroups[0].Markers[0].Rotation 0.48855186 -0.002291647 -0.23783018 0.8394931
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |                CARBINE                 |
+# ------------------------------------------
+EditTag objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine.render_model
+SetField MarkerGroups[1].Markers[0].Translation 0.014350275 -0.0029662417 -0.03943556
+SetField MarkerGroups[1].Markers[0].Rotation -0.5890878 0.14697766 -0.48389506 0.63025296
+
+AddBlockElements MarkerGroups
+AddBlockElements MarkerGroups[*].Markers
+SetField MarkerGroups[*].Name left_hand_elite
+SetField MarkerGroups[*].Markers[*].RegionIndex -1
+SetField MarkerGroups[*].Markers[*].PermutationIndex -1
+SetField MarkerGroups[*].Markers[*].Translation 0.020618191 0.0023538074 -0.0220461
+SetField MarkerGroups[*].Markers[*].Rotation -0.60962826 0.17899512 -0.47754887 0.6068454
+
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |             PLASMA PISTOL              |
+# ------------------------------------------
+EditTag objects\weapons\pistol\plasma_pistol\fp_plasma_pistol\fp_plasma_pistol.render_model
+
+AddBlockElements MarkerGroups
+AddBlockElements MarkerGroups[*].Markers
+SetField MarkerGroups[*].Name left_hand
+SetField MarkerGroups[*].Markers[*].RegionIndex -1
+SetField MarkerGroups[*].Markers[*].PermutationIndex -1
+SetField MarkerGroups[*].Markers[*].Translation -0.0012431224 -0.0012410858 -0.045978148
+SetField MarkerGroups[*].Markers[*].Rotation -0.4714611 0.07865639 -0.51588905 0.71091217
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |              PLASMA RIFLE              |
+# ------------------------------------------
+EditTag objects\weapons\rifle\plasma_rifle\fp_plasma_rifle\fp_plasma_rifle.render_model
+SetField MarkerGroups[4].Markers[0].Translation 0.026555993 0.0043006428 -0.052833803
+SetField MarkerGroups[4].Markers[0].Rotation -0.61645484 0.19570981 -0.46008778 0.6082766
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |                MAGNUM                  |
+# ------------------------------------------
+EditTag objects\weapons\pistol\magnum\fp_magnum\fp_magnum.render_model
+SetField MarkerGroups[1].Markers[0].Translation 0.003737968 -0.002770302 -0.03149237
+SetField MarkerGroups[1].Markers[0].Rotation -0.4730325 -0.02672034 -0.3264062 0.8179152
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |                NEEDLER                 |
+# ------------------------------------------
+EditTag objects\weapons\pistol\needler\fp_needler\fp_needler.render_model
+SetField MarkerGroups[2].Markers[0].Translation 0.00428 0.0093 -0.0527
+SetField MarkerGroups[2].Markers[0].Rotation -0.44 0.1 -0.31 0.425
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |            ROCKET LAUNCHER             |
+# ------------------------------------------
+EditTag objects\weapons\support_high\rocket_launcher\fp_rocket_launcher\fp_rocket_launcher.render_model
+SetField MarkerGroups[1].Markers[0].Translation 0.2303063 0.0216339 -0.0251892
+SetField MarkerGroups[1].Markers[0].Rotation 0.34786 -0.1997311 -0.02808897 0.918385
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |             SENTINEL BEAM              |
+# ------------------------------------------
+EditTag objects\weapons\support_low\sentinel_gun\fp_sentinel_gun\fp_sentinel_gun.render_model
+SetField MarkerGroups[4].Markers[0].Translation -0.0455 0.0645543 0.05832543
+SetField MarkerGroups[4].Markers[0].Rotation -0.88 0.29 0.42 -1.015
+
+SetField MarkerGroups[3].Markers[0].Translation -0.0515 0.0663 0.052
+SetField MarkerGroups[3].Markers[0].Rotation 0.618 -0.205 -0.18 0.72
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |             SNIPER RIFLE               |
+# ------------------------------------------
+EditTag objects\weapons\rifle\sniper_rifle\fp_sniper_rifle_h2\fp_sniper_rifle_h2.render_model
+AddBlockElements MarkerGroups 8
+
+SetField MarkerGroups[0].Name ground_point
+AddBlockElements MarkerGroups[0].Markers 1
+SetField MarkerGroups[0].Markers[0].RegionIndex -1
+SetField MarkerGroups[0].Markers[0].PermutationIndex -1
+SetField MarkerGroups[0].Markers[0].Translation -0.021341622 0.017528862 0.0048972177
+SetField MarkerGroups[0].Markers[0].Rotation 0.76493716 -0.000992903 0.048869867 0.6422476
+
+SetField MarkerGroups[1].Name left_hand
+AddBlockElements MarkerGroups[1].Markers 1
+SetField MarkerGroups[1].Markers[0].RegionIndex -1
+SetField MarkerGroups[1].Markers[0].PermutationIndex -1
+SetField MarkerGroups[1].Markers[0].Translation 0.06916446 -0.0030407917 -0.029555283
+SetField MarkerGroups[1].Markers[0].Rotation -0.69458073 0.15088603 -0.3370411 0.61740935
+
+SetField MarkerGroups[2].Name left_hand_cyborg
+AddBlockElements MarkerGroups[2].Markers 1
+SetField MarkerGroups[2].Markers[0].RegionIndex -1
+SetField MarkerGroups[2].Markers[0].PermutationIndex -1
+SetField MarkerGroups[2].Markers[0].Translation 0.04820867 -0.0065772873 -0.019037323
+SetField MarkerGroups[2].Markers[0].Rotation -0.5548693 0.42551363 -0.46787918 0.54050666
+
+SetField MarkerGroups[3].Name left_hand_elite
+AddBlockElements MarkerGroups[3].Markers 1
+SetField MarkerGroups[3].Markers[0].RegionIndex -1
+SetField MarkerGroups[3].Markers[0].PermutationIndex -1
+SetField MarkerGroups[3].Markers[0].Translation 0.07504041 0.0031752985 -0.02738236
+SetField MarkerGroups[3].Markers[0].Rotation -0.6036607 0.22890352 -0.3478214 0.6798656
+
+SetField MarkerGroups[4].Name left_hand_marine
+AddBlockElements MarkerGroups[4].Markers 1
+SetField MarkerGroups[4].Markers[0].RegionIndex -1
+SetField MarkerGroups[4].Markers[0].PermutationIndex -1
+SetField MarkerGroups[4].Markers[0].Translation 0.037752118 -0.0044479324 -0.02171126
+SetField MarkerGroups[4].Markers[0].Rotation -0.594719 0.4099132 -0.4010996 0.5633824
+
+SetField MarkerGroups[5].Name muzzle_brake
+AddBlockElements MarkerGroups[5].Markers 2
+SetField MarkerGroups[5].Markers[0].RegionIndex -1
+SetField MarkerGroups[5].Markers[0].PermutationIndex -1
+SetField MarkerGroups[5].Markers[0].Translation 0.37326 -0.012 0.0056307125
+SetField MarkerGroups[5].Markers[0].Rotation -7.17E-08 4.5E-09 -0.60876137 0.7933534
+
+SetField MarkerGroups[5].Markers[1].RegionIndex -1
+SetField MarkerGroups[5].Markers[1].PermutationIndex -1
+SetField MarkerGroups[5].Markers[1].Translation 0.37326 0.01201 0.0056307125
+SetField MarkerGroups[5].Markers[1].Rotation -2E-08 -6.58E-08 0.60876155 0.79335326
+
+SetField MarkerGroups[6].Name primary_ejection
+AddBlockElements MarkerGroups[6].Markers 1
+SetField MarkerGroups[6].Markers[0].RegionIndex -1
+SetField MarkerGroups[6].Markers[0].PermutationIndex -1
+SetField MarkerGroups[6].Markers[0].Translation 0.00795 -0.012208955 0.007921471
+SetField MarkerGroups[6].Markers[0].Rotation 0.50864995 -0.49119774 -0.36946216 0.6029078
+
+SetField MarkerGroups[7].Name primary_trigger
+AddBlockElements MarkerGroups[7].Markers 1
+SetField MarkerGroups[7].Markers[0].RegionIndex -1
+SetField MarkerGroups[7].Markers[0].PermutationIndex -1
+SetField MarkerGroups[7].Markers[0].Translation 0.39321998 4.3599999E-10 0.005799999
+SetField MarkerGroups[7].Markers[0].Rotation -6.71E-08 -3.91E-08 6.99E-08 1
+SaveTagChanges
+Exit

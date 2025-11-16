@@ -171,10 +171,81 @@ Exit
 # -------------------------------------
 # |             MISC FIXUP            |
 # -------------------------------------
+
+# SNIPER <-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-
 DuplicateTag objects\weapons\rifle\sniper_rifle\sniper_rifle.render_model objects\weapons\rifle\sniper_rifle\fp_sniper_rifle_h2\fp_sniper_rifle_h2
 EditTag objects\weapons\rifle\sniper_rifle\sniper_rifle.weapon
 SetField FirstPerson[0].FirstPersonModel objects\weapons\rifle\sniper_rifle\fp_sniper_rifle_h2\fp_sniper_rifle_h2.render_model
 SetField FirstPerson[1].FirstPersonModel objects\weapons\rifle\sniper_rifle\fp_sniper_rifle_h2\fp_sniper_rifle_h2.render_model
+SaveTagChanges
+Exit
+
+# Fix TP Sniper markers
+# This fix no firing sound, broken left hand ik, etc
+EditTag objects\weapons\rifle\sniper_rifle\sniper_rifle.render_model
+AddBlockElements MarkerGroups 8
+
+SetField MarkerGroups[0].Name ground_point
+AddBlockElements MarkerGroups[0].Markers 1
+SetField MarkerGroups[0].Markers[0].RegionIndex -1
+SetField MarkerGroups[0].Markers[0].PermutationIndex -1
+SetField MarkerGroups[0].Markers[0].Translation -0.021341622 0.017528862 0.0048972177
+SetField MarkerGroups[0].Markers[0].Rotation 0.76493716 -0.000992903 0.048869867 0.6422476
+
+SetField MarkerGroups[1].Name left_hand
+AddBlockElements MarkerGroups[1].Markers 1
+SetField MarkerGroups[1].Markers[0].RegionIndex -1
+SetField MarkerGroups[1].Markers[0].PermutationIndex -1
+SetField MarkerGroups[1].Markers[0].Translation 0.08523396 -0.0027922255 -0.025363985
+SetField MarkerGroups[1].Markers[0].Rotation -0.5548693 0.42551363 -0.46787918 0.54050666
+
+SetField MarkerGroups[2].Name left_hand_marine
+AddBlockElements MarkerGroups[2].Markers 1
+SetField MarkerGroups[2].Markers[0].RegionIndex -1
+SetField MarkerGroups[2].Markers[0].PermutationIndex -1
+SetField MarkerGroups[2].Markers[0].Translation 0.05661296 -0.0044479324 -0.030442242
+SetField MarkerGroups[2].Markers[0].Rotation -0.59471905 0.4099132 -0.40109965 0.56338227
+
+SetField MarkerGroups[3].Name muzzle_brake
+AddBlockElements MarkerGroups[3].Markers 2
+SetField MarkerGroups[3].Markers[0].RegionIndex -1
+SetField MarkerGroups[3].Markers[0].PermutationIndex -1
+
+SetField MarkerGroups[3].Markers[0].Translation 0.39609453 -0.020806793 0.0056307125
+SetField MarkerGroups[3].Markers[0].Rotation -7.17E-08 4.5E-09 -0.60876137 0.7933534
+
+SetField MarkerGroups[3].Markers[1].RegionIndex -1
+SetField MarkerGroups[3].Markers[1].PermutationIndex -1
+SetField MarkerGroups[3].Markers[1].Translation 0.39609453 0.020343542 0.0056307125
+SetField MarkerGroups[3].Markers[1].Rotation -2E-08 -6.58E-08 0.60876155 0.79335326
+
+SetField MarkerGroups[4].Name primary_ejection
+AddBlockElements MarkerGroups[4].Markers 1
+SetField MarkerGroups[4].Markers[0].RegionIndex -1
+SetField MarkerGroups[4].Markers[0].PermutationIndex -1
+SetField MarkerGroups[4].Markers[0].Translation 0.00795 -0.012208955 0.007921471
+SetField MarkerGroups[4].Markers[0].Rotation 0.50864995 -0.49119774 -0.36946216 0.6029078
+
+SetField MarkerGroups[5].Name primary_trigger
+AddBlockElements MarkerGroups[5].Markers 1
+SetField MarkerGroups[5].Markers[0].RegionIndex -1
+SetField MarkerGroups[5].Markers[0].PermutationIndex -1
+SetField MarkerGroups[5].Markers[0].Translation 0.4264232 4.3599999E-10 0.005799999
+SetField MarkerGroups[5].Markers[0].Rotation -6.71E-08 -3.91E-08 6.99E-08 1
+
+SetField MarkerGroups[6].Name right_hand
+AddBlockElements MarkerGroups[6].Markers 1
+SetField MarkerGroups[6].Markers[0].RegionIndex -1
+SetField MarkerGroups[6].Markers[0].PermutationIndex -1
+SetField MarkerGroups[6].Markers[0].Translation -0.06697202 -0.003105599 -0.037266213
+SetField MarkerGroups[6].Markers[0].Rotation -4.1E-08 2.98E-08 6.54E-08 1
+
+SetField MarkerGroups[7].Name weapon_stow_anchor
+AddBlockElements MarkerGroups[7].Markers 1
+SetField MarkerGroups[7].Markers[0].RegionIndex -1
+SetField MarkerGroups[7].Markers[0].PermutationIndex -1
+SetField MarkerGroups[7].Markers[0].Translation -0.0039839125 0.006011317 -0.006505313
+SetField MarkerGroups[7].Markers[0].Rotation -0.6693277 0.32834446 0.2107923 0.6322635
 SaveTagChanges
 Exit
 
@@ -199,6 +270,7 @@ SetField Materials[1].RenderMethod objects\weapons\rifle\sniper_rifle\shaders\sn
 SaveTagChanges
 Exit
 
+# BATTLE RIFLE <-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
 DuplicateTag objects\weapons\rifle\battle_rifle\battle_rifle.render_model objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2
 EditTag objects\weapons\rifle\battle_rifle\battle_rifle.weapon
 SetField FirstPerson[0].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2.render_model

@@ -185,13 +185,15 @@ RunCommands workingdir\cmds\bipeds.cmds
 
 RunCommands workingdir\cmds\EKweaponsWIP.cmds
 
+RunCommands workingdir\cmds\animations_fp_rendermodel_marker.cmds
+
+# RunCommands workingdir\cmds\animations_fp_weapons_spartan.cmds
+
 RunCommands workingdir\cmds\h2sounds.cmds
 
 RunCommands workingdir\cmds\h2stats.cmds
 
 RunCommands workingdir\cmds\customization.cmds
-
-# RunCommands workingdir\cmds\animations_fp_weapons_spartan.cmds
 
 
 echo WHY DOES THIS NEED TO BE HERE
