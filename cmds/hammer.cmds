@@ -1,0 +1,24 @@
+
+
+edittag objects\weapons\melee\gravity_hammer\fp_gravity_hammer\fp_gravity_hammer.render_model
+replacerendergeometry workingdir\models\gravity_hammer.dae
+Exit
+
+EditTag objects\weapons\melee\gravity_hammer\gravity_hammer.model
+SetField RenderModel objects\weapons\melee\gravity_hammer\fp_gravity_hammer\fp_gravity_hammer.render_model
+savetagchanges
+exit
+
+opencachefile "h2maps\08b_deltacontrol.map"
+porttag replace objects\weapons\melee\gravity_hammer\bitmaps\gravity_hammer.bitmap
+porttag replace objects\weapons\melee\gravity_hammer\bitmaps\gravity_hammer_bump.bitmap
+exit
+
+EditTag objects\weapons\melee\gravity_hammer\shaders\hammer.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\weapons\melee\gravity_hammer\bitmaps\gravity_hammer.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\weapons\melee\gravity_hammer\bitmaps\gravity_hammer_bump.bitmap
+SetArgument specular_coefficient 0.25
+savetagchanges
+exit
+
+
