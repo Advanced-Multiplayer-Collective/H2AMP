@@ -201,6 +201,8 @@ RunCommands workingdir\cmds\h2stats.cmds
 
 RunCommands workingdir\cmds\customization.cmds
 
+RunCommands workingdir\cmds\hammer.cmds
+
 
 echo WHY DOES THIS NEED TO BE HERE
 
