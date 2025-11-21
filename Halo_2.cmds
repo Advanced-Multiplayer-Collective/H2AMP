@@ -302,8 +302,22 @@ porttag replace objects\weapons\support_low\brute_shot\bitmaps\brute_shot_bump.b
 porttag replace objects\weapons\support_high\flak_cannon\bitmaps\flak_cannon.bitmap
 porttag replace objects\weapons\support_high\flak_cannon\bitmaps\flak_cannon_bump.bitm
 porttag replace objects\weapons\support_high\flak_cannon\bitmaps\flak_cannon_illum.bitm
+porttag replace objects\weapons\support_low\sentinel_gun\bitmaps\sentinel_gun.bitm
+porttag replace objects\weapons\support_low\sentinel_gun\bitmaps\sentinel_gun_bump.bitm
+porttag replace objects\weapons\rifle\battle_rifle\battle_rifle.mode
 exit
 
+Edittag objects\temp\zekken\weapons\sentinel_beam\shaders\sentinel_gun_two.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\weapons\support_low\sentinel_gun\bitmaps\sentinel_gun.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\weapons\support_low\sentinel_gun\bitmaps\sentinel_gun_bump.bitmap
+savetagchanges
+exit
+
+EditTag objects\weapons\rifle\battle_rifle\battle_rifle.render_model
+SetField Materials[8].RenderMethod objects\temp\zekken\weapons\battle_rifle\shaders\ones.shader
+SetField Materials[7].RenderMethod objects\temp\zekken\weapons\battle_rifle\shaders\tens.shader
+savetagchanges
+exit
 
 MapFile Remove 8765
 MapFile Remove 0
