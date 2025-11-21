@@ -273,6 +273,19 @@ edittag ui\halox\common\roster\exp_med_ui.bitmap
 importbitmap 0 workingdir\bitmaps\ranks\exp_med_ui.dds
 exit
 
+echo grenade port
+
+opencachefile "h2maps\zanzibar.map"
+porttag replace objects\weapons\grenade\frag_grenade\frag_grenade.render_model
+porttag replace objects\weapons\grenade\plasma_grenade\plasma_grenade.render_model
+exit
+
+EditTag objects\weapons\grenade\plasma_grenade\plasma_grenade.render_model
+SetField Materials[1].RenderMethod null
+savetagchanges
+exit
+
+
 echo temp bitmaps for weapons | remove later
 
 opencachefile "h2maps\zanzibar.map"
