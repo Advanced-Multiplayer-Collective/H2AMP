@@ -273,6 +273,25 @@ edittag ui\halox\common\roster\exp_med_ui.bitmap
 importbitmap 0 workingdir\bitmaps\ranks\exp_med_ui.dds
 exit
 
+echo temp bitmaps for weapons | remove later
+
+opencachefile "h2maps\zanzibar.map"
+porttag replace objects\weapons\pistol\plasma_pistol\bitmaps\plasma_pistol.bitmap
+porttag replace objects\weapons\pistol\plasma_pistol\bitmaps\plasma_pistol_bump.bitmap
+porttag replace objects\weapons\rifle\plasma_rifle\bitmaps\plasma_rifle.bitmap
+porttag replace objects\weapons\rifle\plasma_rifle\bitmaps\plasma_rifle_bump.bitmap
+porttag replace objects\weapons\rifle\covenant_carbine\bitmaps\covenant_carbine.bitmap
+porttag replace objects\weapons\rifle\covenant_carbine\bitmaps\covenant_carbine_bump.bitmap
+porttag replace objects\weapons\rifle\beam_rifle\bitmaps\beam_rifle.bitmap
+porttag replace objects\weapons\rifle\beam_rifle\bitmaps\beam_rifle_bump.bitmap
+porttag replace objects\weapons\support_low\brute_shot\bitmaps\brute_shot.bitmap
+porttag replace objects\weapons\support_low\brute_shot\bitmaps\brute_shot_bump.bitmap
+porttag replace objects\weapons\support_high\flak_cannon\bitmaps\flak_cannon.bitmap
+porttag replace objects\weapons\support_high\flak_cannon\bitmaps\flak_cannon_bump.bitm
+porttag replace objects\weapons\support_high\flak_cannon\bitmaps\flak_cannon_illum.bitm
+exit
+
+
 MapFile Remove 8765
 MapFile Remove 0
 
