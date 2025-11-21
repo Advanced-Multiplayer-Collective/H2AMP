@@ -29,6 +29,9 @@ NameBlamTag objects\temp\zekken\weapons\beam_rifle\fp_beam_rifle\fp_beam_rifle.r
 PortTag Replace objects\weapons\rifle\beam_rifle\beam_rifle.render_model
 PortTag Replace objects\weapons\rifle\beam_rifle\fp_beam_rifle\fp_beam_rifle.render_model
 
+PortTag Replace Single objects\characters\masterchief\fp\weapons\rifle\fp_beam_rifle\fp_beam_rifle.model_animation_graph
+PortTag Replace Single objects\characters\dervish\fp\weapons\rifle\fp_beam_rifle\fp_beam_rifle.model_animation_graph
+
 # -------------------------------------
 # |            BRUTE SHOT             |
 # -------------------------------------
@@ -126,6 +129,8 @@ NameBlamTag objects\temp\zekken\weapons\rocket_launcher\fp_rocket_launcher\fp_ro
 
 PortTag Replace objects\weapons\support_high\rocket_launcher\rocket_launcher.render_model
 PortTag Replace objects\weapons\support_high\rocket_launcher\fp_rocket_launcher\fp_rocket_launcher.render_model
+
+PortTag Replace Single objects\characters\masterchief\fp\weapons\support_high\fp_rocket_launcher\fp_rocket_launcher.model_animation_graph
 
 # -------------------------------------
 # |           SENTINEL BEAM           |

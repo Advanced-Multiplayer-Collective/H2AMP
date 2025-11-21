@@ -14,3 +14,16 @@ EditTag objects\characters\masterchief\fp\weapons\melee\fp_energy_blade\fp_energ
 SortModes
 SaveTagChanges
 Exit
+
+# ------------------------------------------
+# |            ROCKET LAUNCHER             |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\support_high\fp_rocket_launcher\fp_rocket_launcher.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\rocket_launcher
+SaveTagChanges
+Exit
+
+EditTag objects\characters\masterchief\fp\weapons\support_high\fp_rocket_launcher\fp_rocket_launcher.model_animation_graph
+SortModes
+SaveTagChanges
+Exit

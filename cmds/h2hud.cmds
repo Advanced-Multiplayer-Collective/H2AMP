@@ -890,3 +890,14 @@ SetField HudWidgets[19].BitmapWidgets[1].RenderData[0].OutputScalarE LocalD
 SaveTagChanges
 Exit
 
+
+# VISION MASK
+EditTag objects\characters\elite\mp_elite\bitmaps\vision_mode_mask.bitmap
+ImportBitmap 0 workingdir\bitmaps\vision_mask.dds
+SaveTagChanges
+Exit
+
+EditTag shaders\default_bitmaps\bitmaps\vision_mode_mask.bitmap
+ImportBitmap 0 workingdir\bitmaps\vision_mask.dds
+SaveTagChanges
+Exit
