@@ -4,7 +4,7 @@ SetVariable h2maps "E:\Halo Resources\Halo2V"
 SetVariable h3maps "E:\Halo Resources\Halo3"
 SetVariable h3mythicmaps "E:\Halo Resources\Halo3mythic"
 SetVariable odstmaps "E:\Halo Resources\Halo3odst"
-SetVariable workingdir ""
+SetVariable workingdir "C:\Users\Matthew\Documents\GitHub\H2AMP"
 
 
 
@@ -203,6 +203,9 @@ RunCommands workingdir\cmds\customization.cmds
 
 RunCommands workingdir\cmds\hammer.cmds
 
+#RUN IF YOU WANT BROKEN PORTED H2 VEHICLES :) FIX PLZ
+#RunCommands workingdir\cmds\vehicles.cmds 
+
 
 echo WHY DOES THIS NEED TO BE HERE
 
@@ -304,6 +307,8 @@ porttag replace objects\weapons\support_high\flak_cannon\bitmaps\flak_cannon_bum
 porttag replace objects\weapons\support_high\flak_cannon\bitmaps\flak_cannon_illum.bitm
 porttag replace objects\weapons\support_low\sentinel_gun\bitmaps\sentinel_gun.bitm
 porttag replace objects\weapons\support_low\sentinel_gun\bitmaps\sentinel_gun_bump.bitm
+porttag replace objects\weapons\pistol\needler\bitmaps\needler.bitm
+porttag replace objects\weapons\pistol\needler\bitmaps\needler_bump.bitm
 porttag replace objects\weapons\rifle\battle_rifle\battle_rifle.mode
 exit
 

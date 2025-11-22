@@ -1,0 +1,49 @@
+
+
+opencachefile "h2maps\zanzibar.map"
+DoNotReplaceGroups effe,foot,cont,proj,snd!
+Porttag replace objects\vehicles\warthog\warthog.model
+porttag replace objects\vehicles\banshee\banshee.model
+Porttag replace objects\vehicles\ghost\ghost.model
+porttag replace objects\vehicles\scorpion\scorpion.model
+porttag replace objects\vehicles\wraith\wraith.model
+exit
+
+
+echo warthog
+
+EditTag objects\vehicles\warthog\shaders\console.shader
+SetArgument self_illum_intensity 0
+savetagchanges
+exit
+
+EditTag objects\vehicles\warthog\warthog.render_model
+SetField Materials[9].RenderMethod null
+SetField Materials[13].RenderMethod null
+savetagchanges
+Exit
+
+
+
+echo ghost
+
+Edittag objects\vehicles\ghost\ghost.render_model
+SetField Materials[2].RenderMethod objects\vehicles\ghost\shaders\ghost_dash_zcam.shader_halogram
+savetagchanges
+exit
+
+Edittag objects\vehicles\ghost\shaders\ghost_dash.shader
+SetArgument self_illum_color 1 1 1 0
+savetagchanges
+exit
+
+
+echo scorpion
+
+EditTag objects\vehicles\scorpion\scorpion.vehicle
+SetField Seats[0].MarkerName driver
+SetField Seats[0].EntryMarkerName driver
+savetagchanges
+exit
+
+
