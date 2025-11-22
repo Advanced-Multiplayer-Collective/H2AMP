@@ -310,6 +310,7 @@ porttag replace objects\weapons\support_low\sentinel_gun\bitmaps\sentinel_gun_bu
 porttag replace objects\weapons\pistol\needler\bitmaps\needler.bitm
 porttag replace objects\weapons\pistol\needler\bitmaps\needler_bump.bitm
 porttag replace objects\weapons\rifle\battle_rifle\battle_rifle.mode
+porttag replace objects\weapons\pistol\needler\needler.mode
 exit
 
 Edittag objects\temp\zekken\weapons\sentinel_beam\shaders\sentinel_gun_two.shader
@@ -343,8 +344,12 @@ SetField ShaderProperties[0].TextureConstants[5].Bitmap shaders\default_bitmaps\
 savetagchanges
 exit
 
-
-
+Edittag objects\weapons\pistol\needler\fp_needler\fp_needler.render_model
+SetField Materials[0].RenderMethod objects\weapons\pistol\needler\shaders\needler_dull.shader
+SetField Materials[1].RenderMethod objects\weapons\pistol\needler\shaders\needler_gun.shader
+SetField Materials[2].RenderMethod objects\weapons\pistol\needler\shaders\needler_luminous.shader
+savetagchanges
+exit
 
 
 
