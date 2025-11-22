@@ -313,6 +313,36 @@ SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\weapons\support_
 savetagchanges
 exit
 
+EditTag objects\temp\zekken\weapons\covenant_carbine\shaders\carbine_dull.shader
+SetField ShaderProperties[0].TextureConstants[5].Bitmap shaders\default_bitmaps\bitmaps\color_black.bitmap
+SaveTagChanges
+exit
+
+EditTag objects\temp\zekken\weapons\covenant_carbine\shaders\carbine_shiny.shader
+SetField ShaderProperties[0].TextureConstants[5].Bitmap shaders\default_bitmaps\bitmaps\color_black.bitmap
+SaveTagChanges
+exit
+
+EditTag objects\temp\zekken\weapons\plasma_rifle\shaders\plasma_rifle_dull.shader
+SetField ShaderProperties[0].TextureConstants[5].Bitmap shaders\default_bitmaps\bitmaps\color_black.bitmap
+SaveTagChanges
+exit
+
+EditTag objects\temp\zekken\weapons\plasma_rifle\shaders\plasma_rifle_amber.shader
+SetField ShaderProperties[0].TextureConstants[5].Bitmap shaders\default_bitmaps\bitmaps\color_black.bitmap
+savetagchanges
+exit
+
+EditTag objects\temp\zekken\weapons\plasma_rifle\shaders\plasma_rifle_main.shader
+SetField ShaderProperties[0].TextureConstants[5].Bitmap shaders\default_bitmaps\bitmaps\color_black.bitmap
+savetagchanges
+exit
+
+
+
+
+
+
 EditTag objects\weapons\rifle\battle_rifle\battle_rifle.render_model
 SetField Materials[8].RenderMethod objects\temp\zekken\weapons\battle_rifle\shaders\ones.shader
 SetField Materials[7].RenderMethod objects\temp\zekken\weapons\battle_rifle\shaders\tens.shader
