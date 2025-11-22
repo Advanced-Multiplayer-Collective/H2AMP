@@ -1,0 +1,41 @@
+
+echo fix BPR
+
+opencachefile "h3mccmaps\zanzibar.map"
+porttag objects\weapons\rifle\plasma_rifle_red\projectiles\plasma_rifle_red.projectile
+porttag objects\weapons\rifle\plasma_rifle_red\fx\firing.effect
+porttag sound\weapons\plasma_pistol\dryfire.effect
+Exit
+
+EditTag objects\weapons\rifle\brute_plasma_rifle\brute_plasma_rifle.weapon
+SetField Barrels[0].FiringEffects[0].FiringEffect objects\weapons\rifle\plasma_rifle_red\fx\firing.effect
+SetField Barrels[0].FiringEffects[0].EmptyEffect sound\weapons\plasma_pistol\dryfire.effect
+SetField Barrels[0].Projectile objects\weapons\rifle\plasma_rifle_red\projectiles\plasma_rifle_red.projectile
+SetField HudInterface ui\chud\plasma_rifle.chud_definition
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\brute_plasma_rifle\brute_plasma_rifle.model
+SetField CollisionModel objects\weapons\rifle\plasma_rifle\plasma_rifle.collision_model
+SetField Animation objects\weapons\rifle\plasma_rifle\plasma_rifle.model_animation_graph
+SetField PhysicsModel objects\weapons\rifle\plasma_rifle\plasma_rifle.physics_model
+SetField LodModel objects\weapons\lod\lod_plasma_rifle\lod_plasma_rifle.render_model
+Savetagchanges
+Exit
+
+Edittag objects\weapons\rifle\brute_plasma_rifle\fp_brute_plasma_rifle\fp_brute_plasma_rifle.render_model
+SetField Materials[4].RenderMethod objects\temp\zekken\weapons\plasma_rifle\shaders\plasma_rifle_gauge.shader
+savetagchanges
+Exit
+
+Edittag objects\weapons\rifle\brute_plasma_rifle\shaders\plasma_rifle_dull.shader
+SetArgument env_tint_color 0.4 0.4 0.4 1
+SaveTagChanges
+Exit
+
+echo Weapons
+
+
+AddForgeItem "Brute Plasma Rifle" 78 objects\weapons\rifle\brute_plasma_rifle\brute_plasma_rifle.weapon
+
+

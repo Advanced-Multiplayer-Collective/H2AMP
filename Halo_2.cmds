@@ -4,6 +4,7 @@ SetVariable h2maps "E:\Halo Resources\Halo2V"
 SetVariable h3maps "E:\Halo Resources\Halo3"
 SetVariable h3mythicmaps "E:\Halo Resources\Halo3mythic"
 SetVariable odstmaps "E:\Halo Resources\Halo3odst"
+SetVariable h3mccmaps "D:\Games\steamapps\common\Halo The Master Chief Collection\halo3\maps"
 SetVariable workingdir "C:\Users\Matthew\Documents\GitHub\H2AMP"
 
 
@@ -202,6 +203,8 @@ RunCommands workingdir\cmds\h2stats.cmds
 RunCommands workingdir\cmds\customization.cmds
 
 RunCommands workingdir\cmds\hammer.cmds
+
+RunCommands workingdir\cmds\forge_pallet.cmds
 
 #RUN IF YOU WANT BROKEN PORTED H2 VEHICLES :) FIX PLZ
 #RunCommands workingdir\cmds\vehicles.cmds 
