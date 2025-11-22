@@ -344,6 +344,10 @@ SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -352,6 +356,10 @@ SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -360,6 +368,10 @@ SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -373,6 +385,10 @@ SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -381,6 +397,10 @@ SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -389,6 +409,10 @@ SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -401,6 +425,14 @@ SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBack
 SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -414,6 +446,10 @@ SetField HudWidgets[2].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[2].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[2].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[2].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -422,6 +458,10 @@ SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -430,6 +470,10 @@ SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -438,6 +482,10 @@ SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -456,6 +504,10 @@ SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -469,6 +521,14 @@ SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBack
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -477,6 +537,10 @@ SetField HudWidgets[2].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[2].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[2].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[2].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -489,6 +553,14 @@ SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBack
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -512,6 +584,14 @@ SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBack
 SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -535,6 +615,14 @@ SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBack
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -556,6 +644,10 @@ SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -564,6 +656,10 @@ SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -577,6 +673,10 @@ SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -585,6 +685,10 @@ SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -597,6 +701,14 @@ SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBack
 SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -605,6 +717,10 @@ SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -613,6 +729,10 @@ SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -626,6 +746,10 @@ SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[5].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[6].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -638,6 +762,14 @@ SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBack
 SetField HudWidgets[7].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[8].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[5].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[6].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[7].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[8].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
@@ -646,6 +778,10 @@ SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorA PrimaryBackgr
 SetField HudWidgets[3].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorA SecondaryBackground
 SetField HudWidgets[4].BitmapWidgets[0].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorA PrimaryBackground
+SetField HudWidgets[3].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorA SecondaryBackground
+SetField HudWidgets[4].BitmapWidgets[1].RenderData[0].OutputColorB SecondaryBackground
 SaveTagChanges
 Exit
 
