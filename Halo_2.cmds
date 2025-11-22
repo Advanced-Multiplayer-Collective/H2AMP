@@ -4,7 +4,7 @@ SetVariable h2maps "E:\Halo Resources\Halo2V"
 SetVariable h3maps "E:\Halo Resources\Halo3"
 SetVariable h3mythicmaps "E:\Halo Resources\Halo3mythic"
 SetVariable odstmaps "E:\Halo Resources\Halo3odst"
-SetVariable workingdir "C:\Users\Matthew\Documents\GitHub\H2AMP"
+SetVariable workingdir ""
 
 
 
